@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */; };
+		E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A665A31AB96F790055CCB1 /* QuestionView.m */; };
 		E4A8163F1AB809260006E5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8163E1AB809260006E5B6 /* main.m */; };
 		E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816411AB809260006E5B6 /* AppDelegate.m */; };
 		E4A816451AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4A816431AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld */; };
@@ -20,7 +22,6 @@
 		E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */; };
 		E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816791AB80B950006E5B6 /* ReportViewController.m */; };
 		E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */; };
-		E4A816801AB82C400006E5B6 /* QuestionsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8167F1AB82C400006E5B6 /* QuestionsPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionUIView.xib; sourceTree = "<group>"; };
+		E4A665A21AB96F790055CCB1 /* QuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionView.h; sourceTree = "<group>"; };
+		E4A665A31AB96F790055CCB1 /* QuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionView.m; sourceTree = "<group>"; };
 		E4A816391AB809260006E5B6 /* InterestClassEntrance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterestClassEntrance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A8163D1AB809260006E5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A8163E1AB809260006E5B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,8 +62,6 @@
 		E4A816791AB80B950006E5B6 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildInfoViewController.h; sourceTree = "<group>"; };
 		E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildInfoViewController.m; sourceTree = "<group>"; };
-		E4A8167E1AB82C400006E5B6 /* QuestionsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsPageViewController.h; sourceTree = "<group>"; };
-		E4A8167F1AB82C400006E5B6 /* QuestionsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +156,9 @@
 				E4A8166C1AB80A0C0006E5B6 /* ViewController.m */,
 				E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */,
 				E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */,
-				E4A8167E1AB82C400006E5B6 /* QuestionsPageViewController.h */,
-				E4A8167F1AB82C400006E5B6 /* QuestionsPageViewController.m */,
+				E4A665A21AB96F790055CCB1 /* QuestionView.h */,
+				E4A665A31AB96F790055CCB1 /* QuestionView.m */,
+				E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */,
 				E4A8164B1AB809260006E5B6 /* Main.storyboard in Resources */,
 				E4A816501AB809260006E5B6 /* LaunchScreen.xib in Resources */,
 				E4A8164D1AB809260006E5B6 /* Images.xcassets in Resources */,
@@ -260,10 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */,
 				E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
 				E4A8166E1AB80A0C0006E5B6 /* ViewController.m in Sources */,
-				E4A816801AB82C400006E5B6 /* QuestionsPageViewController.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
 				E4A8163F1AB809260006E5B6 /* main.m in Sources */,
 				E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */,
@@ -464,6 +468,7 @@
 				E4A816611AB809270006E5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4A816621AB809270006E5B6 /* Build configuration list for PBXNativeTarget "InterestClassEntranceTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +477,7 @@
 				E4A816641AB809270006E5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

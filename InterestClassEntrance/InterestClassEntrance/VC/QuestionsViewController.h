@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionView.h"
 
-@interface QuestionsViewController : UIViewController
+@interface QuestionsViewController : UIViewController <UIGestureRecognizerDelegate>
+
+@property(nonatomic, retain) QuestionView *visitedView;
+@property(nonatomic, retain) QuestionView *preView;
+@property(nonatomic, retain) QuestionView *nextView;
 
 @end
+
+
