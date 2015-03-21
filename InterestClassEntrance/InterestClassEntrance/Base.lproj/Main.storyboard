@@ -170,7 +170,66 @@
         <!--Questions View Controller-->
         <scene sceneID="NdG-d0-5DW">
             <objects>
-                <viewController id="g38-QB-YWz" customClass="QuestionsViewController" sceneMemberID="viewController"/>
+                <viewController id="g38-QB-YWz" customClass="QuestionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fkq-cd-7eg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ffn-gE-m6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S0Q-ng-3YW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-bu-iRX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/128" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8h-vv-bqq">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="8" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-ee-QJ4">
+                                        <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="77" y="19" width="150" height="2"/>
+                                        </variation>
+                                    </progressView>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="s8h-vv-bqq"/>
+                                        <exclude reference="dXD-ee-QJ4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="94" width="274" height="40"/>
+                                    <mask key="subviews">
+                                        <include reference="s8h-vv-bqq"/>
+                                        <include reference="dXD-ee-QJ4"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WGh-bu-iRX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="WGh-bu-iRX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="dXD-ee-QJ4" id="6hF-qK-u2E"/>
+                        <outlet property="progressBarbg" destination="WGh-bu-iRX" id="9yy-Hl-uM7"/>
+                        <outlet property="progressLabel" destination="s8h-vv-bqq" id="R82-j8-YvF"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2496" y="1656.75"/>
