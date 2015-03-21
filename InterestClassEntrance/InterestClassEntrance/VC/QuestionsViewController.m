@@ -19,12 +19,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setUI];
+    self.seq = 1;
+    [self loadViewsData];
+}
+
+#pragma mark -- Data Proc
+
+-(void)loadViewsData{
+    [self loadVisitedViewData];
+    if (self.seq!=1) {
+        [self loadPreViewData];
+    }
+    if (self.seq!=10) {
+        [self loadNextViewData];
+    }
+}
+
+- (void)loadPreViewData{
+    self.preView.labelA.text = [NSString stringWithFormat:@"%d",self.seq-1];
+}
+
+- (void)loadNextViewData{
+    self.nextView.labelA.text = [NSString stringWithFormat:@"%d",self.seq+1];
+}
+
+- (void)loadVisitedViewData{
+    self.visitedView.labelA.text = [NSString stringWithFormat:@"%d",self.seq];
+}
+
+#pragma mark -- UI proc
+
+- (void)setUI{
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     panGesture.delegate = self;
     panGesture.maximumNumberOfTouches = 1;
     [self.view addGestureRecognizer:panGesture];
-    
-    self.seq = 1;
+
     CGRect visitedFrame = [UIScreen mainScreen].bounds;
     self.visitedView = [[QuestionView alloc] initWithFrame:visitedFrame];
     [self.visitedView awakeFromNib];
@@ -32,19 +65,6 @@
     [self.nextView awakeFromNib];
     [self.view addSubview:self.visitedView];
     [self.view addSubview:self.nextView];
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    [self fuzhi];
-}
-
--(void)fuzhi{
-    self.visitedView.labelA.text = [NSString stringWithFormat:@"%d",self.seq];
-    if (self.seq!=1) {
-        self.preView.labelA.text = [NSString stringWithFormat:@"%d",self.seq-1];
-    }
-    if (self.seq!=100) {
-        self.nextView.labelA.text = [NSString stringWithFormat:@"%d",self.seq+1];
-    }
 }
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer{
@@ -54,12 +74,12 @@
     {
         CGFloat screenWidth_2 = [UIScreen mainScreen].bounds.size.width/2.0f;
         if (translation.x < -screenWidth_2) {//手势平移超过一半，进入下一题
-            if (self.seq == 100) {
+            if (self.seq == 10) {
                 [[[UIAlertView alloc] initWithTitle:nil message:@"这是最后一题" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
                 [self resetView];
                 return;
             }
-            [self nextQuestionViewState];
+            [self nextQuestionProc];//异步的
         }
         else if( translation.x > screenWidth_2 )
         {//回到上一题
@@ -68,27 +88,26 @@
                 [self resetView];
                 return;
             }
-            [self preQuestionViewState];
+            [self preQuestionProc];//异步的
         }
         else
         {//复位
-            [self resetView];
+            [self resetView];//异步的
         }
-        [self fuzhi];
     }
 }
 
 - (void) moveViewWithTranslation:(CGPoint)translation{
     if(self.seq != 1 ) {
-           self.preView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
+        self.preView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
     }
-    if (self.seq != 100) {
+    if (self.seq != 10) {
         self.nextView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
     }
     self.visitedView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
 }
 
-- (void) nextQuestionViewState{
+- (void) nextQuestionProc{
     [UIView animateWithDuration:0.5f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
         self.nextView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
@@ -109,10 +128,12 @@
             self.visitedView = self.nextView;
             self.nextView = nil;
             self.nextView = dequeueQuestionView;
-            [self adjustViewAfterStep];
+            [self relocateViewsAfterStep];
             
             self.seq = self.seq+1;
-            if (self.seq == 100) {
+            [self loadNextViewData];
+            
+            if (self.seq == 10) {
                 [self.nextView removeFromSuperview];
                 self.nextView = nil;
             }
@@ -120,17 +141,17 @@
     }];
 }
 
-- (void) preQuestionViewState{
+- (void) preQuestionProc{
     [UIView animateWithDuration:0.5f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         self.preView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
-        if (self.seq == 100) {
+        if (self.seq == 10) {
             self.nextView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         }
     } completion:^(BOOL finished) {
         if (finished) {
             QuestionView *dequeueQuestionView;
-            if (self.seq==100) {
+            if (self.seq==10) {
                 dequeueQuestionView = [[QuestionView alloc] init];
                 [dequeueQuestionView awakeFromNib];
                 [self.view addSubview:dequeueQuestionView];
@@ -141,9 +162,11 @@
             self.visitedView = self.preView;
             self.preView = nil;
             self.preView = dequeueQuestionView;
-            [self adjustViewAfterStep];
+            [self relocateViewsAfterStep];
             
             self.seq = self.seq-1;
+            [self loadPreViewData];
+            
             if (self.seq == 1) {
                 [self.preView removeFromSuperview];
                 self.preView = nil;
@@ -152,7 +175,7 @@
     }];
 }
 
-- (void)adjustViewAfterStep{
+- (void)relocateViewsAfterStep{
     [self.preView removeFromSuperview];
     self.preView.transform = CGAffineTransformIdentity;
     self.preView.frame = CGRectMake([UIScreen mainScreen].bounds.origin.x - [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.origin.y, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
@@ -177,7 +200,7 @@
     if (self.seq != 1) {
         self.preView.transform = CGAffineTransformIdentity;
     }
-    if (self.seq != 100) {
+    if (self.seq != 10) {
         self.nextView.transform = CGAffineTransformIdentity;
     }
     self.visitedView.transform = CGAffineTransformIdentity;
@@ -185,13 +208,10 @@
 }
 
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 /*
 #pragma mark - Navigation
