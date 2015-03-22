@@ -7,7 +7,6 @@
 //
 
 #import "ChildInfoViewController.h"
-#import "ZDProgressView.h"
 #import "characterLable.h"
 
 @interface ChildInfoViewController ()
