@@ -25,6 +25,9 @@
     
 }
 
+
+
+
 -(void)selectCharacter{
     self.isSelected = !self.isSelected;
     if (self.isSelected) {

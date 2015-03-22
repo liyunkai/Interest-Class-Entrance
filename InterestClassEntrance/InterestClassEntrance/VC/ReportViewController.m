@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet ASProgressPopUpView *progressView2;
 @property (weak, nonatomic) IBOutlet ASProgressPopUpView *progressView3;
 
+
+
 @end
 
 @implementation ReportViewController
