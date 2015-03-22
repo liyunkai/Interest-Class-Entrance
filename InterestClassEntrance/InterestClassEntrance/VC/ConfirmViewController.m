@@ -9,7 +9,6 @@
 #import "ConfirmViewController.h"
 
 @interface ConfirmViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *explianation;
 
 @end
 
@@ -18,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.explianation setUserInteractionEnabled:NO];
-    UIImage *bgColor = [UIImage imageNamed:@"bg.png"];
+    UIImage *bgColor = [UIImage imageNamed:@"beijing.png"];
     self.view.layer.contents = (id)bgColor.CGImage;
     
 }

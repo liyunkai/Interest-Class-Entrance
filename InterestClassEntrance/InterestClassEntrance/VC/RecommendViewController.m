@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImage *bgColor = [UIImage imageNamed:@"beijing.png"];
+    self.view.layer.contents = (id)bgColor.CGImage;
 }
 
 - (void)didReceiveMemoryWarning {

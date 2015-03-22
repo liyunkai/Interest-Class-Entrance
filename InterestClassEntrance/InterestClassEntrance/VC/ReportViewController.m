@@ -22,27 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *bgColor = [UIImage imageNamed:@"bg.png"];
+    UIImage *bgColor = [UIImage imageNamed:@"beijing.png"];
     self.view.layer.contents = (id)bgColor.CGImage;
     
-    [self.progressView1 setFrame:CGRectMake(100, 100, 200, 40)];
-    self.progressView1.popUpViewCornerRadius = 20;
+    self.progressView1.popUpViewCornerRadius = 12;
     self.progressView1.popUpViewAnimatedColors = @[[UIColor redColor], [UIColor orangeColor], [UIColor greenColor]];
-    self.progressView1.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:20];
+    self.progressView1.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView1 setProgress:0.9 animated:YES];
     [self.progressView1 showPopUpViewAnimated:YES];
-//    [self.progressView1]
-//    [[self.progressView1 ]];
     
     self.progressView2.popUpViewCornerRadius = 12.0;
     self.progressView2.popUpViewAnimatedColors = @[[UIColor redColor], [UIColor orangeColor], [UIColor greenColor]];
-    self.progressView2.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:28];
+    self.progressView2.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView2 setProgress:0.8 animated:YES];
     [self.progressView2 showPopUpViewAnimated:YES];
     
     self.progressView3.popUpViewCornerRadius = 12.0;
     self.progressView3.popUpViewAnimatedColors = @[[UIColor redColor], [UIColor orangeColor], [UIColor greenColor]];
-    self.progressView3.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:28];
+    self.progressView3.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView3 setProgress:0.6 animated:YES];
     [self.progressView3 showPopUpViewAnimated:YES];
 

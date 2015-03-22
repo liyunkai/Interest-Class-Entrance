@@ -7,16 +7,19 @@
 //
 
 #import "ChildInfoViewController.h"
-#import "checkedLable.h"
-#import "selectedLable.h"
 #import "ZDProgressView.h"
+#import "characterLable.h"
 
 @interface ChildInfoViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sex;
-- (IBAction)sexChanged:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *birthday;
-
 @property (strong, nonatomic)UIDatePicker *datePicker;
+@property (strong, nonatomic) IBOutlet characterLable *huoPo;
+@property (strong, nonatomic) IBOutlet characterLable *anJing;
+@property (strong, nonatomic) IBOutlet characterLable *kaiLang;
+@property (strong, nonatomic) IBOutlet characterLable *neiXiang;
+
+- (IBAction)sexChanged:(id)sender;
 @end
 
 @implementation ChildInfoViewController
@@ -29,6 +32,10 @@
     self.view.layer.contents = (id)(bgImage.CGImage);
     self.view.layer.backgroundColor = [UIColor clearColor].CGColor;
     
+    //segmentedControl size
+    CGRect frame = self.sex.frame;
+    [self.sex setFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 100)];
+
     //enable lable user interaction
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showDatePicker)];
     [self.birthday setUserInteractionEnabled:YES];
@@ -38,30 +45,11 @@
     [dateFormater setTimeZone:timeZone];
     [dateFormater setDateFormat:@"yyyy/MM/dd"];
     self.birthday.text = [dateFormater stringFromDate:[NSDate date]];
-
-    selectedLable *lable1 = [[selectedLable alloc] init];
-//    lable1.backgroundColor = [UIColor redColor];
-    [lable1 setPosition:60 :500];
-    [self.view addSubview:lable1];
     
-    selectedLable *lable2  = [[selectedLable alloc] init];
-    [lable2 setPosition:120 :450];
-    lable2.text = @"开朗";
-    [self.view addSubview:lable2];
-    
-    selectedLable *lable3 = [[selectedLable alloc] init];
-    [lable3 setPosition:100 :520];
-    lable3.text = @"安静";
-    [self.view addSubview:lable3];
-    
-    ZDProgressView *p = [[ZDProgressView alloc] initWithFrame:CGRectMake(50, 100, 200, 30)];
-    p.Progress = 0.5;
-    //p.noColor = [UIColor greenColor];
-    p.prsColor = [UIColor greenColor];
-    p.borderWidth = 3;
-    p.text = @"hello";
-    //[p setBackgroundColor:[UIColor redColor]];
-    [self.view addSubview:p];
+    [self.huoPo enable];
+    [self.kaiLang enable];
+    [self.anJing enable];
+    [self.neiXiang enable];
 }
 
 - (void)didReceiveMemoryWarning {

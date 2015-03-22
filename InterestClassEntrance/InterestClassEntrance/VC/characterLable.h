@@ -10,4 +10,8 @@
 
 @interface characterLable : UILabel
 
+@property (assign, nonatomic) BOOL isSelected;
+@property (strong, nonatomic) UIImageView *imageView;
+-(void)enable;
+
 @end
