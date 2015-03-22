@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASProgressPopUpView.h"
 
-@interface ReportViewController : UIViewController
+@interface ReportViewController : UIViewController<ASProgressPopUpViewDataSource>
 
 @end
