@@ -11,6 +11,10 @@
 @interface QuestionsViewController ()
 
 @property(nonatomic, assign) int seq;
+@property (weak, nonatomic) IBOutlet UIView *progressBarbg;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
+
 
 @end
 
@@ -34,6 +38,7 @@
     if (self.seq!=10) {
         [self loadNextViewData];
     }
+    [self loadProgressBarData];
 }
 
 - (void)loadPreViewData{
@@ -46,6 +51,11 @@
 
 - (void)loadVisitedViewData{
     self.visitedView.labelA.text = [NSString stringWithFormat:@"%d",self.seq];
+}
+
+- (void)loadProgressBarData{
+    self.progressLabel.text = [NSString stringWithFormat:@"%d/10",self.seq];
+    [self.progressBar setProgress:self.seq/10.0f animated:YES];
 }
 
 #pragma mark -- UI proc
@@ -137,6 +147,8 @@
                 [self.nextView removeFromSuperview];
                 self.nextView = nil;
             }
+            [self loadProgressBarData];
+            [self.view bringSubviewToFront:self.progressBarbg];
         }
     }];
 }
@@ -171,6 +183,8 @@
                 [self.preView removeFromSuperview];
                 self.preView = nil;
             }
+            [self loadProgressBarData];
+            [self.view bringSubviewToFront:self.progressBarbg];
         }
     }];
 }
