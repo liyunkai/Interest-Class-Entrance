@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C0E88E4B-6B25-4A37-910F-CD0119959E50</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InterestClassEntrance</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>75CFEA5A12E252A9A86756750E47EEB658C9791E</key>
+		<string>https://github.com/liyunkai/Interest-Class-Entrance.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InterestClassEntrance/InterestClassEntrance.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>75CFEA5A12E252A9A86756750E47EEB658C9791E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/liyunkai/Interest-Class-Entrance.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>75CFEA5A12E252A9A86756750E47EEB658C9791E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>75CFEA5A12E252A9A86756750E47EEB658C9791E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Interest-Class-Entrance</string>
+		</dict>
+	</array>
+</dict>
+</plist>

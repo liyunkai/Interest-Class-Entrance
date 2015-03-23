@@ -6,9 +6,15 @@
 //  Copyright (c) 2015 李允恺. All rights reserved.
 //
 
+#define TABLEBAME  @"quizEysenck"
+
 #import "QuestionsViewController.h"
 
 @interface QuestionsViewController ()
+
+{
+     sqlite3 *db;
+}
 
 @property(nonatomic, assign) int seq;
 @property (weak, nonatomic) IBOutlet UIView *progressBarbg;
@@ -39,6 +45,20 @@
         [self loadNextViewData];
     }
     [self loadProgressBarData];
+    
+    ////////
+    self.haha = [[readDatabase alloc] init];
+    db = [self.haha openDatabase];
+    self.haha.subject = [self.haha getTablebyName:db :(NSString *)TABLEBAME];
+    
+    dataSou *pp0 = [self.haha.subject objectAtIndex:0];
+    dataSou *pp1  =  [self.haha getNextQuiz:self.index];
+    dataSou *pp2  =  [self.haha getNextQuiz:self.index];
+    dataSou *pp3  =  [self.haha getNextQuiz:self.index];
+    NSLog(@"subject:%@",pp0.item);
+    NSLog(@"subject:%@",pp1.item);
+    NSLog(@"subject:%@",pp2.item);
+    NSLog(@"subject:%@",pp3.item);
 }
 
 - (void)loadPreViewData{
