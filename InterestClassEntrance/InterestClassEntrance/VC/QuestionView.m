@@ -24,10 +24,14 @@
 -(void)awakeFromNib{
     [[NSBundle mainBundle] loadNibNamed:@"QuestionUIView" owner:self options:nil];
     [self addSubview:self.view];
+
+    for (int i=1; i<=4; i++) {
+        UIButton *btn = (UIButton *)[self viewWithTag:i];
+        [btn setImage:[UIImage imageNamed:@"Test_selectedImg"] forState:UIControlStateSelected];
+    }
 }
 
 - (IBAction)touchDown:(id)sender{
-    NSLog(@"btn is touched down");
     UIButton *downBtn = (UIButton *)sender;
     [self.delegate handleBtnIndex:downBtn.tag];
     [self viewSelectedAtIndex:downBtn.tag];
@@ -40,6 +44,10 @@
         UIButton *otherBtn = (UIButton *)[self viewWithTag:i];
         [otherBtn setSelected:NO];
     }
+    self.labelAImgView.image = [UIImage imageNamed:@"Test_A"];
+    self.labelBImgView.image = [UIImage imageNamed:@"Test_B"];
+    self.labelCImgView.image = [UIImage imageNamed:@"Test_C"];
+    //
     //入口断言
     if (index<1|| index>4) {
         return;
@@ -50,14 +58,14 @@
         }
         //设置选中状态的view
         if (index == 1) {
-            //self.labelAImgView.image = [UIImage imageNamed:<#(NSString *)#>]
+            self.labelAImgView.image = [UIImage imageNamed:@"Test_A-"];
             
         }
         if (index == 2) {
-            
+            self.labelBImgView.image = [UIImage imageNamed:@"Test_B-"];
         }
         if (index == 3) {
-            
+            self.labelCImgView.image = [UIImage imageNamed:@"Test_C-"];
         }
         if (index == 4) {
             

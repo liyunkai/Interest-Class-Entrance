@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="295"/>
+            <point key="canvasLocation" x="420" y="303.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Af-Rs-vAx">
@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TD-2j-Sg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="318.75"/>
+            <point key="canvasLocation" x="-339" y="297.75"/>
         </scene>
         <!--Test Choose View Controller-->
         <scene sceneID="JZM-Ag-dNV">
@@ -114,11 +114,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-LO-WMU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="开始测试" image="enter.png">
+                                <state key="normal" image="enter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="483" width="170" height="44"/>
+                                    <rect key="frame" x="108" y="483" width="170" height="44"/>
                                 </variation>
                                 <connections>
                                     <segue destination="g38-QB-YWz" kind="show" id="Hfb-mT-Skf"/>
@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuE-AK-99j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.5" y="972.75"/>
+            <point key="canvasLocation" x="354" y="972.75"/>
         </scene>
         <!--测试结果-->
         <scene sceneID="eID-VI-P8x">
@@ -385,7 +385,7 @@
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-Md-QEg">
                                 <rect key="frame" x="74" y="500" width="198" height="56"/>
-                                <state key="normal" title="Button" image="chakan.png">
+                                <state key="normal" image="chakan.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -428,13 +428,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="8qW-JC-tfI"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="兴趣班推荐" id="nTC-qs-cyI">
-                        <barButtonItem key="leftBarButtonItem" title="返回" id="dh7-Ih-3Ye">
-                            <connections>
-                                <action selector="quit:" destination="KkA-dd-oVG" id="4H5-tb-W4r"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="兴趣班推荐" id="nTC-qs-cyI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-xB-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,7 +450,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr0-1W-Dmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="967"/>
+            <point key="canvasLocation" x="-346.5" y="966.75"/>
         </scene>
     </scenes>
     <resources>

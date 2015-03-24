@@ -22,6 +22,7 @@
 @property (nonatomic, assign) id<QuestionViewBtnIndexDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UIView *view;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelQuiz;
 @property (weak, nonatomic) IBOutlet UILabel *labelA;
 @property (weak, nonatomic) IBOutlet UILabel *labelB;

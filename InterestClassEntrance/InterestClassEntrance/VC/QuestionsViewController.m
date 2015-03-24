@@ -247,13 +247,14 @@
 - (IBAction)quitTest:(id)sender {
     UIAlertView *quitAlert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"您确定结束测试吗？\n您的测试进度将被保存" delegate:self cancelButtonTitle:@"继续测试" otherButtonTitles:@"结束测试", nil];
     [quitAlert show];
-    //做数据保存
-    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 1) {
+    if (buttonIndex == 1) {//go on
         [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    if (buttonIndex == 0) {//quit
+        //做数据保存
     }
 }
 
