@@ -16,13 +16,15 @@
 @property(strong,nonatomic)  dataSou *data;
 @property(strong,nonatomic) NSMutableArray *subject;
 @property(assign,nonatomic) int index0;
+@property(assign,nonatomic) NSInteger amount;
 
 -(sqlite3 *)openDatabase;
 -(void)closeDataBase:(sqlite3 *)dbName;
--(NSMutableArray *)getTablebyName:(sqlite3 *)dbName :(NSString *)tableName;
+-(NSMutableArray *)getTablebyName:(NSString *)tableName;
 
--(dataSou *)getNextQuiz:(int)index;
--(dataSou *)getLastQuiz:(int)index;
 -(dataSou *)getRandQuiz:(int)index;
+-(dataSou *)getNextQuiz;
+-(dataSou *)getLastQuiz;
+- (dataSou *)getCurrentQuiz;
 
 @end

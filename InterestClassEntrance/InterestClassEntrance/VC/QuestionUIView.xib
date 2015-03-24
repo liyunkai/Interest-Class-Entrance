@@ -8,10 +8,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView">
             <connections>
                 <outlet property="labelA" destination="0aL-0w-M4t" id="YuV-3U-Kcb"/>
+                <outlet property="labelAImgView" destination="J6I-nA-hfB" id="Q8Z-yW-NHn"/>
                 <outlet property="labelB" destination="Cl5-AT-XGO" id="pOZ-b9-rLd"/>
+                <outlet property="labelBImgView" destination="6NM-8E-0bt" id="bjk-Ka-rSi"/>
                 <outlet property="labelC" destination="Qzg-88-ApO" id="S7a-jg-xJg"/>
+                <outlet property="labelCImgView" destination="HoU-1G-npF" id="X3c-eF-wXH"/>
                 <outlet property="labelD" destination="F8B-va-xd0" id="61x-4M-fdP"/>
-                <outlet property="labelQuizSeq" destination="E9h-Mt-X7e" id="M7t-Tf-t5p"/>
+                <outlet property="labelDImgView" destination="Py7-YW-LX1" id="KPX-Nv-8tC"/>
+                <outlet property="labelQuiz" destination="E9h-Mt-X7e" id="MPa-dL-gn5"/>
+                <outlet property="quizeImgView" destination="K4q-nf-4yA" id="Deh-eP-4WL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eLL-6W-lPm"/>
             </connections>
         </placeholder>
@@ -110,7 +115,7 @@
                         <rect key="frame" x="23" y="159" width="26" height="28"/>
                     </variation>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whn-CQ-NyU">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="btnC" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whn-CQ-NyU">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,8 +123,11 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="422" width="325" height="55"/>
                     </variation>
+                    <connections>
+                        <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="2t8-Tl-RBA"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-RV-vfx">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="btnA" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-RV-vfx">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,8 +135,11 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="290" width="325" height="55"/>
                     </variation>
+                    <connections>
+                        <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="v03-OX-s2h"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-z5-GD9">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="btnB" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-z5-GD9">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,8 +147,11 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="357" width="325" height="55"/>
                     </variation>
+                    <connections>
+                        <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="NPe-Il-oh8"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-hw-rjQ">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="btnD" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-hw-rjQ">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,6 +159,9 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="488" width="325" height="55"/>
                     </variation>
+                    <connections>
+                        <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="f3F-9b-VUt"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

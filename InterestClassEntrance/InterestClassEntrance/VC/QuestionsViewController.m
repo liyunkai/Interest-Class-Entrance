@@ -12,11 +12,6 @@
 
 @interface QuestionsViewController ()
 
-{
-     sqlite3 *db;
-}
-
-@property(nonatomic, assign) int seq;
 @property (weak, nonatomic) IBOutlet UIView *progressBarbg;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
@@ -30,52 +25,55 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setUI];
-    self.seq = 1;
-    [self loadViewsData];
+    [self initViewsData];
 }
 
 #pragma mark -- Data Proc
 
--(void)loadViewsData{
-    [self loadVisitedViewData];
-    if (self.seq!=1) {
-        [self loadPreViewData];
-    }
-    if (self.seq!=10) {
-        [self loadNextViewData];
-    }
+- (void)handleBtnIndex:(NSInteger)btnIndex{
+    NSLog(@"Nov.%ld按钮已被按下",(long)btnIndex);
+}
+
+
+-(void)initViewsData{
+    self.quiz = [[readDatabase alloc] init];
+    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLEBAME];
+    
+    int seqInit;
+    seqInit = 1;
+    self.quiz.index0 = seqInit-1;
+    
     [self loadProgressBarData];
-    
-    ////////
-    self.haha = [[readDatabase alloc] init];
-    db = [self.haha openDatabase];
-    self.haha.subject = [self.haha getTablebyName:db :(NSString *)TABLEBAME];
-    
-    dataSou *pp0 = [self.haha.subject objectAtIndex:0];
-    dataSou *pp1  =  [self.haha getNextQuiz:self.index];
-    dataSou *pp2  =  [self.haha getNextQuiz:self.index];
-    dataSou *pp3  =  [self.haha getNextQuiz:self.index];
-    NSLog(@"subject:%@",pp0.item);
-    NSLog(@"subject:%@",pp1.item);
-    NSLog(@"subject:%@",pp2.item);
-    NSLog(@"subject:%@",pp3.item);
-}
-
-- (void)loadPreViewData{
-    self.preView.labelA.text = [NSString stringWithFormat:@"%d",self.seq-1];
-}
-
-- (void)loadNextViewData{
-    self.nextView.labelA.text = [NSString stringWithFormat:@"%d",self.seq+1];
-}
-
-- (void)loadVisitedViewData{
-    self.visitedView.labelA.text = [NSString stringWithFormat:@"%d",self.seq];
+    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getCurrentQuiz]];
+    if (seqInit!=1) {
+        [self loadQuestionView:self.preView WithQuestion:[self.quiz getRandQuiz:self.quiz.index0-1]];
+    }
+    if (seqInit!=self.quiz.amount) {
+        [self loadQuestionView:self.nextView WithQuestion:[self.quiz getRandQuiz:self.quiz.index0+1]];
+    }
 }
 
 - (void)loadProgressBarData{
-    self.progressLabel.text = [NSString stringWithFormat:@"%d/10",self.seq];
-    [self.progressBar setProgress:self.seq/10.0f animated:YES];
+    self.progressLabel.text = [NSString stringWithFormat:@"%d/%ld",self.quiz.index0+1, (long)self.quiz.amount];
+    [self.progressBar setProgress:(float)(self.quiz.index0+1)/self.quiz.amount animated:YES];
+}
+
+- (void)loadPreViewData{
+    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getLastQuiz]];
+}
+
+- (void)loadNextViewData{
+    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getNextQuiz]];
+}
+
+- (void)loadQuestionView:(QuestionView *)view WithQuestion:(dataSou *)question{
+    if (question) {
+        view.labelQuiz.text = question.item;
+        view.labelA.text = question.optionA;
+        view.labelB.text = question.optionB;
+        view.labelC.text = question.optionC;
+        view.labelD.text = question.optionD;
+    }
 }
 
 #pragma mark -- UI proc
@@ -91,8 +89,10 @@
     CGRect visitedFrame = [UIScreen mainScreen].bounds;
     self.visitedView = [[QuestionView alloc] initWithFrame:visitedFrame];
     [self.visitedView awakeFromNib];
+    self.visitedView.delegate = self;
     self.nextView = [[QuestionView alloc] initWithFrame:CGRectMake(visitedFrame.origin.x + visitedFrame.size.width, visitedFrame.origin.y, visitedFrame.size.width, visitedFrame.size.height)];
     [self.nextView awakeFromNib];
+    self.nextView.delegate = self;
     [self.view addSubview:self.visitedView];
     [self.view addSubview:self.nextView];
 }
@@ -104,7 +104,7 @@
     {
         CGFloat screenWidth_2 = [UIScreen mainScreen].bounds.size.width/2.0f;
         if (translation.x < -screenWidth_2) {//手势平移超过一半，进入下一题
-            if (self.seq == 10) {
+            if (self.quiz.index0+1 == self.quiz.amount) {
                 [[[UIAlertView alloc] initWithTitle:nil message:@"这是最后一题" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
                 [self resetView];
                 return;
@@ -113,7 +113,7 @@
         }
         else if( translation.x > screenWidth_2 )
         {//回到上一题
-            if (self.seq == 1) {
+            if (self.quiz.index0 == 0) {
                 [[[UIAlertView alloc] initWithTitle:nil message:@"这是第一题" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
                 [self resetView];
                 return;
@@ -128,10 +128,10 @@
 }
 
 - (void) moveViewWithTranslation:(CGPoint)translation{
-    if(self.seq != 1 ) {
+    if(self.quiz.index0 != 0 ) {
         self.preView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
     }
-    if (self.seq != 10) {
+    if (self.quiz.index0+1 != self.quiz.amount) {
         self.nextView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
     }
     self.visitedView.transform = CGAffineTransformMakeTranslation(translation.x, 0);
@@ -141,15 +141,16 @@
     [UIView animateWithDuration:0.5f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
         self.nextView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
-        if (self.seq == 1) {
+        if (self.quiz.index0 == 0) {
             self.preView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
         }
     } completion:^(BOOL finished) {
         if (finished) {
             QuestionView *dequeueQuestionView;
-            if (self.seq==1) {
+            if (self.quiz.index0==0) {
                 dequeueQuestionView = [[QuestionView alloc] init];
                 [dequeueQuestionView awakeFromNib];
+                dequeueQuestionView.delegate = self;
                 [self.view addSubview:dequeueQuestionView];
             }else{
                 dequeueQuestionView = self.preView;
@@ -160,10 +161,9 @@
             self.nextView = dequeueQuestionView;
             [self relocateViewsAfterStep];
             
-            self.seq = self.seq+1;
             [self loadNextViewData];
             
-            if (self.seq == 10) {
+            if (self.quiz.index0+1 == self.quiz.amount) {
                 [self.nextView removeFromSuperview];
                 self.nextView = nil;
             }
@@ -177,15 +177,16 @@
     [UIView animateWithDuration:0.5f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         self.preView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
-        if (self.seq == 10) {
+        if (self.quiz.index0+1 == self.quiz.amount) {
             self.nextView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         }
     } completion:^(BOOL finished) {
         if (finished) {
             QuestionView *dequeueQuestionView;
-            if (self.seq==10) {
+            if (self.quiz.index0+1==self.quiz.amount) {
                 dequeueQuestionView = [[QuestionView alloc] init];
                 [dequeueQuestionView awakeFromNib];
+                dequeueQuestionView.delegate = self;
                 [self.view addSubview:dequeueQuestionView];
             }else{
                 dequeueQuestionView = self.nextView;
@@ -196,10 +197,9 @@
             self.preView = dequeueQuestionView;
             [self relocateViewsAfterStep];
             
-            self.seq = self.seq-1;
             [self loadPreViewData];
             
-            if (self.seq == 1) {
+            if (self.quiz.index0 == 0) {
                 [self.preView removeFromSuperview];
                 self.preView = nil;
             }
@@ -231,10 +231,10 @@
 - (void) resetView{
     [UIView beginAnimations:@"resetView" context:nil];
     [UIView setAnimationDuration:1];
-    if (self.seq != 1) {
+    if (self.quiz.index0 != 0) {
         self.preView.transform = CGAffineTransformIdentity;
     }
-    if (self.seq != 10) {
+    if (self.quiz.index0+1 != self.quiz.amount) {
         self.nextView.transform = CGAffineTransformIdentity;
     }
     self.visitedView.transform = CGAffineTransformIdentity;

@@ -10,15 +10,13 @@
 #import "QuestionView.h"
 #import "readDatabase.h"
 
-@interface QuestionsViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface QuestionsViewController : UIViewController <UIGestureRecognizerDelegate, QuestionViewBtnIndexDelegate>
 
 @property(nonatomic, retain) QuestionView *visitedView;
 @property(nonatomic, retain) QuestionView *preView;
 @property(nonatomic, retain) QuestionView *nextView;
 
-@property(strong,nonatomic) NSMutableArray *subject_o;
-@property(strong,nonatomic) readDatabase *haha;
-@property(assign,nonatomic) int index;
+@property(strong,nonatomic) readDatabase *quiz;
 
 @end
 

@@ -23,8 +23,12 @@
 
 -(id)init{
     self = [super init];
-    self.index0 = 0;
-    self.subject = [[NSMutableArray alloc] init];
+    if (self) {
+        self.index0 = 0;
+        self.subject = [[NSMutableArray alloc] init];
+        self->db = [self openDatabase];
+    }
+    
     return self;
 }
 
@@ -68,16 +72,14 @@
 }
 
 
--(NSMutableArray *)getTablebyName:(sqlite3 *)dbName :(NSString *)tableName{
-    
-    NSLog(@"sjfasljfnaksjfnakjsfnakjnlawnjfknvakjl");
+-(NSMutableArray *)getTablebyName:(NSString *)tableName{
     
     NSString *sqlQuery = [@"SELECT * FROM " stringByAppendingString:tableName];//quizEysenck
     sqlite3_stmt * statement;
     
     NSLog(@"%@",sqlQuery);
     
-    if (sqlite3_prepare_v2(dbName, [sqlQuery UTF8String], -1, &statement, nil) == SQLITE_OK) {
+    if (sqlite3_prepare_v2(db, [sqlQuery UTF8String], -1, &statement, nil) == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
             dataSou *temp = [dataSou alloc];
             
@@ -121,16 +123,10 @@
             temp.answer = _answer;
             
             [self.subject addObject:temp];
-            
-            NSLog(@"%@",temp.item);
-       
-//            NSLog(@"id:%d,item:%@,A:%@,B:%@,C:%@,D:%@,AS:%@",_id,_item,_optionA,_optionB,self.data.optionC,self.data.optionD,_answer);
+
         }
     }
-    
-    
-    NSLog(@"%@",self.subject);
-    
+    self.amount = [self.subject count];
     return self.subject; //subject1;//
     
 }
@@ -140,16 +136,8 @@
 }
 
 
--(dataSou *)getNextQuiz:(int)index{
+-(dataSou *)getNextQuiz{
     
-//    if ([self.data isEqual:[self.subject lastObject ]]) {
-//
-//        return nil;
-//    } else {
-//        NSInteger index = [self.subject indexOfObject:self.data];
-//        self.data = [self.subject objectAtIndex:index+1];
-//        return self.data;
-//    }
     if (self.index0 == [self.subject count]) {
         return nil;
     }else{
@@ -159,7 +147,7 @@
     return [self.subject objectAtIndex:self.index0];
 }
 
--(dataSou *)getLastQuiz:(int)index{
+-(dataSou *)getLastQuiz{
     if (self.index0 == [self.subject count]) {
         return nil;
     }else{
@@ -170,9 +158,16 @@
     
 }
 
--(dataSou *)getRandQuiz:(int)index{
-    if (self.index0 >= 0 && self.index0 <= [self.subject count] - 1) {
+- (dataSou *)getCurrentQuiz{
+    if (self.index0>=0 && self.index0<self.amount) {
         return [self.subject objectAtIndex:self.index0];
+    }
+    return nil;
+}
+
+-(dataSou *)getRandQuiz:(int)index{
+    if (index >= 0 && index < self.amount ) {
+        return [self.subject objectAtIndex:index];
     }
     return nil;
 }
