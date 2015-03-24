@@ -10,8 +10,15 @@
 
 @implementation QuestionView
 
-- (void)configQuestion{
-    
+- (void)configQuestion:(dataSou *)question btnIndex:(int)btnIndex{
+    if (question) {
+        self.labelQuiz.text = question.item;
+        self.labelA.text = question.optionA;
+        self.labelB.text = question.optionB;
+        self.labelC.text = question.optionC;
+        self.labelD.text = question.optionD;
+        [self viewSelectedAtIndex:btnIndex];
+    }
 }
 
 -(void)awakeFromNib{
@@ -28,28 +35,34 @@
 
 /* 将view改变为选中状态 */
 - (void)viewSelectedAtIndex:(NSInteger)index{
-    UIButton *downBtn = (UIButton *)[self viewWithTag:index];
-    if (downBtn) {
-        for (NSInteger i=1; i<=4; ++i) {
-            UIButton *otherBtn = (UIButton *)[self viewWithTag:i];
-            [otherBtn setSelected:NO];
+    //设置未选中状态的view
+    for (NSInteger i=1; i<=4; ++i) {
+        UIButton *otherBtn = (UIButton *)[self viewWithTag:i];
+        [otherBtn setSelected:NO];
+    }
+    //入口断言
+    if (index<1|| index>4) {
+        return;
+    }else{//设置选中状态的view
+        UIButton *downBtn = (UIButton *)[self viewWithTag:index];
+        if (downBtn) {
+            [downBtn setSelected:YES];
         }
-        [downBtn setSelected:YES];
+        //设置选中状态的view
+        if (index == 1) {
+            //self.labelAImgView.image = [UIImage imageNamed:<#(NSString *)#>]
+            
+        }
+        if (index == 2) {
+            
+        }
+        if (index == 3) {
+            
+        }
+        if (index == 4) {
+            
+        }
     }
-    if (index == 1) {
-//        self.labelAImgView.image = [UIImage imageNamed:<#(NSString *)#>]
-        
-    }
-    if (index == 2) {
-        
-    }
-    if (index == 3) {
-        
-    }
-    if (index == 4) {
-        
-    }
-    
 }
 
 /*

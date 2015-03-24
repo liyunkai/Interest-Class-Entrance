@@ -32,25 +32,25 @@
 
 - (void)handleBtnIndex:(NSInteger)btnIndex{
     NSLog(@"Nov.%ld按钮已被按下",(long)btnIndex);
+    self->choises[self.quiz.index0] = (int)btnIndex;
 }
-
 
 -(void)initViewsData{
     self.quiz = [[readDatabase alloc] init];
     self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLEBAME];
-    
+    //配置题目开始题数
     int seqInit;
     seqInit = 1;
     self.quiz.index0 = seqInit-1;
-    
+    //配置用户已选信息
+    for (int i=0; i<100; ++i) {
+        self->choises[i] = -1;
+    }
+    //
     [self loadProgressBarData];
-    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getCurrentQuiz]];
-    if (seqInit!=1) {
-        [self loadQuestionView:self.preView WithQuestion:[self.quiz getRandQuiz:self.quiz.index0-1]];
-    }
-    if (seqInit!=self.quiz.amount) {
-        [self loadQuestionView:self.nextView WithQuestion:[self.quiz getRandQuiz:self.quiz.index0+1]];
-    }
+    [self.visitedView configQuestion:[self.quiz getCurrentQuiz] btnIndex:self->choises[self.quiz.index0]];
+    [self.preView configQuestion:[self.quiz getRandQuiz:self.quiz.index0-1] btnIndex:self->choises[self.quiz.index0-1]];
+    [self.nextView configQuestion:[self.quiz getRandQuiz:self.quiz.index0+1] btnIndex:self->choises[self.quiz.index0+1]];
 }
 
 - (void)loadProgressBarData{
@@ -59,21 +59,15 @@
 }
 
 - (void)loadPreViewData{
-    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getLastQuiz]];
+    dataSou *question = [self.quiz getLastQuiz];
+    [self.visitedView configQuestion:question btnIndex:self->choises[self.quiz.index0]];
+    [self.preView configQuestion:[self.quiz getRandQuiz:self.quiz.index0-1] btnIndex:self->choises[self.quiz.index0-1]];
 }
 
 - (void)loadNextViewData{
-    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getNextQuiz]];
-}
-
-- (void)loadQuestionView:(QuestionView *)view WithQuestion:(dataSou *)question{
-    if (question) {
-        view.labelQuiz.text = question.item;
-        view.labelA.text = question.optionA;
-        view.labelB.text = question.optionB;
-        view.labelC.text = question.optionC;
-        view.labelD.text = question.optionD;
-    }
+    dataSou *question = [self.quiz getNextQuiz];
+    [self.visitedView configQuestion:question btnIndex:self->choises[self.quiz.index0]];
+    [self.nextView configQuestion:[self.quiz getRandQuiz:self.quiz.index0+1] btnIndex:self->choises[self.quiz.index0+1]];
 }
 
 #pragma mark -- UI proc
@@ -162,13 +156,13 @@
             [self relocateViewsAfterStep];
             
             [self loadNextViewData];
+            [self loadProgressBarData];
+            [self.view bringSubviewToFront:self.progressBarbg];
             
             if (self.quiz.index0+1 == self.quiz.amount) {
                 [self.nextView removeFromSuperview];
                 self.nextView = nil;
             }
-            [self loadProgressBarData];
-            [self.view bringSubviewToFront:self.progressBarbg];
         }
     }];
 }
@@ -198,13 +192,13 @@
             [self relocateViewsAfterStep];
             
             [self loadPreViewData];
+            [self loadProgressBarData];
+            [self.view bringSubviewToFront:self.progressBarbg];
             
             if (self.quiz.index0 == 0) {
                 [self.preView removeFromSuperview];
                 self.preView = nil;
             }
-            [self loadProgressBarData];
-            [self.view bringSubviewToFront:self.progressBarbg];
         }
     }];
 }

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "dataSou.h"
+
 @protocol QuestionViewBtnIndexDelegate
 
 @required
@@ -33,7 +35,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *labelDImgView;
 
 
-- (void)configQuestion;
+- (void)configQuestion:(dataSou *)question btnIndex:(int)btnIndex;
+- (void)viewSelectedAtIndex:(NSInteger)index;
 - (void)awakeFromNib;
 - (IBAction)touchDown:(id)sender;
 
