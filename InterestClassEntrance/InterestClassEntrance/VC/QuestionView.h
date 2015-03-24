@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *labelDImgView;
 
 
+
 - (void)configQuestion:(dataSou *)question btnIndex:(int)btnIndex;
 - (void)viewSelectedAtIndex:(NSInteger)index;
 - (void)awakeFromNib;

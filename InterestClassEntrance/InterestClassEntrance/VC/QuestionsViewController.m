@@ -31,7 +31,6 @@
 #pragma mark -- Data Proc
 
 - (void)handleBtnIndex:(NSInteger)btnIndex{
-    NSLog(@"Nov.%ld按钮已被按下",(long)btnIndex);
     self->choises[self.quiz.index0] = (int)btnIndex;
 }
 

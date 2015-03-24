@@ -12,6 +12,7 @@
 
 - (void)configQuestion:(dataSou *)question btnIndex:(int)btnIndex{
     if (question) {
+
         self.labelQuiz.text = question.item;
         self.labelA.text = question.optionA;
         self.labelB.text = question.optionB;
