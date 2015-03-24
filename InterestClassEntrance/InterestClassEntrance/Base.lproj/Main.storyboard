@@ -211,9 +211,9 @@
                                 <action selector="quitTest:" destination="g38-QB-YWz" id="xaO-wj-kXA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="oTq-XU-vtg">
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="oTq-XU-vtg">
                             <connections>
-                                <segue destination="pFr-34-JQK" kind="show" id="wuZ-cc-1zd"/>
+                                <action selector="completeTest:" destination="g38-QB-YWz" id="6yF-YA-U7P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -222,6 +222,7 @@
                         <outlet property="progressBar" destination="dXD-ee-QJ4" id="6hF-qK-u2E"/>
                         <outlet property="progressBarbg" destination="WGh-bu-iRX" id="9yy-Hl-uM7"/>
                         <outlet property="progressLabel" destination="s8h-vv-bqq" id="R82-j8-YvF"/>
+                        <segue destination="pFr-34-JQK" kind="show" identifier="completeTest" id="WU9-5k-9Qg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>

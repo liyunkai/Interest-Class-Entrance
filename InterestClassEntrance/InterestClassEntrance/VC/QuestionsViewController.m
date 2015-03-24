@@ -258,6 +258,15 @@
     }
 }
 
+- (IBAction)completeTest:(id)sender {
+    if (self.quiz.index0 == self.quiz.amount-1) {
+        [self performSegueWithIdentifier:@"completeTest" sender:sender];
+    }else{
+        [[[UIAlertView alloc] initWithTitle:nil message:@"请答完全部题后再提交" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
+    }
+}
+
+
 
 /*
 

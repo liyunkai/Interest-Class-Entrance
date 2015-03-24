@@ -28,7 +28,31 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="Rmn-SD-yfr">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="405" height="800"/>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-Ks-Z8N">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="19" y="293" width="325" height="54"/>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="rhx-hF-W6h">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="19" y="364" width="325" height="54"/>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-EI-xkm">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="19" y="427" width="325" height="54"/>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="ZRh-xE-ALc">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="19" y="493" width="325" height="54"/>
                     </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aL-0w-M4t">
@@ -151,19 +175,19 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="359" width="325" height="55"/>
+                        <rect key="frame" x="53" y="359" width="285" height="55"/>
                     </variation>
                     <connections>
                         <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="NPe-Il-oh8"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="btnD" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-hw-rjQ">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="btnD" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-hw-rjQ">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="39" y="490" width="325" height="55"/>
+                        <rect key="frame" x="39" y="490" width="285" height="46"/>
                     </variation>
                     <connections>
                         <action selector="touchDown:" destination="-1" eventType="touchUpInside" id="f3F-9b-VUt"/>
@@ -174,6 +198,10 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Rmn-SD-yfr"/>
+                    <exclude reference="9yn-Ks-Z8N"/>
+                    <exclude reference="rhx-hF-W6h"/>
+                    <exclude reference="sZF-EI-xkm"/>
+                    <exclude reference="ZRh-xE-ALc"/>
                     <exclude reference="J6I-nA-hfB"/>
                     <exclude reference="6NM-8E-0bt"/>
                     <exclude reference="HoU-1G-npF"/>
@@ -188,6 +216,10 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="Rmn-SD-yfr"/>
+                    <include reference="9yn-Ks-Z8N"/>
+                    <include reference="rhx-hF-W6h"/>
+                    <include reference="sZF-EI-xkm"/>
+                    <include reference="ZRh-xE-ALc"/>
                     <include reference="J6I-nA-hfB"/>
                     <include reference="6NM-8E-0bt"/>
                     <include reference="HoU-1G-npF"/>
@@ -209,6 +241,7 @@
         <image name="Test_C" width="25" height="24"/>
         <image name="Test_C-" width="25" height="24"/>
         <image name="Test_beijing" width="250" height="444"/>
+        <image name="Test_selectedImg" width="250" height="46"/>
         <image name="star" width="19" height="18"/>
     </resources>
 </document>

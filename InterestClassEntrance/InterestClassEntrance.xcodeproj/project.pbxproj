@@ -23,7 +23,6 @@
 		A5614C9C1ABF0A410053D19D /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C991ABF0A410053D19D /* ASPopUpView.m */; };
 		A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */; };
 		A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9F1ABF0AEF0053D19D /* characterLable.m */; };
-		A5614CA51ABF0AEF0053D19D /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */; };
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
 		E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */; };
 		E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A665A31AB96F790055CCB1 /* QuestionView.m */; };
@@ -74,8 +73,6 @@
 		A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
 		A5614C9E1ABF0AEF0053D19D /* characterLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = characterLable.h; sourceTree = "<group>"; };
 		A5614C9F1ABF0AEF0053D19D /* characterLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = characterLable.m; sourceTree = "<group>"; };
-		A5614CA01ABF0AEF0053D19D /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
-		A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionUIView.xib; sourceTree = "<group>"; };
@@ -224,8 +221,6 @@
 			children = (
 				A5614C9E1ABF0AEF0053D19D /* characterLable.h */,
 				A5614C9F1ABF0AEF0053D19D /* characterLable.m */,
-				A5614CA01ABF0AEF0053D19D /* ConfirmViewController.h */,
-				A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */,
 				A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */,
 				A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */,
 				A5614C971ABF0A410053D19D /* ASProgressPopUpView */,
@@ -375,7 +370,6 @@
 				A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */,
 				E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */,
 				E4A816451AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld in Sources */,
-				A5614CA51ABF0AEF0053D19D /* ConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
