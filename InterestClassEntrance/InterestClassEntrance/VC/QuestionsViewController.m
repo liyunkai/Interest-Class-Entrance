@@ -37,14 +37,14 @@
 
 -(void)initViewsData{
     self.quiz = [[readDatabase alloc] init];
-    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLEBAME];
+//    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLEBAME];
     
     int seqInit;
     seqInit = 1;
     self.quiz.index0 = seqInit-1;
     
     [self loadProgressBarData];
-    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getCurrentQuiz]];
+    [self loadQuestionView:self.visitedView WithQuestion:[self.quiz getCurrentQuiz:3]];
     if (seqInit!=1) {
         [self loadQuestionView:self.preView WithQuestion:[self.quiz getRandQuiz:self.quiz.index0-1]];
     }
