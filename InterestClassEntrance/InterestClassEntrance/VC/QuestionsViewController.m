@@ -241,8 +241,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
+
+- (IBAction)quitTest:(id)sender {
+    UIAlertView *quitAlert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"您确定结束测试吗？\n您的测试进度将被保存" delegate:self cancelButtonTitle:@"继续测试" otherButtonTitles:@"结束测试", nil];
+    [quitAlert show];
+    //做数据保存
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
+
+/*
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

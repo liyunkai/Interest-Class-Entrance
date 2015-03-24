@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TD-2j-Sg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="358" y="295"/>
+            <point key="canvasLocation" x="141" y="318.75"/>
         </scene>
         <!--Test Choose View Controller-->
         <scene sceneID="JZM-Ag-dNV">
@@ -62,9 +62,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="72" y="213" width="90" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="VeI-EO-vPU" kind="show" id="rZb-4g-lW0"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1138" y="1659"/>
         </scene>
-        <!--Test Introduction View Controller-->
+        <!--试题介绍-->
         <scene sceneID="y5P-Ad-C8G">
             <objects>
                 <viewController id="VeI-EO-vPU" customClass="TestIntroductionViewController" sceneMemberID="viewController">
@@ -115,13 +112,13 @@
                                     <rect key="frame" x="77" y="288" width="85" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-LO-WMU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-LO-WMU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="开始测试">
+                                <state key="normal" title="开始测试" image="enter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="89" y="364" width="60" height="30"/>
+                                    <rect key="frame" x="112" y="483" width="170" height="44"/>
                                 </variation>
                                 <connections>
                                     <segue destination="g38-QB-YWz" kind="show" id="Hfb-mT-Skf"/>
@@ -144,12 +141,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="试题介绍" id="XiQ-bR-t1U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZ1-Tn-1St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834" y="1657"/>
         </scene>
-        <!--Questions View Controller-->
+        <!--测试中-->
         <scene sceneID="NdG-d0-5DW">
             <objects>
                 <viewController id="g38-QB-YWz" customClass="QuestionsViewController" sceneMemberID="viewController">
@@ -206,6 +204,20 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="测试中" id="eBG-HM-XLs">
+                        <barButtonItem key="leftBarButtonItem" title="退出" id="YQ4-cM-7a0">
+                            <connections>
+                                <action selector="quitTest:" destination="g38-QB-YWz" id="xaO-wj-kXA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="oTq-XU-vtg">
+                            <connections>
+                                <segue destination="pFr-34-JQK" kind="show" id="wuZ-cc-1zd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="progressBar" destination="dXD-ee-QJ4" id="6hF-qK-u2E"/>
                         <outlet property="progressBarbg" destination="WGh-bu-iRX" id="9yy-Hl-uM7"/>
@@ -215,24 +227,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2496" y="1656.75"/>
-        </scene>
-        <!--Report View Controller-->
-        <scene sceneID="xhb-vX-2iI">
-            <objects>
-                <viewController id="Wlk-cL-xhL" customClass="ReportViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mwd-hE-yln"/>
-                        <viewControllerLayoutGuide type="bottom" id="pUf-s2-Ehq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="i9m-gg-LZo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ADm-EF-n6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3146" y="1659"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRn-Xy-8lX">
@@ -245,7 +239,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="irK-HS-Ro3" kind="relationship" relationship="rootViewController" id="htQ-F8-80P"/>
+                        <segue destination="VeI-EO-vPU" kind="relationship" relationship="rootViewController" id="zDq-fy-3er"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvS-yj-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +326,7 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="Uqh-9T-Qlf"/>
                         <barButtonItem key="rightBarButtonItem" title="完成" id="jff-xO-s2c">
                             <connections>
-                                <segue destination="BB6-R8-dSf" kind="show" id="QXr-w2-ZVl"/>
+                                <segue destination="4eK-a0-8YO" kind="presentation" id="a3C-im-ycG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -348,40 +342,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuE-AK-99j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="967"/>
+            <point key="canvasLocation" x="1792.5" y="972.75"/>
         </scene>
-        <!--Confirm View Controller-->
-        <scene sceneID="175-Z6-uuT">
-            <objects>
-                <viewController id="BB6-R8-dSf" customClass="ConfirmViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pdv-Az-C4q"/>
-                        <viewControllerLayoutGuide type="bottom" id="moB-KL-4xW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ueI-GU-JwX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojG-NB-X0U">
-                                <rect key="frame" x="76" y="502" width="213" height="54"/>
-                                <state key="normal" image="enter.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="irK-HS-Ro3" kind="show" id="1gw-IO-CRT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qTb-Ur-G7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2594" y="967"/>
-        </scene>
-        <!--Report View Controller-->
+        <!--测试结果-->
         <scene sceneID="eID-VI-P8x">
             <objects>
                 <viewController id="pFr-34-JQK" customClass="ReportViewController" sceneMemberID="viewController">
@@ -432,6 +395,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="测试结果" id="IZH-wT-2B4">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="pdb-B1-S6G">
+                            <connections>
+                                <action selector="quit:" destination="pFr-34-JQK" id="MaI-KB-b2y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressView1" destination="VPS-f9-tUT" id="09B-cI-sS3"/>
                         <outlet property="progressView2" destination="n3p-0D-vbr" id="BOW-h6-4GJ"/>
@@ -440,9 +410,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urq-hT-X7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3308" y="967"/>
+            <point key="canvasLocation" x="3190.5" y="1659"/>
         </scene>
-        <!--Recommend View Controller-->
+        <!--兴趣班推荐-->
         <scene sceneID="VT2-4r-RYo">
             <objects>
                 <viewController id="KkA-dd-oVG" customClass="RecommendViewController" sceneMemberID="viewController">
@@ -455,10 +425,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="8qW-JC-tfI"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="兴趣班推荐" id="nTC-qs-cyI">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="dh7-Ih-3Ye">
+                            <connections>
+                                <action selector="quit:" destination="KkA-dd-oVG" id="4H5-tb-W4r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-xB-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4016" y="967"/>
+            <point key="canvasLocation" x="3841.5" y="1653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hmk-BU-8oU">
@@ -486,7 +466,4 @@
         <image name="fourStars.png" width="317" height="65"/>
         <image name="touxiang.png" width="89" height="66"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1gw-IO-CRT"/>
-    </inferredMetricsTieBreakers>
 </document>
