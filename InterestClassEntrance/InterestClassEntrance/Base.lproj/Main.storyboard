@@ -94,8 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试题名字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEf-fA-4Sp">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="测试题名字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ6-RK-GNN">
+                                <rect key="frame" x="244" y="194" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,8 +103,8 @@
                                     <rect key="frame" x="77" y="201" width="85" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试题简介" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-gb-96z">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="测试题简介" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOd-DQ-XQf">
+                                <rect key="frame" x="247" y="289" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,8 +112,8 @@
                                     <rect key="frame" x="77" y="288" width="85" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-LO-WMU">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECE-TM-dlr">
+                                <rect key="frame" x="255" y="384" width="91" height="30"/>
                                 <state key="normal" image="enter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -121,25 +121,11 @@
                                     <rect key="frame" x="108" y="483" width="170" height="44"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="g38-QB-YWz" kind="show" id="Hfb-mT-Skf"/>
+                                    <segue destination="g38-QB-YWz" kind="show" id="hhm-ge-2Cf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="HEf-fA-4Sp"/>
-                                <exclude reference="vLh-gb-96z"/>
-                                <exclude reference="2Zm-LO-WMU"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="HEf-fA-4Sp"/>
-                                <include reference="vLh-gb-96z"/>
-                                <include reference="2Zm-LO-WMU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="试题介绍" id="XiQ-bR-t1U"/>
                 </viewController>
@@ -159,11 +145,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGh-bu-iRX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-IC-ky5">
+                                <rect key="frame" x="157" y="93" width="286" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/128" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8h-vv-bqq">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                    <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znG-Fi-X7v">
+                                        <rect key="frame" x="93" y="29" width="150" height="2"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="77" y="19" width="150" height="2"/>
+                                        </variation>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="24/128" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blf-WI-KKu">
+                                        <rect key="frame" x="17" y="19" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -171,38 +163,12 @@
                                             <rect key="frame" x="15" y="8" width="60" height="21"/>
                                         </variation>
                                     </label>
-                                    <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-ee-QJ4">
-                                        <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="77" y="19" width="150" height="2"/>
-                                        </variation>
-                                    </progressView>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="s8h-vv-bqq"/>
-                                        <exclude reference="dXD-ee-QJ4"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="37" y="94" width="274" height="40"/>
-                                    <mask key="subviews">
-                                        <include reference="s8h-vv-bqq"/>
-                                        <include reference="dXD-ee-QJ4"/>
-                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="WGh-bu-iRX"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="WGh-bu-iRX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="测试中" id="eBG-HM-XLs">
@@ -219,15 +185,15 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="progressBar" destination="dXD-ee-QJ4" id="6hF-qK-u2E"/>
-                        <outlet property="progressBarbg" destination="WGh-bu-iRX" id="9yy-Hl-uM7"/>
-                        <outlet property="progressLabel" destination="s8h-vv-bqq" id="R82-j8-YvF"/>
+                        <outlet property="progressBar" destination="znG-Fi-X7v" id="doA-Kd-JHc"/>
+                        <outlet property="progressBarbg" destination="1Ze-IC-ky5" id="KiN-8Z-kVT"/>
+                        <outlet property="progressLabel" destination="Blf-WI-KKu" id="mZp-8s-NXr"/>
                         <segue destination="pFr-34-JQK" kind="show" identifier="completeTest" id="WU9-5k-9Qg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="1656.75"/>
+            <point key="canvasLocation" x="2496" y="1656"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRn-Xy-8lX">
