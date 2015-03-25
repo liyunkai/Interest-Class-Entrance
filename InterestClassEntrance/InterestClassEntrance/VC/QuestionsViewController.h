@@ -11,6 +11,9 @@
 #import "readDatabase.h"
 
 @interface QuestionsViewController : UIViewController <UIGestureRecognizerDelegate, QuestionViewBtnIndexDelegate>
+{
+    int choises[100];
+}
 
 @property(nonatomic, retain) QuestionView *visitedView;
 @property(nonatomic, retain) QuestionView *preView;

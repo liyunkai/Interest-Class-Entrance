@@ -17,13 +17,10 @@
 		57FFE97F1ABFFD0A00D6ECDC /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE9761ABFFD0A00D6ECDC /* selected.png */; };
 		57FFE9801ABFFD0A00D6ECDC /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE9771ABFFD0A00D6ECDC /* touxiang.png */; };
 		57FFE9821ABFFE4D00D6ECDC /* test.db in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE9811ABFFE4D00D6ECDC /* test.db */; };
-		57FFE9881ABFFEEA00D6ECDC /* dataSou.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FFE9851ABFFEEA00D6ECDC /* dataSou.m */; };
-		57FFE9891ABFFEEA00D6ECDC /* readDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FFE9871ABFFEEA00D6ECDC /* readDatabase.m */; };
 		57FFE98B1ABFFFF500D6ECDC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FFE98A1ABFFFF500D6ECDC /* libsqlite3.dylib */; };
 		A5614C9C1ABF0A410053D19D /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C991ABF0A410053D19D /* ASPopUpView.m */; };
 		A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */; };
 		A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9F1ABF0AEF0053D19D /* characterLable.m */; };
-		A5614CA51ABF0AEF0053D19D /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */; };
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
 		E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */; };
 		E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A665A31AB96F790055CCB1 /* QuestionView.m */; };
@@ -40,6 +37,8 @@
 		E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */; };
 		E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816791AB80B950006E5B6 /* ReportViewController.m */; };
 		E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */; };
+		E4AC7F221AC24E7A00A25F78 /* dataSou.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */; };
+		E4AC7F231AC24E7A00A25F78 /* readDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F211AC24E7A00A25F78 /* readDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +62,6 @@
 		57FFE9761ABFFD0A00D6ECDC /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		57FFE9771ABFFD0A00D6ECDC /* touxiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiang.png; sourceTree = "<group>"; };
 		57FFE9811ABFFE4D00D6ECDC /* test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.db; sourceTree = "<group>"; };
-		57FFE9841ABFFEEA00D6ECDC /* dataSou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataSou.h; sourceTree = SOURCE_ROOT; };
-		57FFE9851ABFFEEA00D6ECDC /* dataSou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataSou.m; sourceTree = SOURCE_ROOT; };
-		57FFE9861ABFFEEA00D6ECDC /* readDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readDatabase.h; sourceTree = SOURCE_ROOT; };
-		57FFE9871ABFFEEA00D6ECDC /* readDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = readDatabase.m; sourceTree = SOURCE_ROOT; };
 		57FFE98A1ABFFFF500D6ECDC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A5614C981ABF0A410053D19D /* ASPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopUpView.h; sourceTree = "<group>"; };
 		A5614C991ABF0A410053D19D /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
@@ -74,8 +69,6 @@
 		A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
 		A5614C9E1ABF0AEF0053D19D /* characterLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = characterLable.h; sourceTree = "<group>"; };
 		A5614C9F1ABF0AEF0053D19D /* characterLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = characterLable.m; sourceTree = "<group>"; };
-		A5614CA01ABF0AEF0053D19D /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
-		A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionUIView.xib; sourceTree = "<group>"; };
@@ -105,6 +98,10 @@
 		E4A816791AB80B950006E5B6 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildInfoViewController.h; sourceTree = "<group>"; };
 		E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildInfoViewController.m; sourceTree = "<group>"; };
+		E4AC7F1E1AC24E7A00A25F78 /* dataSou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataSou.h; path = Class/dataSou.h; sourceTree = "<group>"; };
+		E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataSou.m; path = Class/dataSou.m; sourceTree = "<group>"; };
+		E4AC7F201AC24E7A00A25F78 /* readDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = readDatabase.h; path = Class/readDatabase.h; sourceTree = "<group>"; };
+		E4AC7F211AC24E7A00A25F78 /* readDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = readDatabase.m; path = Class/readDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +126,10 @@
 		57FFE9831ABFFE9A00D6ECDC /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				57FFE9841ABFFEEA00D6ECDC /* dataSou.h */,
-				57FFE9851ABFFEEA00D6ECDC /* dataSou.m */,
-				57FFE9861ABFFEEA00D6ECDC /* readDatabase.h */,
-				57FFE9871ABFFEEA00D6ECDC /* readDatabase.m */,
+				E4AC7F1E1AC24E7A00A25F78 /* dataSou.h */,
+				E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */,
+				E4AC7F201AC24E7A00A25F78 /* readDatabase.h */,
+				E4AC7F211AC24E7A00A25F78 /* readDatabase.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -224,8 +221,6 @@
 			children = (
 				A5614C9E1ABF0AEF0053D19D /* characterLable.h */,
 				A5614C9F1ABF0AEF0053D19D /* characterLable.m */,
-				A5614CA01ABF0AEF0053D19D /* ConfirmViewController.h */,
-				A5614CA11ABF0AEF0053D19D /* ConfirmViewController.m */,
 				A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */,
 				A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */,
 				A5614C971ABF0A410053D19D /* ASProgressPopUpView */,
@@ -362,20 +357,19 @@
 				E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */,
 				E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */,
 				A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */,
-				57FFE9891ABFFEEA00D6ECDC /* readDatabase.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
 				E4A8166E1AB80A0C0006E5B6 /* ViewController.m in Sources */,
-				57FFE9881ABFFEEA00D6ECDC /* dataSou.m in Sources */,
 				A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
 				E4A8163F1AB809260006E5B6 /* main.m in Sources */,
 				E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */,
 				A5614C9C1ABF0A410053D19D /* ASPopUpView.m in Sources */,
+				E4AC7F231AC24E7A00A25F78 /* readDatabase.m in Sources */,
+				E4AC7F221AC24E7A00A25F78 /* dataSou.m in Sources */,
 				E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */,
 				A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */,
 				E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */,
 				E4A816451AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld in Sources */,
-				A5614CA51ABF0AEF0053D19D /* ConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
