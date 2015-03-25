@@ -25,13 +25,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="32" width="600" height="600"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="-129" y="0.0" width="600" height="600"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="405" height="800"/>
                     </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Mt-X7e">
-                    <rect key="frame" x="113" y="109" width="375" height="82"/>
+                    <rect key="frame" x="117" y="128" width="375" height="82"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -44,7 +47,7 @@
                     </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-fY-WnI">
-                    <rect key="frame" x="66" y="138" width="25" height="23"/>
+                    <rect key="frame" x="70" y="157" width="25" height="23"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="44" y="155" width="26" height="28"/>
                     </variation>
@@ -139,7 +142,7 @@
                         <rect key="frame" x="45" y="441" width="26" height="28"/>
                     </variation>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WW-St4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_D" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WW-St4">
                     <rect key="frame" x="68" y="430" width="29" height="33"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="45" y="506" width="26" height="28"/>
@@ -205,6 +208,7 @@
         <image name="Test_B-" width="25" height="24"/>
         <image name="Test_C" width="25" height="24"/>
         <image name="Test_C-" width="25" height="24"/>
+        <image name="Test_D" width="24" height="24"/>
         <image name="Test_beijing" width="250" height="444"/>
         <image name="Test_selectedImg" width="250" height="46"/>
         <image name="star" width="19" height="18"/>

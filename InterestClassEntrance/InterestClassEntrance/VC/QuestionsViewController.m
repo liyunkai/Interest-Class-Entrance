@@ -222,7 +222,7 @@
 
 - (void) resetView{
     [UIView beginAnimations:@"resetView" context:nil];
-    [UIView setAnimationDuration:1];
+    [UIView setAnimationDuration:0.5f];
     if (self.quiz.index0 != 0) {
         self.preView.transform = CGAffineTransformIdentity;
     }
