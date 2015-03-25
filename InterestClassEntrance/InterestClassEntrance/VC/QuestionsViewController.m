@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 李允恺. All rights reserved.
 //
 
-#define TABLEBAME  @"quizEysenck"
+#define TABLEBAME_EYSENCK  @"quizEysenck"
+#define TABLENAME_TALENT   @"quizTalent"
 
 #import "QuestionsViewController.h"
 
@@ -36,7 +37,7 @@
 
 -(void)initViewsData{
     self.quiz = [[readDatabase alloc] init];
-    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLEBAME];
+    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLENAME_TALENT];
     //配置题目开始题数
     int seqInit;
     seqInit = 1;
