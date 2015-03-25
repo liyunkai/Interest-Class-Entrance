@@ -12,13 +12,30 @@
 
 - (void)configQuestion:(dataSou *)question btnIndex:(int)btnIndex{
     if (question) {
-
+        [self viewSelectedAtIndex:btnIndex];
         self.labelQuiz.text = question.item;
         self.labelA.text = question.optionA;
         self.labelB.text = question.optionB;
         self.labelC.text = question.optionC;
         self.labelD.text = question.optionD;
-        [self viewSelectedAtIndex:btnIndex];
+        if(question.optionA.length == 0){
+            [self.labelAImgView setHidden:YES];
+            [(UIButton *)[self viewWithTag:1] setHidden:YES];
+        }
+        if(question.optionB.length == 0){
+            [self.labelBImgView setHidden:YES];
+            [(UIButton *)[self viewWithTag:2] setHidden:YES];
+        }
+
+        if(question.optionC.length == 0){
+            [self.labelCImgView setHidden:YES];
+            [(UIButton *)[self viewWithTag:3] setHidden:YES];
+        }
+
+        if(question.optionD.length == 0){
+            [self.labelDImgView setHidden:YES];
+            [(UIButton *)[self viewWithTag:4] setHidden:YES];
+        }
     }
 }
 
@@ -45,6 +62,7 @@
     self.labelAImgView.image = [UIImage imageNamed:@"Test_A"];
     self.labelBImgView.image = [UIImage imageNamed:@"Test_B"];
     self.labelCImgView.image = [UIImage imageNamed:@"Test_C"];
+    self.labelDImgView.image = [UIImage imageNamed:@"Test_D"];
     //
     //入口断言
     if (index<1|| index>4) {
@@ -62,7 +80,7 @@
             self.labelCImgView.image = [UIImage imageNamed:@"Test_C-"];
         }
         if (index == 4) {
-            
+            self.labelDImgView.image = [UIImage imageNamed:@"Test_D-"];
         }
     }
 }

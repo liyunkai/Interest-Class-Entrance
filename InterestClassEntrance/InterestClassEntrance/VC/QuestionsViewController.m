@@ -56,6 +56,7 @@
 - (void)loadProgressBarData{
     self.progressLabel.text = [NSString stringWithFormat:@"%d/%ld",self.quiz.index0+1, (long)self.quiz.amount];
     [self.progressBar setProgress:(float)(self.quiz.index0+1)/self.quiz.amount animated:YES];
+    [self.view bringSubviewToFront:self.progressBarbg];
 }
 
 - (void)loadPreViewData{
@@ -157,7 +158,6 @@
             
             [self loadNextViewData];
             [self loadProgressBarData];
-            [self.view bringSubviewToFront:self.progressBarbg];
             
             if (self.quiz.index0+1 == self.quiz.amount) {
                 [self.nextView removeFromSuperview];
@@ -193,7 +193,6 @@
             
             [self loadPreViewData];
             [self loadProgressBarData];
-            [self.view bringSubviewToFront:self.progressBarbg];
             
             if (self.quiz.index0 == 0) {
                 [self.preView removeFromSuperview];
@@ -224,7 +223,7 @@
 
 - (void) resetView{
     [UIView beginAnimations:@"resetView" context:nil];
-    [UIView setAnimationDuration:1];
+    [UIView setAnimationDuration:0.5f];
     if (self.quiz.index0 != 0) {
         self.preView.transform = CGAffineTransformIdentity;
     }
