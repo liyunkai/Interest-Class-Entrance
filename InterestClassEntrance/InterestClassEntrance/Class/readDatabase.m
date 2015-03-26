@@ -172,6 +172,124 @@
     return nil;
 }
 
+/*
+ *与评价维度函数接口
+ *
+ *
+ *
+ *
+ *
+ */
+
+-(NSString *)getEvaluatebyScore:(NSMutableArray *)sub{
+    
+    
+    
+    return nil;
+}
+
+#pragma mark--是否为加*题
+
+-(BOOL)isSpecial:(int)score{
+    if (score > 8) {
+        return YES;
+    }
+    return NO;
+}
+
+/*
+ *分数提取函数
+ *getScore
+ *输入：选项
+ *输出：得分
+ */
+
+- (int)getScorefromChooice:(int)choice :(NSString *)answer{
+    
+    int ans = [answer intValue];
+    int marks = [self getMarks:answer];
+    int score;
+    
+    switch (choice) {
+        case 0:
+            score = marks;
+            break;
+            
+        case 1:
+            score = marks/2;
+            break;
+            
+        case 2:
+        case 3:
+            if ([self isSpecial:ans]) {
+                score = 3;
+            } else {
+                score = 0;
+            }
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    return score;
+}
+
+/*
+ *分值解析函数
+ *
+ *输入:正确答案
+ *输出:分数
+ *
+ *
+ *
+ *   *       分数编码位3位
+ *  ____   ____  ____  ____
+ */
+
+-(int)getMarks:(NSString *)answer{
+    
+    int ans = [answer intValue];
+    int res;
+    
+    switch (ans & 0x07) {
+        case 0:
+            res = 12;
+            break;
+            
+        case 1:
+            res = 16;
+            break;
+            
+        case 2:
+            res = 18;
+            break;
+            
+        case 3:
+            res = 20;
+            break;
+            
+        case 4:
+            res = 24;
+            break;
+            
+        case 5:
+            res = 26;
+            break;
+            
+        default:
+            break;
+            
+    }
+    
+    return res;
+}
+
+
+
+
+
 
 
 @end
