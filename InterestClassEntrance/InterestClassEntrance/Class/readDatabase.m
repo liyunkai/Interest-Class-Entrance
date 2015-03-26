@@ -10,11 +10,13 @@
 
 #define DBNAME  @"test.db"
 #define TABLEBAME  @"quizEysenck"
+#define TABLEBAME_TALENT  @"quizTalent"
 
 @interface readDatabase()
 {
     sqlite3 *db;
     NSMutableArray *subject1;
+    int pingjia[7];
 }
 @end
 
@@ -27,6 +29,7 @@
         self.index0 = 0;
         self.subject = [[NSMutableArray alloc] init];
         self->db = [self openDatabase];
+        self.amount = [self getCountofRows:TABLEBAME_TALENT];
     }
     
     return self;
@@ -126,7 +129,7 @@
 
         }
     }
-    self.amount = [self.subject count];
+//    self.amount = [self.subject count];
     return self.subject; //subject1;//
     
 }
@@ -145,6 +148,7 @@
     }
     
     return [self.subject objectAtIndex:self.index0];
+//    return [self findDatabyId:TABLEBAME :self.index0];
 }
 
 -(dataSou *)getLastQuiz{
@@ -155,6 +159,7 @@
     }
     
     return [self.subject objectAtIndex:self.index0];
+//    return [self findDatabyId:TABLEBAME :self.index0];
     
 }
 
@@ -181,11 +186,101 @@
  *
  */
 
--(NSString *)getEvaluatebyScore:(NSMutableArray *)sub{
+-(int *)getEvaluatebyScore:(NSMutableArray *)sub :(int *)choice{
+    
+    dataSou *tmp;
+    int sum = 0;
+//    int 
+    
+    for (int i=0; i<7; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[0] = [self cutOffScore:sum];
     
     
+    sum = 0;
+    for (int i=7; i<14; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[1] = [self cutOffScore:sum];
     
-    return nil;
+    
+    sum = 0;
+    for (int i=14; i<20; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[2] = [self cutOffScore:sum];
+    
+    
+    sum = 0;
+    for (int i=20; i<25; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[3] = [self cutOffScore:sum];
+    
+    
+    sum = 0;
+    for (int i=25; i<32; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[4] = [self cutOffScore:sum];
+    
+   
+    sum = 0;
+    for (int i=32; i<39; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    
+    pingjia[5] = [self cutOffScore:sum];
+    
+    sum = 0;
+    for (int i=39; i<44; i++) {
+        tmp = [sub objectAtIndex:i];
+        
+        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        
+    }
+    pingjia[6] = [self cutOffScore:sum];
+    
+    NSLog(@"%d",pingjia[0]);
+    NSLog(@"%d",pingjia[1]);
+    NSLog(@"%d",pingjia[2]);
+    NSLog(@"%d",pingjia[3]);
+    NSLog(@"%d",pingjia[4]);
+    NSLog(@"%d",pingjia[5]);
+    NSLog(@"%d",pingjia[6]);
+//    NSLog(@"%d",pingjia[0]);
+    
+    return pingjia;
+    
+}
+
+-(int)cutOffScore:(int)sc{
+    
+    if (sc < 25) {
+        return 25;
+    } else if(sc > 85){
+        return 85;
+    }else
+        return sc;
 }
 
 #pragma mark--是否为加*题
@@ -211,16 +306,16 @@
     int score;
     
     switch (choice) {
-        case 0:
+        case 1:
             score = marks;
             break;
             
-        case 1:
+        case 2:
             score = marks/2;
             break;
             
-        case 2:
         case 3:
+        case 4:
             if ([self isSpecial:ans]) {
                 score = 3;
             } else {
@@ -230,6 +325,7 @@
             break;
             
         default:
+            score = 0;
             break;
     }
     
@@ -287,6 +383,84 @@
 }
 
 
+#pragma mark:按照id（NOT NULL）来获取题目总数
+- (int)getCountofRows:(NSString *)tableName{
+    
+    NSString *sqlQuery = [@"SELECT COUNT(*) AS id FROM " stringByAppendingString:tableName];//quizEysenck
+    int p = 0;
+    char **ss;
+    
+    if (sqlite3_get_table(db, [sqlQuery UTF8String], &ss, &p, nil, nil) == SQLITE_OK )
+    {
+        return atoi(ss[1]);
+    }
+    return -1;
+}
+
+
+
+
+#pragma mark:按照id来获取特定行的值
+
+- (dataSou *)findDatabyId:(NSString *)tableName :(int)index{
+    dataSou * temp = [dataSou alloc];
+    sqlite3_stmt *statement=nil;
+    
+    NSString *sqlQuery = [NSString stringWithFormat:@"SELECT * FROM '%@' WHERE ID = ?",tableName];
+    
+    int flag=sqlite3_prepare_v2(db, [sqlQuery UTF8String], -1, &statement, nil);//调用预处理函数将sql语句赋值给statement对象
+    if (flag==SQLITE_OK)
+    {
+        sqlite3_bind_int(statement, 1, index);//给问号占位符赋值
+        
+        while (sqlite3_step(statement) == SQLITE_ROW)
+        {
+            
+            int _id = sqlite3_column_int(statement, 0);
+            temp._id = _id;
+            
+            
+            char *item = (char*)sqlite3_column_text(statement, 1);
+            NSString *_item = [[NSString alloc]initWithUTF8String:item];
+            temp.item = _item;
+            
+            char *optionA = (char*)sqlite3_column_text(statement, 2);
+            NSString *_optionA = [[NSString alloc]initWithUTF8String:optionA];
+            temp.optionA = _optionA;
+            
+            char *optionB = (char*)sqlite3_column_text(statement, 3);
+            NSString *_optionB = [[NSString alloc]initWithUTF8String:optionB];
+            temp.optionB = _optionB;
+            
+            char *optionC = (char*)sqlite3_column_text(statement, 4);
+            if (optionC != nil) {
+                NSString *_optionC = [[NSString alloc]initWithUTF8String:optionC];
+                temp.optionC = _optionC;
+            }else {
+                temp.optionC = nil;
+            }
+            
+            
+            
+            char *optionD = (char*)sqlite3_column_text(statement, 5);
+            if (optionD != nil) {
+                NSString *_optionD = [[NSString alloc]initWithUTF8String:optionD];
+                temp.optionD = _optionD;
+            } else {
+                temp.optionD = nil;
+            }
+            
+            
+            char *answer = (char*)sqlite3_column_text(statement, 6);
+            NSString *_answer = [[NSString alloc]initWithUTF8String:answer];
+            temp.answer = _answer;
+            
+        }
+        sqlite3_finalize(statement);
+        return temp;
+    }
+    return nil;
+}
 
 
 

@@ -10,6 +10,7 @@
 #define TABLENAME_TALENT   @"quizTalent"
 
 #import "QuestionsViewController.h"
+#import "ReportViewController.h"
 
 @interface QuestionsViewController ()
 
@@ -268,13 +269,17 @@
 
 
 
-/*
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    ReportViewController *desVC = segue.destinationViewController;
+    
+    desVC.gress = [self.quiz getEvaluatebyScore:self.quiz.subject :choises];
 }
-*/
+
 
 @end

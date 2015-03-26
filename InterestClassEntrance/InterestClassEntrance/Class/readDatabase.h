@@ -26,6 +26,6 @@
 -(dataSou *)getNextQuiz;
 -(dataSou *)getLastQuiz;
 - (dataSou *)getCurrentQuiz;
--(NSString *)getEvaluatebyScore:(NSMutableArray *)sub;
+-(int *)getEvaluatebyScore:(NSMutableArray *)sub :(int *)choice;
 
 @end

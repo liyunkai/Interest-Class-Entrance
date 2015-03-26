@@ -11,6 +11,6 @@
 
 @interface ReportViewController : UIViewController<ASProgressPopUpViewDataSource>
 
-
+@property(assign,nonatomic) int *gress;
 
 @end
