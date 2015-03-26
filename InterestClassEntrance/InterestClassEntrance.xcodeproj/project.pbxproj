@@ -22,6 +22,8 @@
 		A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */; };
 		A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9F1ABF0AEF0053D19D /* characterLable.m */; };
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
+		E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */; };
+		E43E3FB01AC3D28700D2B0B4 /* HorizontalScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */; };
 		E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */; };
 		E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A665A31AB96F790055CCB1 /* QuestionView.m */; };
 		E4A8163F1AB809260006E5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8163E1AB809260006E5B6 /* main.m */; };
@@ -31,7 +33,7 @@
 		E4A8164D1AB809260006E5B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A8164C1AB809260006E5B6 /* Images.xcassets */; };
 		E4A816501AB809260006E5B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A8164E1AB809260006E5B6 /* LaunchScreen.xib */; };
 		E4A8165C1AB809270006E5B6 /* InterestClassEntranceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8165B1AB809270006E5B6 /* InterestClassEntranceTests.m */; };
-		E4A8166E1AB80A0C0006E5B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8166C1AB80A0C0006E5B6 /* ViewController.m */; };
+		E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */; };
 		E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816701AB80B330006E5B6 /* TestChooseViewController.m */; };
 		E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816731AB80B560006E5B6 /* TestIntroductionViewController.m */; };
 		E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */; };
@@ -71,6 +73,9 @@
 		A5614C9F1ABF0AEF0053D19D /* characterLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = characterLable.m; sourceTree = "<group>"; };
 		A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCell.h; sourceTree = "<group>"; };
+		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollCell.m; sourceTree = "<group>"; };
+		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalScrollCell.xib; sourceTree = "<group>"; };
 		E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionUIView.xib; sourceTree = "<group>"; };
 		E4A665A21AB96F790055CCB1 /* QuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionView.h; sourceTree = "<group>"; };
 		E4A665A31AB96F790055CCB1 /* QuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionView.m; sourceTree = "<group>"; };
@@ -86,8 +91,8 @@
 		E4A816551AB809270006E5B6 /* InterestClassEntranceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestClassEntranceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A8165A1AB809270006E5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A8165B1AB809270006E5B6 /* InterestClassEntranceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestClassEntranceTests.m; sourceTree = "<group>"; };
-		E4A8166B1AB80A0C0006E5B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4A8166C1AB80A0C0006E5B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestCategoryViewController.h; sourceTree = "<group>"; };
+		E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestCategoryViewController.m; sourceTree = "<group>"; };
 		E4A8166F1AB80B330006E5B6 /* TestChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestChooseViewController.h; sourceTree = "<group>"; };
 		E4A816701AB80B330006E5B6 /* TestChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestChooseViewController.m; sourceTree = "<group>"; };
 		E4A816721AB80B560006E5B6 /* TestIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestIntroductionViewController.h; sourceTree = "<group>"; };
@@ -219,6 +224,9 @@
 		E4A816681AB80A0C0006E5B6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */,
+				E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */,
+				E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */,
 				A5614C9E1ABF0AEF0053D19D /* characterLable.h */,
 				A5614C9F1ABF0AEF0053D19D /* characterLable.m */,
 				A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */,
@@ -232,8 +240,8 @@
 				E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */,
 				E4A816781AB80B950006E5B6 /* ReportViewController.h */,
 				E4A816791AB80B950006E5B6 /* ReportViewController.m */,
-				E4A8166B1AB80A0C0006E5B6 /* ViewController.h */,
-				E4A8166C1AB80A0C0006E5B6 /* ViewController.m */,
+				E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */,
+				E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */,
 				E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */,
 				E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */,
 				E4A665A21AB96F790055CCB1 /* QuestionView.h */,
@@ -330,6 +338,7 @@
 				57FFE97A1ABFFD0A00D6ECDC /* bgImage.png in Resources */,
 				57FFE97B1ABFFD0A00D6ECDC /* border.png in Resources */,
 				57FFE9791ABFFD0A00D6ECDC /* bg.png in Resources */,
+				E43E3FB01AC3D28700D2B0B4 /* HorizontalScrollCell.xib in Resources */,
 				57FFE9781ABFFD0A00D6ECDC /* beijing.png in Resources */,
 				57FFE97D1ABFFD0A00D6ECDC /* enter.png in Resources */,
 				E4A816501AB809260006E5B6 /* LaunchScreen.xib in Resources */,
@@ -356,9 +365,10 @@
 			files = (
 				E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */,
 				E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */,
+				E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */,
 				A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
-				E4A8166E1AB80A0C0006E5B6 /* ViewController.m in Sources */,
+				E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */,
 				A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
 				E4A8163F1AB809260006E5B6 /* main.m in Sources */,
