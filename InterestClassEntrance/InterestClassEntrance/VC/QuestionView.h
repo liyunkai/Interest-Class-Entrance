@@ -29,7 +29,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelC;
 @property (weak, nonatomic) IBOutlet UILabel *labelD;
 
-@property (weak, nonatomic) IBOutlet UIImageView *quizeImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *labelAImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *labelBImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *labelCImgView;
