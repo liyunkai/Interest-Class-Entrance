@@ -9,9 +9,7 @@
 #import "InterestCategoryViewController.h"
 #import "HorizontalScrollCell.h"
 @interface InterestCategoryViewController ()<HorizontalScrollCellDelegate>
-{
-    NSArray *images;
-}
+
 @end
 
 @implementation InterestCategoryViewController
@@ -19,31 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [self prepareImages];
-    
+    self.interestCategInfo = [[InterestCategoryClass alloc] init];
     [self setUpCollection];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-//-(void)viewDidLayoutSubviews
-//{
-//    [self.collection setFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height)];
-//}
-
--(void)prepareImages
-{
-    NSMutableArray *tmp = [[NSMutableArray alloc]init];
-    for(int i = 0; i < 5; i++)
-    {
-        [tmp addObject:[UIImage imageNamed:[NSString stringWithFormat:@"img%i.jpg", i]]];
-    }
-    
-    images = [[NSArray alloc]initWithArray:tmp];
 }
 
 -(void)setUpCollection
@@ -64,7 +44,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;
+    return INTEREST_CATEGORY_ROW;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -73,7 +53,8 @@
                                                                          forIndexPath:indexPath];
         
     [hsc setBackgroundColor:[UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:0.5f]];
-    [hsc setUpCellWithArray:images];
+    
+    [hsc setUpCellWithArray:[self.interestCategInfo imgArrayForRowAtIndex:indexPath.row]];
     
     [hsc.scroll setFrame:CGRectMake(hsc.scroll.frame.origin.x, hsc.scroll.frame.origin.y, hsc.frame.size.width, 164)];
     
@@ -92,6 +73,39 @@
 -(void)cellSelected
 {
     NSLog(@"Selected !!");
+}
+
+@end
+
+
+@implementation InterestCategoryClass
+
+-(id)init{
+    self = [super init];
+    if (self) {
+        self->columArr[0] = 4;
+        self->columArr[1] = 4;
+        self->columArr[2] = 4;
+        self->columArr[3] = 4;
+    }
+    return self;
+}
+
+-(NSArray *)imgArrayForRowAtIndex:(char)rowIndex{
+    if(rowIndex>=0 && rowIndex<INTEREST_CATEGORY_ROW){
+        NSMutableArray *imgArr = [[NSMutableArray alloc] init];
+        for (int i =0; i<self->columArr[rowIndex]; ++i) {
+            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"InterCateg0_img%d",i]];
+            if (img) {
+                [imgArr addObject:img];
+            }else{
+                img = [UIImage imageNamed:@"photo"];
+                [imgArr addObject:img];
+            }
+        }
+        return [[NSArray alloc] initWithArray:imgArr];
+    }
+    return nil;
 }
 
 @end
