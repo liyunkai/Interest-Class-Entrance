@@ -10,7 +10,14 @@
 
 @class HorizontalScrollCellAction;
 @protocol HorizontalScrollCellDelegate <NSObject>
--(void)cellSelected;
+-(void)cellSelectedWithRow:(NSInteger)row Column:(NSInteger)column;
+@end
+
+@interface CustomInterCategView : UIView
+
+@property(nonatomic,assign) NSInteger row;
+@property(nonatomic,assign) NSInteger column;
+
 @end
 
 @interface HorizontalScrollCell : UICollectionViewCell <UIScrollViewDelegate>
@@ -24,7 +31,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property (strong, nonatomic) IBOutlet UILabel *title;
--(void)setUpCellWithArray:(NSArray *)array;
+-(void)setUpCellWithArray:(NSArray *)array andRow:(NSInteger)row;
 
 @property (nonatomic,strong) id<HorizontalScrollCellDelegate> cellDelegate;
 

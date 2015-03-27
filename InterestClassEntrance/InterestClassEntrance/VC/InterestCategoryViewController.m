@@ -52,11 +52,14 @@
     HorizontalScrollCell *hsc =[collectionView dequeueReusableCellWithReuseIdentifier:@"cvcHsc"
                                                                          forIndexPath:indexPath];
         
-    [hsc setBackgroundColor:[UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:0.5f]];
+//    [hsc setBackgroundColor:[UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:0.5f]];
+    [hsc setBackgroundColor:[UIColor whiteColor]];
     
-    [hsc setUpCellWithArray:[self.interestCategInfo imgArrayForRowAtIndex:indexPath.row]];
+    [hsc setUpCellWithArray:[self.interestCategInfo imgArrayForRowAtIndex:indexPath.row] andRow:indexPath.row];
     
-    [hsc.scroll setFrame:CGRectMake(hsc.scroll.frame.origin.x, hsc.scroll.frame.origin.y, hsc.frame.size.width, 164)];
+    hsc.title.text = [self.interestCategInfo.categNameArr objectAtIndex:indexPath.row];
+    
+    [hsc.scroll setFrame:CGRectMake(hsc.scroll.frame.origin.x, hsc.scroll.frame.origin.y, hsc.frame.size.width, 120)];
     
     hsc.cellDelegate = self;
     
@@ -65,47 +68,16 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize retval = CGSizeMake(self.view.frame.size.width - 10, 200);
+    CGSize retval = CGSizeMake(self.view.frame.size.width - 10, 150);
     
     return retval;
 }
 
--(void)cellSelected
+-(void)cellSelectedWithRow:(NSInteger)row Column:(NSInteger)column
 {
-    NSLog(@"Selected !!");
+    NSLog(@"Selected !! %ld, %ld",(long)row,(long)column);
 }
 
 @end
 
 
-@implementation InterestCategoryClass
-
--(id)init{
-    self = [super init];
-    if (self) {
-        self->columArr[0] = 4;
-        self->columArr[1] = 4;
-        self->columArr[2] = 4;
-        self->columArr[3] = 4;
-    }
-    return self;
-}
-
--(NSArray *)imgArrayForRowAtIndex:(char)rowIndex{
-    if(rowIndex>=0 && rowIndex<INTEREST_CATEGORY_ROW){
-        NSMutableArray *imgArr = [[NSMutableArray alloc] init];
-        for (int i =0; i<self->columArr[rowIndex]; ++i) {
-            UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"InterCateg0_img%d",i]];
-            if (img) {
-                [imgArr addObject:img];
-            }else{
-                img = [UIImage imageNamed:@"photo"];
-                [imgArr addObject:img];
-            }
-        }
-        return [[NSArray alloc] initWithArray:imgArr];
-    }
-    return nil;
-}
-
-@end

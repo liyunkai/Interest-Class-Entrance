@@ -24,6 +24,7 @@
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
 		E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */; };
 		E43E3FB01AC3D28700D2B0B4 /* HorizontalScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */; };
+		E4878BAB1AC415FC00205E1B /* InterestCategoryClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */; };
 		E4A21BBC1ABB105400DDB18C /* QuestionUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */; };
 		E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A665A31AB96F790055CCB1 /* QuestionView.m */; };
 		E4A8163F1AB809260006E5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8163E1AB809260006E5B6 /* main.m */; };
@@ -76,6 +77,8 @@
 		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCell.h; sourceTree = "<group>"; };
 		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollCell.m; sourceTree = "<group>"; };
 		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalScrollCell.xib; sourceTree = "<group>"; };
+		E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestCategoryClass.h; sourceTree = "<group>"; };
+		E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestCategoryClass.m; sourceTree = "<group>"; };
 		E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionUIView.xib; sourceTree = "<group>"; };
 		E4A665A21AB96F790055CCB1 /* QuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionView.h; sourceTree = "<group>"; };
 		E4A665A31AB96F790055CCB1 /* QuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionView.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */,
 				E4AC7F201AC24E7A00A25F78 /* readDatabase.h */,
 				E4AC7F211AC24E7A00A25F78 /* readDatabase.m */,
+				E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */,
+				E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */,
 				A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
+				E4878BAB1AC415FC00205E1B /* InterestCategoryClass.m in Sources */,
 				E4A8163F1AB809260006E5B6 /* main.m in Sources */,
 				E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */,
 				A5614C9C1ABF0A410053D19D /* ASPopUpView.m in Sources */,

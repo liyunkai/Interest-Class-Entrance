@@ -16,20 +16,24 @@
  
 }
 
--(void)setUpCellWithArray:(NSArray *)array
+-(void)setUpCellWithArray:(NSArray *)array andRow:(NSInteger)row
 {
     CGFloat xbase = 10;
     CGFloat width = 100;
     
     [self.scroll setScrollEnabled:YES];
-    [self.scroll setShowsHorizontalScrollIndicator:NO];
+    [self.scroll setShowsHorizontalScrollIndicator:YES];
+    [self.scroll setShowsVerticalScrollIndicator:NO];
     
     for(int i = 0; i < [array count]; i++)
     {
         UIImage *image = [array objectAtIndex:i];
-        UIView *custom = [self createCustomViewWithImage: image];
+        CustomInterCategView *custom = [self createCustomViewWithImage: image];
         [self.scroll addSubview:custom];
-        [custom setFrame:CGRectMake(xbase, 7, width, 150)];
+        [custom setFrame:CGRectMake(xbase, 7, width, 120)];
+        custom.row = row;
+        custom.column = i;
+        
         xbase += 10 + width;
         
         
@@ -40,13 +44,15 @@
     self.scroll.delegate = self;
 }
 
--(UIView *)createCustomViewWithImage:(UIImage *)image
+-(CustomInterCategView *)createCustomViewWithImage:(UIImage *)image
 {
-    UIView *custom = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 150)];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 150)];
+    CustomInterCategView *custom = [[CustomInterCategView alloc]initWithFrame:CGRectMake(0, 0, 100, 120)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 105)];
     [imageView setImage:image];
     
     [custom addSubview:imageView];
+    imageView.layer.cornerRadius = 40.0f;
+    
     [custom setBackgroundColor:[UIColor whiteColor]];
     
     UITapGestureRecognizer *singleFingerTap =
@@ -66,16 +72,10 @@
 
 - (void)containingScrollViewDidEndDragging:(UIScrollView *)containingScrollView
 {
-    CGFloat minOffsetToTriggerRefresh = 25.0f;
-    
-    NSLog(@"%.2f",containingScrollView.contentOffset.x);
-    
-    NSLog(@"%.2f",self.scroll.contentSize.width);
-    
     if (containingScrollView.contentOffset.x <= -50)
     {
         
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(-50 , 7, 100, 150)];
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(-50 , 7, 100, 120)];
         
         UIActivityIndicatorView *acc = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
         acc.hidesWhenStopped = YES;
@@ -101,8 +101,6 @@
                              
                          }
                          completion:nil];
-        //[containingScrollView setContentInset:UIEdgeInsetsMake(0, 100, 0, 0)];
-        
         
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -141,12 +139,18 @@
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
     NSLog(@"clicked");
     
-    UIView *selectedView = (UIView *)recognizer.view;
+    CustomInterCategView *selectedView = (CustomInterCategView *)recognizer.view;
     
-    if([_cellDelegate respondsToSelector:@selector(cellSelected)])
-        [_cellDelegate cellSelected];
+    if([_cellDelegate respondsToSelector:@selector(cellSelectedWithRow:Column:)])
+        [_cellDelegate cellSelectedWithRow:selectedView.row Column:selectedView.column];
     
     //Do stuff here...
+    
 }
+
+@end
+
+
+@implementation CustomInterCategView
 
 @end

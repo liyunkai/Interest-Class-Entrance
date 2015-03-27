@@ -491,7 +491,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1jI-Ts-FR6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="InterCateg_top_ads" translatesAutoresizingMaskIntoConstraints="NO" id="1jI-Ts-FR6">
                                 <rect key="frame" x="111" y="0.0" width="379" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="JmZ-mM-JV7"/>
@@ -588,7 +588,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg.png" width="750" height="1334"/>
+        <image name="InterCateg_top_ads" width="250" height="133"/>
         <image name="border.png" width="567" height="157"/>
         <image name="chakan.png" width="258" height="80"/>
         <image name="enter.png" width="340" height="88"/>
