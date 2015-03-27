@@ -112,7 +112,11 @@
 
 
 - (IBAction)quit:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (((UIView *)sender).tag == 2) {
+        return;
+    }else{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 
