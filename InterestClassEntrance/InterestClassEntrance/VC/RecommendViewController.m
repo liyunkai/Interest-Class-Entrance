@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *bgColor = [UIImage imageNamed:@"beijing.png"];
+    UIImage *bgColor = [UIImage imageNamed:@"recomand_bg"];
     self.view.layer.contents = (id)bgColor.CGImage;
 }
 
