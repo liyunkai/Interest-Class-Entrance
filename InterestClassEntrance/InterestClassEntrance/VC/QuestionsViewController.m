@@ -135,7 +135,7 @@
 }
 
 - (void) nextQuestionProc{
-    [UIView animateWithDuration:0.5f animations:^{
+    [UIView animateWithDuration:0.2f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
         self.nextView.transform = CGAffineTransformMakeTranslation(-[UIScreen mainScreen].bounds.size.width, 0);
         if (self.quiz.index0 == 0) {
@@ -170,7 +170,7 @@
 }
 
 - (void) preQuestionProc{
-    [UIView animateWithDuration:0.5f animations:^{
+    [UIView animateWithDuration:0.2f animations:^{
         self.visitedView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         self.preView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);
         if (self.quiz.index0+1 == self.quiz.amount) {
@@ -225,7 +225,7 @@
 
 - (void) resetView{
     [UIView beginAnimations:@"resetView" context:nil];
-    [UIView setAnimationDuration:0.5f];
+    [UIView setAnimationDuration:0.2f];
     if (self.quiz.index0 != 0) {
         self.preView.transform = CGAffineTransformIdentity;
     }
