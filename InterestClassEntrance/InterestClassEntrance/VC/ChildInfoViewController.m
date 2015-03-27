@@ -32,8 +32,8 @@
     self.view.layer.backgroundColor = [UIColor clearColor].CGColor;
     
     //segmentedControl size
-    CGRect frame = self.sex.frame;
-    [self.sex setFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 100)];
+//    CGRect frame = self.sex.frame;
+//    [self.sex setFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 100)];
 
     //enable lable user interaction
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showDatePicker)];

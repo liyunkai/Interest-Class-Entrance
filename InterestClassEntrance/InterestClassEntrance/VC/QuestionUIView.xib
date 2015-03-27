@@ -24,16 +24,13 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
-                    <rect key="frame" x="0.0" y="32" width="600" height="600"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="-129" y="0.0" width="600" height="600"/>
-                    </variation>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="632"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="405" height="800"/>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Mt-X7e">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Mt-X7e">
                     <rect key="frame" x="117" y="128" width="375" height="82"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,24 +51,36 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-Kb-xvk">
                     <rect key="frame" x="41" y="233" width="451" height="46"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="261" width="380" height="46"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="19" y="293" width="325" height="54"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="42J-fd-qdm">
                     <rect key="frame" x="33" y="295" width="459" height="47"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="323" width="380" height="47"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="19" y="364" width="325" height="54"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-zC-LJc">
                     <rect key="frame" x="49" y="354" width="443" height="48"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="382" width="380" height="48"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="19" y="427" width="325" height="54"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-gE-oCq">
                     <rect key="frame" x="33" y="421" width="471" height="51"/>
+                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="9" y="440" width="380" height="51"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="19" y="493" width="325" height="54"/>
                     </variation>
@@ -83,6 +92,9 @@
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="99" y="286" width="53" height="21"/>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="142" y="258" width="250" height="43"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="80" y="295" width="235" height="49"/>
@@ -96,6 +108,9 @@
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="99" y="416" width="54" height="21"/>
                     </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="142" y="323" width="244" height="47"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="78" y="362" width="237" height="49"/>
                     </variation>
@@ -107,6 +122,9 @@
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="99" y="525" width="55" height="21"/>
+                    </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="144" y="386" width="200" height="45"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="73" y="427" width="242" height="50"/>
@@ -120,30 +138,45 @@
                     <variation key="heightClass=regular" fixedFrame="YES">
                         <rect key="frame" x="100" y="621" width="54" height="21"/>
                     </variation>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="144" y="433" width="197" height="64"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="78" y="493" width="231" height="55"/>
                     </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_A" highlightedImage="Test_A-" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-Jj-f7l">
                     <rect key="frame" x="68" y="242" width="30" height="28"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="48" y="270" width="30" height="28"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="45" y="306" width="26" height="28"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_B" highlightedImage="Test_B-" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-8h-6MJ">
                     <rect key="frame" x="71" y="307" width="27" height="23"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="51" y="335" width="27" height="23"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="45" y="373" width="26" height="28"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_C" highlightedImage="Test_C-" translatesAutoresizingMaskIntoConstraints="NO" id="j68-AB-A2c">
                     <rect key="frame" x="69" y="363" width="30" height="29"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="49" y="391" width="30" height="29"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="45" y="441" width="26" height="28"/>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Test_D" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WW-St4">
                     <rect key="frame" x="68" y="430" width="29" height="33"/>
+                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="49" y="448" width="29" height="33"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="45" y="506" width="26" height="28"/>
                     </variation>
@@ -153,6 +186,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="266" width="380" height="48"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="39" y="292" width="305" height="46"/>
                     </variation>
@@ -165,6 +201,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="326" width="380" height="42"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="53" y="359" width="285" height="55"/>
                     </variation>
@@ -177,6 +216,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="378" width="380" height="52"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="39" y="424" width="325" height="55"/>
                     </variation>
@@ -189,6 +231,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="9" y="439" width="380" height="51"/>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="39" y="490" width="285" height="46"/>
                     </variation>
@@ -198,6 +243,32 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="U82-D5-GeO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Sf-tg-Y6T"/>
+                <constraint firstAttribute="trailing" secondItem="U82-D5-GeO" secondAttribute="trailing" id="8UY-Xa-Imk"/>
+                <constraint firstAttribute="bottom" secondItem="U82-D5-GeO" secondAttribute="bottom" id="Jva-ER-gYP"/>
+                <constraint firstAttribute="bottom" secondItem="80X-WW-St4" secondAttribute="bottom" constant="119" id="PGl-RI-hgU">
+                    <variation key="widthClass=compact" constant="90"/>
+                </constraint>
+                <constraint firstItem="U82-D5-GeO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PjL-MA-oQP"/>
+                <constraint firstAttribute="centerX" secondItem="U82-D5-GeO" secondAttribute="centerX" id="TBb-DU-I3H"/>
+                <constraint firstAttribute="centerY" secondItem="U82-D5-GeO" secondAttribute="centerY" id="U1C-I7-6SE"/>
+                <constraint firstAttribute="bottom" secondItem="MN9-gE-oCq" secondAttribute="bottom" constant="169" id="lhf-ob-HXL"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="TBb-DU-I3H"/>
+                    <exclude reference="U1C-I7-6SE"/>
+                    <exclude reference="lhf-ob-HXL"/>
+                    <exclude reference="PGl-RI-hgU"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="lhf-ob-HXL"/>
+                    <include reference="PGl-RI-hgU"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
