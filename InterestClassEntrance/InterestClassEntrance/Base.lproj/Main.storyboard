@@ -5,43 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="obk-sa-rug"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="420" y="303.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Af-Rs-vAx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L6c-Sc-oe4" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wBb-c8-ywO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xBT-zl-JJv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6TD-2j-Sg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-339" y="297.75"/>
-        </scene>
         <!--Test Choose View Controller-->
         <scene sceneID="JZM-Ag-dNV">
             <objects>
@@ -80,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRQ-84-HpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1659"/>
+            <point key="canvasLocation" x="2145" y="1699"/>
         </scene>
         <!--试题介绍-->
         <scene sceneID="y5P-Ad-C8G">
@@ -161,7 +124,8 @@
                                     <constraint firstAttribute="height" constant="186" id="94Q-jU-6EA"/>
                                     <constraint firstAttribute="width" constant="231" id="PeI-Cn-cpq"/>
                                 </constraints>
-                                <string key="text">尊敬的各位家长：       想知道您孩子适合什么兴趣班吗?快来参加“孩子潜能测试”吧，为您打造的孩子潜能和兴趣分析工具.</string>
+                                <string key="text">尊敬的各位家长：
+       想知道您孩子适合什么兴趣班吗?快来参加“孩子潜能测试”吧，为您打造的孩子潜能和兴趣分析工具.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -224,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZ1-Tn-1St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="1657"/>
+            <point key="canvasLocation" x="2841" y="1697"/>
         </scene>
         <!--测试中-->
         <scene sceneID="NdG-d0-5DW">
@@ -316,13 +280,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="1656"/>
+            <point key="canvasLocation" x="3504" y="1696"/>
         </scene>
-        <!--Item-->
+        <!--测一测-->
         <scene sceneID="SRn-Xy-8lX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eK-a0-8YO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="L5x-Hz-FT3"/>
+                    <tabBarItem key="tabBarItem" title="测一测" id="L5x-Hz-FT3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DJX-Rg-jpL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -335,7 +299,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvS-yj-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="1653"/>
+            <point key="canvasLocation" x="1362" y="1693"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Azr-Vn-o8z">
@@ -354,9 +318,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtm-eI-rx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-189" y="2470"/>
+            <point key="canvasLocation" x="375" y="1678"/>
         </scene>
-        <!--Child Info View Controller-->
+        <!--孩子信息-->
         <scene sceneID="H8y-0n-r5h">
             <objects>
                 <viewController id="D0w-ti-nSA" customClass="ChildInfoViewController" sceneMemberID="viewController">
@@ -465,7 +429,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="eox-ws-zzc">
+                    <navigationItem key="navigationItem" title="孩子信息" id="eox-ws-zzc">
                         <barButtonItem key="backBarButtonItem" title="返回" id="Uqh-9T-Qlf"/>
                         <barButtonItem key="rightBarButtonItem" title="完成" id="jff-xO-s2c">
                             <connections>
@@ -511,7 +475,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX指数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-Sc-tDX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="音乐指数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-Sc-tDX">
                                 <rect key="frame" x="74" y="253" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -553,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urq-hT-X7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3190.5" y="1659"/>
+            <point key="canvasLocation" x="4198.5" y="1699"/>
         </scene>
         <!--兴趣班推荐-->
         <scene sceneID="VT2-4r-RYo">
@@ -575,11 +539,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-xB-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841.5" y="1653"/>
+            <point key="canvasLocation" x="4849.5" y="1693"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hmk-BU-8oU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lr0-1W-Dmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TQb-Zj-CGO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0mu-PB-IuL">
@@ -591,11 +556,10 @@
                         <segue destination="D0w-ti-nSA" kind="relationship" relationship="rootViewController" id="MuW-r9-RXX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lr0-1W-Dmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-346.5" y="966.75"/>
         </scene>
-        <!--Item-->
+        <!--兴趣班-->
         <scene sceneID="6MS-a3-Gci">
             <objects>
                 <viewController id="iSO-js-6cl" customClass="InterestCategoryViewController" sceneMemberID="viewController">
@@ -693,14 +657,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="oxE-dv-tQQ"/>
+                    <tabBarItem key="tabBarItem" title="兴趣班" id="oxE-dv-tQQ"/>
                     <connections>
                         <outlet property="collection" destination="AAn-zq-r0x" id="EpU-9s-aUC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGk-GG-nOj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="2646"/>
+            <point key="canvasLocation" x="1309.5" y="2502"/>
         </scene>
     </scenes>
     <resources>

@@ -34,6 +34,7 @@
 
 - (void)handleBtnIndex:(NSInteger)btnIndex{
     self->choises[self.quiz.index0] = (int)btnIndex;
+    [self nextQuestionProc];
 }
 
 -(void)initViewsData{
@@ -98,8 +99,8 @@
     [self moveViewWithTranslation:translation];
     if (recognizer.state == UIGestureRecognizerStateEnded)
     {
-        CGFloat screenWidth_2 = [UIScreen mainScreen].bounds.size.width/2.0f;
-        if (translation.x < -screenWidth_2) {//手势平移超过一半，进入下一题
+        CGFloat screenWidth_edge = [UIScreen mainScreen].bounds.size.width/4.0f;
+        if (translation.x < -screenWidth_edge) {//手势平移超过一半，进入下一题
             if (self.quiz.index0+1 == self.quiz.amount) {
                 [[[UIAlertView alloc] initWithTitle:nil message:@"这是最后一题" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
                 [self resetView];
@@ -107,7 +108,7 @@
             }
             [self nextQuestionProc];//异步的
         }
-        else if( translation.x > screenWidth_2 )
+        else if( translation.x > screenWidth_edge )
         {//回到上一题
             if (self.quiz.index0 == 0) {
                 [[[UIAlertView alloc] initWithTitle:nil message:@"这是第一题" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
@@ -263,6 +264,7 @@
         [self performSegueWithIdentifier:@"completeTest" sender:sender];
     }else{
         [[[UIAlertView alloc] initWithTitle:nil message:@"请答完全部题后再提交" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil] show];
+        [self performSegueWithIdentifier:@"completeTest" sender:sender];
     }
 }
 
