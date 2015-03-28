@@ -197,7 +197,7 @@ NSString *const FillColorAnimation = @"fillColor";
 - (void)animateBlock:(void (^)(CFTimeInterval duration))block
 {
     _shouldAnimate = YES;
-    _animDuration = 0.5;
+    _animDuration = 1.5;
     
     CAAnimation *anim = [self.layer animationForKey:@"position"];
     if ((anim)) { // if previous animation hasn't finished reduce the time of new animation

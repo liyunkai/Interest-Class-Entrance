@@ -36,7 +36,7 @@
 
 -(void)progressViewInit{
     self.progressView1.popUpViewCornerRadius = 12;
-//    UIColor *color1 = [UIColor colorWithPatternImage:[UIImage imageNamed:@"1.png"]];
+    //    UIColor *color1 = [UIColor colorWithPatternImage:[UIImage imageNamed:@"1.png"]];
     self.progressView1.popUpViewAnimatedColors = @[[UIColor brownColor]];
     self.progressView1.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView1 setProgress:self.gress[0]/100.0 animated:YES];
@@ -47,13 +47,13 @@
     self.progressView2.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView2 setProgress:self.gress[1]/100.0 animated:YES];
     [self.progressView2 showPopUpViewAnimated:YES];
-//
+    //
     self.progressView3.popUpViewCornerRadius = 12.0;
     self.progressView3.popUpViewAnimatedColors = @[[UIColor brownColor]];
     self.progressView3.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
     [self.progressView3 setProgress:self.gress[2]/100.0 animated:YES];
     [self.progressView3 showPopUpViewAnimated:YES];
-//
+    //
     self.progressView4.popUpViewCornerRadius = 12.0;
     self.progressView4.popUpViewAnimatedColors = @[[UIColor grayColor]];
     self.progressView4.font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:15];
@@ -112,18 +112,22 @@
 
 
 - (IBAction)quit:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (((UIView *)sender).tag == 2) {
+        return;
+    }else{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
