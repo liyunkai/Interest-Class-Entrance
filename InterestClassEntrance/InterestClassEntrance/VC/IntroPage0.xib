@@ -11,11 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IntroPage_0" translatesAutoresizingMaskIntoConstraints="NO" id="99b-CX-PO5">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="IntroPage_0" translatesAutoresizingMaskIntoConstraints="NO" id="99b-CX-PO5">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="600" id="EhP-aq-CfT">
-                            <variation key="widthClass=compact" constant="500"/>
+                            <variation key="widthClass=compact" constant="600"/>
                         </constraint>
                         <constraint firstAttribute="width" constant="400" id="Ueo-kE-X2b"/>
                     </constraints>
@@ -36,12 +36,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="99b-CX-PO5" secondAttribute="bottom" id="DwL-6D-9XP">
-                    <variation key="widthClass=compact" constant="50"/>
+                    <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="99b-CX-PO5" secondAttribute="trailing" id="Uec-fP-0ym"/>
                 <constraint firstItem="99b-CX-PO5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gNZ-ue-56R"/>
                 <constraint firstItem="99b-CX-PO5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kRi-2k-YLi">
-                    <variation key="widthClass=compact" constant="50"/>
+                    <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
             </constraints>
             <variation key="default">
@@ -63,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="IntroPage_0" width="640" height="712"/>
+        <image name="IntroPage_0" width="750" height="1334"/>
     </resources>
 </document>

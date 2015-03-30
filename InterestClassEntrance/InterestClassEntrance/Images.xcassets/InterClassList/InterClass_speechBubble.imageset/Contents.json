@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "导航4.png"
+      "filename" : "speechBubble.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "speechBubble@2x.png"
     },
     {
       "idiom" : "universal",

@@ -11,12 +11,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IntroPage_3" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-gu-yfz">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="IntroPage_3" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-gu-yfz">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="400" id="LY7-Da-Jt1"/>
                         <constraint firstAttribute="height" constant="600" id="RwG-Xf-Tku">
-                            <variation key="widthClass=compact" constant="500"/>
+                            <variation key="widthClass=compact" constant="600"/>
                         </constraint>
                     </constraints>
                     <variation key="default">
@@ -37,10 +37,10 @@
             <constraints>
                 <constraint firstItem="qpq-gu-yfz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CaO-AC-fxM"/>
                 <constraint firstItem="qpq-gu-yfz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rty-55-jYg">
-                    <variation key="widthClass=compact" constant="50"/>
+                    <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="qpq-gu-yfz" secondAttribute="bottom" id="e8x-QC-R7W">
-                    <variation key="widthClass=compact" constant="50"/>
+                    <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="qpq-gu-yfz" secondAttribute="trailing" id="qD8-M9-k5W"/>
             </constraints>
@@ -63,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="IntroPage_3" width="640" height="712"/>
+        <image name="IntroPage_3" width="750" height="1334"/>
     </resources>
 </document>
