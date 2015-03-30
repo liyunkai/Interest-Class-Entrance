@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TQb-Zj-CGO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKi-MN-2Tl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRQ-84-HpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1659"/>
+            <point key="canvasLocation" x="2067" y="1875"/>
         </scene>
         <!--试题介绍-->
         <scene sceneID="y5P-Ad-C8G">
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZ1-Tn-1St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="1657"/>
+            <point key="canvasLocation" x="2088" y="2657"/>
         </scene>
         <!--测试中-->
         <scene sceneID="NdG-d0-5DW">
@@ -280,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf9-Jj-yJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="1656"/>
+            <point key="canvasLocation" x="2067" y="3344"/>
         </scene>
         <!--测一测-->
         <scene sceneID="SRn-Xy-8lX">
@@ -299,7 +299,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvS-yj-xtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="1653"/>
+            <point key="canvasLocation" x="2088" y="1169"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Azr-Vn-o8z">
@@ -312,13 +312,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="iSO-js-6cl" kind="relationship" relationship="viewControllers" id="rt8-om-3Ao"/>
+                        <segue destination="LOh-Ro-duu" kind="relationship" relationship="viewControllers" id="rt8-om-3Ao"/>
                         <segue destination="4eK-a0-8YO" kind="relationship" relationship="viewControllers" id="R9u-Ek-Xtw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtm-eI-rx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-189" y="2470"/>
+            <point key="canvasLocation" x="1245" y="373"/>
         </scene>
         <!--基本信息-->
         <scene sceneID="H8y-0n-r5h">
@@ -449,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuE-AK-99j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="972.75"/>
+            <point key="canvasLocation" x="456" y="400"/>
         </scene>
         <!--兴趣班推荐-->
         <scene sceneID="VT2-4r-RYo">
@@ -469,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDy-xB-8NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841.5" y="1653"/>
+            <point key="canvasLocation" x="2047.5" y="4853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hmk-BU-8oU">
@@ -487,7 +487,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr0-1W-Dmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346.5" y="966.75"/>
+            <point key="canvasLocation" x="-244.5" y="394"/>
         </scene>
         <!--兴趣班-->
         <scene sceneID="6MS-a3-Gci">
@@ -587,14 +587,144 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="兴趣班" image="ic_home_normal" id="oxE-dv-tQQ"/>
+                    <navigationItem key="navigationItem" title="兴趣班" id="0Hd-nn-xuR">
+                        <barButtonItem key="backBarButtonItem" title="武汉" id="wbi-aw-FrR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collection" destination="AAn-zq-r0x" id="EpU-9s-aUC"/>
+                        <segue destination="aNs-pL-3om" kind="show" identifier="segueToInterClassList" id="p49-Tb-vZz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGk-GG-nOj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="2646"/>
+            <point key="canvasLocation" x="331.5" y="1921"/>
+        </scene>
+        <!--兴趣班列表-->
+        <scene sceneID="bsa-NH-Dft">
+            <objects>
+                <viewController id="aNs-pL-3om" customClass="InterClassListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AVd-9T-nyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="gZC-UX-nGg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I3j-Ud-OHR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="p74-rb-Og4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellInterClassSummary" rowHeight="76" id="Nnb-DS-q9Q" customClass="InterClassSummaryTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nnb-DS-q9Q" id="eNf-VN-WKG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-h7-ad7">
+                                                    <rect key="frame" x="9" y="5" width="50" height="50"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InterClass_heartShape" translatesAutoresizingMaskIntoConstraints="NO" id="mON-2b-6TS">
+                                                    <rect key="frame" x="70" y="25" width="14" height="14"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InterClass_speechBubble" translatesAutoresizingMaskIntoConstraints="NO" id="4td-8f-BBF">
+                                                    <rect key="frame" x="180" y="25" width="14" height="14"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-el-cil">
+                                                    <rect key="frame" x="70" y="41" width="14" height="14"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GuI-Q7-Djb">
+                                                    <rect key="frame" x="311" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="价格 多少起" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-o1-4rd">
+                                                    <rect key="frame" x="180" y="0.0" width="113" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="认证" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-2G-gr4">
+                                                    <rect key="frame" x="88" y="42" width="84" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多少人报名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7q-CS-X5v">
+                                                    <rect key="frame" x="88" y="21" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多少条评价" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-BB-Ue4">
+                                                    <rect key="frame" x="202" y="21" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.4472411288" blue="0.27872347600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdO-Yb-NBD">
+                                                    <rect key="frame" x="70" y="4" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="洪山区华中烤鸡大学启明学院" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1k-YL-PCJ">
+                                                    <rect key="frame" x="27" y="54" width="194" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="n1k-YL-PCJ" id="sgp-U5-mC3"/>
+                                            <outlet property="certificationLabel" destination="S5k-2G-gr4" id="fJS-3b-zfH"/>
+                                            <outlet property="commentNumLabel" destination="ck5-BB-Ue4" id="meb-Zg-E4a"/>
+                                            <outlet property="headImageView" destination="YPY-h7-ad7" id="ZXu-El-k8A"/>
+                                            <outlet property="nameLabel" destination="SdO-Yb-NBD" id="izb-lr-24H"/>
+                                            <outlet property="priceLabel" destination="aQd-o1-4rd" id="fDa-gH-3Ai"/>
+                                            <outlet property="signningNumLabel" destination="y7q-CS-X5v" id="j35-jG-VfM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aNs-pL-3om" id="nWN-OE-gam"/>
+                                    <outlet property="delegate" destination="aNs-pL-3om" id="6yA-Cl-rOS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="兴趣班列表" id="P4A-z6-N9T"/>
+                    <connections>
+                        <segue destination="fed-sx-c87" kind="show" identifier="segueToInterClassDetail" id="aA4-az-WLi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVi-ny-JN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="2657"/>
+        </scene>
+        <!--兴趣班名字-->
+        <scene sceneID="pmq-0z-AAn">
+            <objects>
+                <viewController id="fed-sx-c87" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FRj-0G-QH1"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ki-RI-fJp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ms-m1-EDb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-9i-Z1W">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="兴趣班名字" id="vzy-RU-VxP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhg-QA-4dX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="3371"/>
         </scene>
         <!--测试结果-->
         <scene sceneID="eV1-1D-yTp">
@@ -780,11 +910,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCX-Gp-fgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="1653"/>
+            <point key="canvasLocation" x="2088" y="4077"/>
+        </scene>
+        <!--兴趣班-->
+        <scene sceneID="0z5-Vz-KhE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LOh-Ro-duu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="兴趣班" image="ic_home_normal" id="oxE-dv-tQQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mAg-xT-WYd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iSO-js-6cl" kind="relationship" relationship="rootViewController" id="Kwe-jq-YRA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7R1-F2-oSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331.5" y="1169"/>
         </scene>
     </scenes>
     <resources>
         <image name="InterCateg_top_ads" width="250" height="133"/>
+        <image name="InterClass_heartShape" width="12" height="12"/>
+        <image name="InterClass_speechBubble" width="12" height="12"/>
         <image name="Test_beijing" width="250" height="444"/>
         <image name="border.png" width="567" height="157"/>
         <image name="chakan.png" width="258" height="80"/>

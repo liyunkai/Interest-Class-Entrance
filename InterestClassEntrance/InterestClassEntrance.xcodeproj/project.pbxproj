@@ -48,8 +48,11 @@
 		E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */; };
 		E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A816791AB80B950006E5B6 /* ReportViewController.m */; };
 		E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */; };
+		E4A9B18F1AC93C0E004F0298 /* InterestClassSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A9B18E1AC93C0E004F0298 /* InterestClassSummary.m */; };
 		E4AC7F221AC24E7A00A25F78 /* dataSou.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */; };
 		E4AC7F231AC24E7A00A25F78 /* readDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F211AC24E7A00A25F78 /* readDatabase.m */; };
+		E4E2B2031AC6A217009BDEAB /* InterClassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B2021AC6A217009BDEAB /* InterClassListViewController.m */; };
+		E4E2B2071AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B2061AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +85,9 @@
 		A5614C9F1ABF0AEF0053D19D /* characterLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = characterLable.m; sourceTree = "<group>"; };
 		A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
-		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCell.h; sourceTree = "<group>"; };
-		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollCell.m; sourceTree = "<group>"; };
-		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalScrollCell.xib; sourceTree = "<group>"; };
+		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalScrollCell.h; path = VC/HorizontalScrollCell.h; sourceTree = "<group>"; };
+		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalScrollCell.m; path = VC/HorizontalScrollCell.m; sourceTree = "<group>"; };
+		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalScrollCell.xib; path = VC/HorizontalScrollCell.xib; sourceTree = "<group>"; };
 		E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestCategoryClass.h; sourceTree = "<group>"; };
 		E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestCategoryClass.m; sourceTree = "<group>"; };
 		E4878BAD1AC5975F00205E1B /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
@@ -113,8 +116,8 @@
 		E4A816551AB809270006E5B6 /* InterestClassEntranceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestClassEntranceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A8165A1AB809270006E5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A8165B1AB809270006E5B6 /* InterestClassEntranceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestClassEntranceTests.m; sourceTree = "<group>"; };
-		E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestCategoryViewController.h; sourceTree = "<group>"; };
-		E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestCategoryViewController.m; sourceTree = "<group>"; };
+		E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterestCategoryViewController.h; path = VC/InterestCategoryViewController.h; sourceTree = "<group>"; };
+		E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterestCategoryViewController.m; path = VC/InterestCategoryViewController.m; sourceTree = "<group>"; };
 		E4A8166F1AB80B330006E5B6 /* TestChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestChooseViewController.h; sourceTree = "<group>"; };
 		E4A816701AB80B330006E5B6 /* TestChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestChooseViewController.m; sourceTree = "<group>"; };
 		E4A816721AB80B560006E5B6 /* TestIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestIntroductionViewController.h; sourceTree = "<group>"; };
@@ -125,10 +128,16 @@
 		E4A816791AB80B950006E5B6 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildInfoViewController.h; sourceTree = "<group>"; };
 		E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildInfoViewController.m; sourceTree = "<group>"; };
+		E4A9B18D1AC93C0E004F0298 /* InterestClassSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterestClassSummary.h; path = ../Class/InterestClassSummary.h; sourceTree = "<group>"; };
+		E4A9B18E1AC93C0E004F0298 /* InterestClassSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterestClassSummary.m; path = ../Class/InterestClassSummary.m; sourceTree = "<group>"; };
 		E4AC7F1E1AC24E7A00A25F78 /* dataSou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataSou.h; path = Class/dataSou.h; sourceTree = "<group>"; };
 		E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataSou.m; path = Class/dataSou.m; sourceTree = "<group>"; };
 		E4AC7F201AC24E7A00A25F78 /* readDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = readDatabase.h; path = Class/readDatabase.h; sourceTree = "<group>"; };
 		E4AC7F211AC24E7A00A25F78 /* readDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = readDatabase.m; path = Class/readDatabase.m; sourceTree = "<group>"; };
+		E4E2B2011AC6A217009BDEAB /* InterClassListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterClassListViewController.h; sourceTree = "<group>"; };
+		E4E2B2021AC6A217009BDEAB /* InterClassListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterClassListViewController.m; sourceTree = "<group>"; };
+		E4E2B2051AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterClassSummaryTableViewCell.h; sourceTree = "<group>"; };
+		E4E2B2061AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterClassSummaryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +166,6 @@
 				E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */,
 				E4AC7F201AC24E7A00A25F78 /* readDatabase.h */,
 				E4AC7F211AC24E7A00A25F78 /* readDatabase.m */,
-				E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */,
-				E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 		E4878BB61AC59CF800205E1B /* IntroductionPages */ = {
 			isa = PBXGroup;
 			children = (
+				E4878BAC1AC5975F00205E1B /* MYBlurIntroductionView */,
 				E4878BB71AC59D2000205E1B /* IntroPage0.xib */,
 				E4878BB91AC59D3500205E1B /* IntroPage1.xib */,
 				E4878BBB1AC59D4300205E1B /* IntroPage2.xib */,
@@ -273,16 +281,14 @@
 		E4A816681AB80A0C0006E5B6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E4A9B1901AC940DE004F0298 /* InterestCategory */,
+				E4E2B2041AC6A87D009BDEAB /* InterClassList */,
 				E4878BB61AC59CF800205E1B /* IntroductionPages */,
-				E4878BAC1AC5975F00205E1B /* MYBlurIntroductionView */,
-				E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */,
-				E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */,
-				E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */,
+				A5614C971ABF0A410053D19D /* ASProgressPopUpView */,
 				A5614C9E1ABF0AEF0053D19D /* characterLable.h */,
 				A5614C9F1ABF0AEF0053D19D /* characterLable.m */,
 				A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */,
 				A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */,
-				A5614C971ABF0A410053D19D /* ASProgressPopUpView */,
 				E4A8166F1AB80B330006E5B6 /* TestChooseViewController.h */,
 				E4A816701AB80B330006E5B6 /* TestChooseViewController.m */,
 				E4A816721AB80B560006E5B6 /* TestIntroductionViewController.h */,
@@ -291,8 +297,6 @@
 				E4A816761AB80B7D0006E5B6 /* QuestionsViewController.m */,
 				E4A816781AB80B950006E5B6 /* ReportViewController.h */,
 				E4A816791AB80B950006E5B6 /* ReportViewController.m */,
-				E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */,
-				E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */,
 				E4A8167B1AB80CD60006E5B6 /* ChildInfoViewController.h */,
 				E4A8167C1AB80CD60006E5B6 /* ChildInfoViewController.m */,
 				E4A665A21AB96F790055CCB1 /* QuestionView.h */,
@@ -300,6 +304,34 @@
 				E4A21BBB1ABB105400DDB18C /* QuestionUIView.xib */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		E4A9B1901AC940DE004F0298 /* InterestCategory */ = {
+			isa = PBXGroup;
+			children = (
+				E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */,
+				E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */,
+				E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */,
+				E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */,
+				E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */,
+				E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */,
+				E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */,
+			);
+			name = InterestCategory;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E4E2B2041AC6A87D009BDEAB /* InterClassList */ = {
+			isa = PBXGroup;
+			children = (
+				E4A9B18D1AC93C0E004F0298 /* InterestClassSummary.h */,
+				E4A9B18E1AC93C0E004F0298 /* InterestClassSummary.m */,
+				E4E2B2011AC6A217009BDEAB /* InterClassListViewController.h */,
+				E4E2B2021AC6A217009BDEAB /* InterClassListViewController.m */,
+				E4E2B2051AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.h */,
+				E4E2B2061AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m */,
+			);
+			name = InterClassList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +383,7 @@
 				TargetAttributes = {
 					E4A816381AB809260006E5B6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = X5CBHKQ885;
 					};
 					E4A816541AB809270006E5B6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -428,8 +461,10 @@
 				A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */,
 				E4878BB41AC5975F00205E1B /* MYBlurIntroductionView.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
+				E4A9B18F1AC93C0E004F0298 /* InterestClassSummary.m in Sources */,
 				E4878BAB1AC415FC00205E1B /* InterestCategoryClass.m in Sources */,
 				E4A8163F1AB809260006E5B6 /* main.m in Sources */,
+				E4E2B2071AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m in Sources */,
 				E4878BB31AC5975F00205E1B /* AMBlurView.m in Sources */,
 				E4A8167D1AB80CD60006E5B6 /* ChildInfoViewController.m in Sources */,
 				A5614C9C1ABF0A410053D19D /* ASPopUpView.m in Sources */,
@@ -439,6 +474,7 @@
 				A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */,
 				E4878BB51AC5975F00205E1B /* MYIntroductionPanel.m in Sources */,
 				E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */,
+				E4E2B2031AC6A217009BDEAB /* InterClassListViewController.m in Sources */,
 				E4A816451AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,10 +599,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -574,10 +613,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

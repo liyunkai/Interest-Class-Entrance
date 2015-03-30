@@ -8,7 +8,11 @@
 
 #import "InterestCategoryViewController.h"
 #import "HorizontalScrollCell.h"
+#import "InterestCategoryClass.h"
+
 @interface InterestCategoryViewController ()<HorizontalScrollCellDelegate>
+
+@property(nonatomic,strong) NSString *selectedInfo;
 
 @end
 
@@ -76,7 +80,24 @@
 -(void)cellSelectedWithRow:(NSInteger)row Column:(NSInteger)column
 {
     NSLog(@"Selected !! %ld, %ld",(long)row,(long)column);
+    [self performSegueWithIdentifier:@"segueToInterClassList" sender:self];
 }
+
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier compare:@"segueToInterClassList"] == NSOrderedSame) {
+        InterestCategoryViewController *desVC = segue.destinationViewController;
+        //对兴趣班列表viewcontroller赋值，传递数据
+    }
+}
+
+
+
 
 @end
 
