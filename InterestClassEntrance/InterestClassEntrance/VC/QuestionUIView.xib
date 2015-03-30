@@ -45,9 +45,6 @@
                             <include reference="sqD-sG-Hzl"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="405" height="800"/>
-                    </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="question" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Mt-X7e">
                     <rect key="frame" x="117" y="128" width="375" height="82"/>
@@ -76,9 +73,8 @@
                             <include reference="XGS-jo-vTu"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                    <variation key="heightClass=regular-widthClass=compact">
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                        <rect key="frame" x="79" y="115" width="245" height="113"/>
                     </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-fY-WnI">
@@ -119,7 +115,7 @@
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="17" y="417" width="380" height="51"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="19" y="493" width="325" height="54"/>
                     </variation>
                 </imageView>
@@ -215,7 +211,7 @@
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="57" y="425" width="29" height="33"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="45" y="506" width="26" height="28"/>
                     </variation>
                 </imageView>
