@@ -24,6 +24,10 @@
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
 		E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */; };
 		E43E3FB01AC3D28700D2B0B4 /* HorizontalScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */; };
+		E44EF22A1ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EF2251ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m */; };
+		E44EF22B1ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EF2271ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.m */; };
+		E44EF22C1ACA4566000F5EBD /* HTHorizontalSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EF2291ACA4566000F5EBD /* HTHorizontalSelectionList.m */; };
+		E44EF22F1ACA4629000F5EBD /* InterClassDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EF22E1ACA4629000F5EBD /* InterClassDetailViewController.m */; };
 		E4878BAB1AC415FC00205E1B /* InterestCategoryClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */; };
 		E4878BB31AC5975F00205E1B /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4878BAE1AC5975F00205E1B /* AMBlurView.m */; };
 		E4878BB41AC5975F00205E1B /* MYBlurIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4878BB01AC5975F00205E1B /* MYBlurIntroductionView.m */; };
@@ -88,6 +92,15 @@
 		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalScrollCell.h; path = VC/HorizontalScrollCell.h; sourceTree = "<group>"; };
 		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalScrollCell.m; path = VC/HorizontalScrollCell.m; sourceTree = "<group>"; };
 		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalScrollCell.xib; path = VC/HorizontalScrollCell.xib; sourceTree = "<group>"; };
+		E44EF2231ACA4566000F5EBD /* HTHorizontalSelectionListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHorizontalSelectionListCell.h; sourceTree = "<group>"; };
+		E44EF2241ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHorizontalSelectionListCustomViewCell.h; sourceTree = "<group>"; };
+		E44EF2251ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHorizontalSelectionListCustomViewCell.m; sourceTree = "<group>"; };
+		E44EF2261ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHorizontalSelectionListLabelCell.h; sourceTree = "<group>"; };
+		E44EF2271ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHorizontalSelectionListLabelCell.m; sourceTree = "<group>"; };
+		E44EF2281ACA4566000F5EBD /* HTHorizontalSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTHorizontalSelectionList.h; sourceTree = "<group>"; };
+		E44EF2291ACA4566000F5EBD /* HTHorizontalSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHorizontalSelectionList.m; sourceTree = "<group>"; };
+		E44EF22D1ACA4629000F5EBD /* InterClassDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterClassDetailViewController.h; sourceTree = "<group>"; };
+		E44EF22E1ACA4629000F5EBD /* InterClassDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterClassDetailViewController.m; sourceTree = "<group>"; };
 		E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestCategoryClass.h; sourceTree = "<group>"; };
 		E4878BAA1AC415FC00205E1B /* InterestCategoryClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestCategoryClass.m; sourceTree = "<group>"; };
 		E4878BAD1AC5975F00205E1B /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
@@ -179,6 +192,38 @@
 				A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */,
 			);
 			path = ASProgressPopUpView;
+			sourceTree = "<group>";
+		};
+		E44EF2201ACA453B000F5EBD /* InterestClassDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E44EF22D1ACA4629000F5EBD /* InterClassDetailViewController.h */,
+				E44EF22E1ACA4629000F5EBD /* InterClassDetailViewController.m */,
+				E44EF2211ACA4566000F5EBD /* HTHorizontalSelectionList */,
+			);
+			name = InterestClassDetail;
+			sourceTree = "<group>";
+		};
+		E44EF2211ACA4566000F5EBD /* HTHorizontalSelectionList */ = {
+			isa = PBXGroup;
+			children = (
+				E44EF2221ACA4566000F5EBD /* Cells */,
+				E44EF2281ACA4566000F5EBD /* HTHorizontalSelectionList.h */,
+				E44EF2291ACA4566000F5EBD /* HTHorizontalSelectionList.m */,
+			);
+			path = HTHorizontalSelectionList;
+			sourceTree = "<group>";
+		};
+		E44EF2221ACA4566000F5EBD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E44EF2231ACA4566000F5EBD /* HTHorizontalSelectionListCell.h */,
+				E44EF2241ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.h */,
+				E44EF2251ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m */,
+				E44EF2261ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.h */,
+				E44EF2271ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E4878BAC1AC5975F00205E1B /* MYBlurIntroductionView */ = {
@@ -281,6 +326,7 @@
 		E4A816681AB80A0C0006E5B6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E44EF2201ACA453B000F5EBD /* InterestClassDetail */,
 				E4A9B1901AC940DE004F0298 /* InterestCategory */,
 				E4E2B2041AC6A87D009BDEAB /* InterClassList */,
 				E4878BB61AC59CF800205E1B /* IntroductionPages */,
@@ -458,6 +504,7 @@
 				A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
 				E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */,
+				E44EF22A1ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m in Sources */,
 				A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */,
 				E4878BB41AC5975F00205E1B /* MYBlurIntroductionView.m in Sources */,
 				E4A816421AB809260006E5B6 /* AppDelegate.m in Sources */,
@@ -473,9 +520,12 @@
 				E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */,
 				A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */,
 				E4878BB51AC5975F00205E1B /* MYIntroductionPanel.m in Sources */,
+				E44EF22C1ACA4566000F5EBD /* HTHorizontalSelectionList.m in Sources */,
 				E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */,
 				E4E2B2031AC6A217009BDEAB /* InterClassListViewController.m in Sources */,
 				E4A816451AB809260006E5B6 /* InterestClassEntrance.xcdatamodeld in Sources */,
+				E44EF22F1ACA4629000F5EBD /* InterClassDetailViewController.m in Sources */,
+				E44EF22B1ACA4566000F5EBD /* HTHorizontalSelectionListLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

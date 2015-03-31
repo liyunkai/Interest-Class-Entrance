@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "certified_s.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "推荐.png"
+      "filename" : "certified_m.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "certified_l.png"
     }
   ],
   "info" : {
