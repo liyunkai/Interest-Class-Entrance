@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="80" width="400" height="460"/>
                     </variation>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-fY-WnI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-fY-WnI">
                     <rect key="frame" x="70" y="157" width="25" height="23"/>
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="44" y="155" width="26" height="28"/>
@@ -363,16 +363,16 @@
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="Svh-Mw-lXY"/>
+                    <exclude reference="lWb-VT-VFS"/>
                     <exclude reference="KNu-sf-MHL"/>
                     <exclude reference="Uoo-m1-ncz"/>
                     <exclude reference="gHp-6E-lIc"/>
-                    <exclude reference="lWb-VT-VFS"/>
                     <exclude reference="6Qy-fF-3sf"/>
                     <exclude reference="XRs-UI-9qR"/>
                     <exclude reference="jmI-EZ-cCm"/>
                     <exclude reference="xbU-Bw-81A"/>
-                    <exclude reference="HPZ-5s-2dd"/>
                     <exclude reference="9lZ-ep-QBP"/>
+                    <exclude reference="HPZ-5s-2dd"/>
                     <exclude reference="NLD-TU-GPH"/>
                     <exclude reference="pIq-0f-kvx"/>
                     <exclude reference="Yj2-bM-JSq"/>
@@ -382,16 +382,16 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="constraints">
                     <include reference="Svh-Mw-lXY"/>
+                    <include reference="lWb-VT-VFS"/>
                     <include reference="KNu-sf-MHL"/>
                     <include reference="Uoo-m1-ncz"/>
                     <include reference="gHp-6E-lIc"/>
-                    <include reference="lWb-VT-VFS"/>
                     <include reference="6Qy-fF-3sf"/>
                     <include reference="XRs-UI-9qR"/>
                     <include reference="jmI-EZ-cCm"/>
                     <include reference="xbU-Bw-81A"/>
-                    <include reference="HPZ-5s-2dd"/>
                     <include reference="9lZ-ep-QBP"/>
+                    <include reference="HPZ-5s-2dd"/>
                     <include reference="NLD-TU-GPH"/>
                     <include reference="pIq-0f-kvx"/>
                     <include reference="Yj2-bM-JSq"/>

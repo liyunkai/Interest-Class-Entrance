@@ -27,7 +27,7 @@
     self = [super init];
     if (self) {
         self.index0 = 0;
-        self.subject = [[NSMutableArray alloc] init];
+//        self.subject = [[NSMutableArray alloc] init];
         self->db = [self openDatabase];
         self.amount = [self getCountofRows:TABLEBAME_TALENT];
     }
@@ -74,64 +74,89 @@
     return db;
 }
 
+//
+//-(NSMutableArray *)getTablebyName:(NSString *)tableName{
+//    
+//    NSString *sqlQuery = [@"SELECT * FROM " stringByAppendingString:tableName];//quizEysenck
+//    sqlite3_stmt * statement;
+//    
+//    NSLog(@"%@",sqlQuery);
+//    
+//    if (sqlite3_prepare_v2(db, [sqlQuery UTF8String], -1, &statement, nil) == SQLITE_OK) {
+//        while (sqlite3_step(statement) == SQLITE_ROW) {
+//            dataSou *temp = [dataSou alloc];
+//            
+//            int _id = sqlite3_column_int(statement, 0);
+//            temp._id = _id;
+//            
+//            
+//            char *item = (char*)sqlite3_column_text(statement, 1);
+//            NSString *_item = [[NSString alloc]initWithUTF8String:item];
+//            temp.item = _item;
+//            
+//            char *optionA = (char*)sqlite3_column_text(statement, 2);
+//            NSString *_optionA = [[NSString alloc]initWithUTF8String:optionA];
+//            temp.optionA = _optionA;
+//            
+//            char *optionB = (char*)sqlite3_column_text(statement, 3);
+//            NSString *_optionB = [[NSString alloc]initWithUTF8String:optionB];
+//            temp.optionB = _optionB;
+//            
+//            char *optionC = (char*)sqlite3_column_text(statement, 4);
+//            if (optionC != nil) {
+//                NSString *_optionC = [[NSString alloc]initWithUTF8String:optionC];
+//                temp.optionC = _optionC;
+//            }else {
+//                temp.optionC = nil;
+//            }
+//            
+//            
+//            
+//            char *optionD = (char*)sqlite3_column_text(statement, 5);
+//            if (optionD != nil) {
+//                NSString *_optionD = [[NSString alloc]initWithUTF8String:optionD];
+//                temp.optionD = _optionD;
+//            } else {
+//                temp.optionD = nil;
+//            }
+//            
+//            
+//            char *answer = (char*)sqlite3_column_text(statement, 6);
+//            NSString *_answer = [[NSString alloc]initWithUTF8String:answer];
+//            temp.answer = _answer;
+//            
+//            [self.subject addObject:temp];
+//
+//        }
+//    }
+//
+//    return self.subject; //subject1;//
+//    
+//}
 
--(NSMutableArray *)getTablebyName:(NSString *)tableName{
-    
+
+-(NSMutableArray *)getAnswerbyTableName:(NSString *)tableName{
+
     NSString *sqlQuery = [@"SELECT * FROM " stringByAppendingString:tableName];//quizEysenck
     sqlite3_stmt * statement;
-    
+    NSMutableArray *sub = [[NSMutableArray alloc] init];
+
     NSLog(@"%@",sqlQuery);
-    
+
     if (sqlite3_prepare_v2(db, [sqlQuery UTF8String], -1, &statement, nil) == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
-            dataSou *temp = [dataSou alloc];
-            
-            int _id = sqlite3_column_int(statement, 0);
-            temp._id = _id;
-            
-            
-            char *item = (char*)sqlite3_column_text(statement, 1);
-            NSString *_item = [[NSString alloc]initWithUTF8String:item];
-            temp.item = _item;
-            
-            char *optionA = (char*)sqlite3_column_text(statement, 2);
-            NSString *_optionA = [[NSString alloc]initWithUTF8String:optionA];
-            temp.optionA = _optionA;
-            
-            char *optionB = (char*)sqlite3_column_text(statement, 3);
-            NSString *_optionB = [[NSString alloc]initWithUTF8String:optionB];
-            temp.optionB = _optionB;
-            
-            char *optionC = (char*)sqlite3_column_text(statement, 4);
-            if (optionC != nil) {
-                NSString *_optionC = [[NSString alloc]initWithUTF8String:optionC];
-                temp.optionC = _optionC;
-            }else {
-                temp.optionC = nil;
-            }
-            
-            
-            
-            char *optionD = (char*)sqlite3_column_text(statement, 5);
-            if (optionD != nil) {
-                NSString *_optionD = [[NSString alloc]initWithUTF8String:optionD];
-                temp.optionD = _optionD;
-            } else {
-                temp.optionD = nil;
-            }
-            
-            
+
+            //answer字段应该设置为非空
             char *answer = (char*)sqlite3_column_text(statement, 6);
             NSString *_answer = [[NSString alloc]initWithUTF8String:answer];
-            temp.answer = _answer;
-            
-            [self.subject addObject:temp];
+
+            [sub addObject:_answer];
 
         }
     }
-//    self.amount = [self.subject count];
-    return self.subject; //subject1;//
-    
+
+    return sub; 
+
 }
 
 -(void)closeDataBase:(sqlite3 *)dbName{
@@ -141,38 +166,38 @@
 
 -(dataSou *)getNextQuiz{
     
-    if (self.index0 == [self.subject count]) {
+    if (self.index0 == self.amount) {
         return nil;
     }else{
         ++ self.index0;
     }
     
-    return [self.subject objectAtIndex:self.index0];
-//    return [self findDatabyId:TABLEBAME :self.index0];
+    return [self findDatabyId:TABLEBAME_TALENT :self.index0+1];
 }
 
 -(dataSou *)getLastQuiz{
-    if (self.index0 == [self.subject count]) {
+    if (self.index0 == 0) {//[self.subject count]
         return nil;
     }else{
         -- self.index0;
     }
     
-    return [self.subject objectAtIndex:self.index0];
-//    return [self findDatabyId:TABLEBAME :self.index0];
+    return [self findDatabyId:TABLEBAME_TALENT :self.index0+1];
     
 }
 
 - (dataSou *)getCurrentQuiz{
     if (self.index0>=0 && self.index0<self.amount) {
-        return [self.subject objectAtIndex:self.index0];
+//        return [self.subject objectAtIndex:self.index0];
+        return [self findDatabyId:TABLEBAME_TALENT :self.index0+1];
     }
     return nil;
 }
 
 -(dataSou *)getRandQuiz:(int)index{
     if (index >= 0 && index < self.amount ) {
-        return [self.subject objectAtIndex:index];
+//        return [self.subject objectAtIndex:index];
+        return [self findDatabyId:TABLEBAME_TALENT :self.index0+1];
     }
     return nil;
 }
@@ -188,14 +213,14 @@
 
 -(int *)getEvaluatebyScore:(NSMutableArray *)sub :(int *)choice{
     
-    dataSou *tmp;
+    NSString *tmp;
     int sum = 0;
 //    int 
     
     for (int i=0; i<7; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[0] = [self cutOffScore:sum];
@@ -205,7 +230,7 @@
     for (int i=7; i<14; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[1] = [self cutOffScore:sum];
@@ -215,7 +240,7 @@
     for (int i=14; i<20; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[2] = [self cutOffScore:sum];
@@ -225,7 +250,7 @@
     for (int i=20; i<25; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[3] = [self cutOffScore:sum];
@@ -235,7 +260,7 @@
     for (int i=25; i<32; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[4] = [self cutOffScore:sum];
@@ -245,7 +270,7 @@
     for (int i=32; i<39; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     
@@ -255,7 +280,7 @@
     for (int i=39; i<44; i++) {
         tmp = [sub objectAtIndex:i];
         
-        sum += [self getScorefromChooice: choice[i]:tmp.answer];
+        sum += [self getScorefromChooice: choice[i]:tmp];
         
     }
     pingjia[6] = [self cutOffScore:sum];

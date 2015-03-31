@@ -39,7 +39,7 @@
 
 -(void)initViewsData{
     self.quiz = [[readDatabase alloc] init];
-    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLENAME_TALENT];
+//    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLENAME_TALENT];
     //配置题目开始题数
     int seqInit;
     seqInit = 1;
@@ -279,7 +279,7 @@
     
     ReportViewController *desVC = segue.destinationViewController;
     
-    desVC.gress = [self.quiz getEvaluatebyScore:self.quiz.subject :choises];
+    desVC.gress = [self.quiz getEvaluatebyScore:[self.quiz getAnswerbyTableName:TABLENAME_TALENT] :choises];
 }
 
 

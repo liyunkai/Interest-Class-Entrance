@@ -14,13 +14,14 @@
 
 
 @property(strong,nonatomic)  dataSou *data;
-@property(strong,nonatomic) NSMutableArray *subject;
+//@property(strong,nonatomic) NSMutableArray *subject;     //答案放在该数组
 @property(assign,nonatomic) int index0;
 @property(assign,nonatomic) NSInteger amount;
 
 -(sqlite3 *)openDatabase;
 -(void)closeDataBase:(sqlite3 *)dbName;
--(NSMutableArray *)getTablebyName:(NSString *)tableName;
+//-(NSMutableArray *)getTablebyName:(NSString *)tableName;
+-(NSMutableArray *)getAnswerbyTableName:(NSString *)tableName;
 
 -(dataSou *)getRandQuiz:(int)index;
 -(dataSou *)getNextQuiz;
