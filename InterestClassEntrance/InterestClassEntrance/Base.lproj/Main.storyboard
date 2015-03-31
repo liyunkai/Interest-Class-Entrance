@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -494,11 +495,13 @@
                                 <rect key="frame" x="111" y="0.0" width="379" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="JmZ-mM-JV7"/>
+                                    <constraint firstAttribute="width" secondItem="1jI-Ts-FR6" secondAttribute="height" multiplier="125:64" id="Vjs-Hy-0KA"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="Wdn-2k-sNd"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JmZ-mM-JV7"/>
+                                        <exclude reference="Vjs-Hy-0KA"/>
                                         <exclude reference="Wdn-2k-sNd"/>
                                     </mask>
                                 </variation>
@@ -512,8 +515,12 @@
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="60" width="250" height="128"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="60" width="250" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="JmZ-mM-JV7"/>
+                                        <include reference="Vjs-Hy-0KA"/>
+                                        <exclude reference="Wdn-2k-sNd"/>
+                                    </mask>
                                 </variation>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-zq-r0x">
@@ -557,6 +564,9 @@
                             <constraint firstItem="1jI-Ts-FR6" firstAttribute="top" secondItem="L1k-aI-ZLh" secondAttribute="top" constant="60" id="1BE-Ol-7Kx"/>
                             <constraint firstAttribute="bottom" secondItem="AAn-zq-r0x" secondAttribute="bottom" id="3bN-ZU-Pq6"/>
                             <constraint firstAttribute="centerX" secondItem="1jI-Ts-FR6" secondAttribute="centerX" id="AG0-6f-5TT"/>
+                            <constraint firstAttribute="trailing" secondItem="1jI-Ts-FR6" secondAttribute="trailing" constant="150" id="JTM-1f-Hkk">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="1jI-Ts-FR6" firstAttribute="leading" secondItem="L1k-aI-ZLh" secondAttribute="leading" id="Lzy-bw-k2F"/>
                             <constraint firstItem="AAn-zq-r0x" firstAttribute="top" secondItem="1jI-Ts-FR6" secondAttribute="bottom" id="QDF-vz-E61"/>
                             <constraint firstAttribute="centerX" secondItem="AAn-zq-r0x" secondAttribute="centerX" id="lH6-Q4-fLd"/>
@@ -565,6 +575,7 @@
                             <mask key="constraints">
                                 <exclude reference="1BE-Ol-7Kx"/>
                                 <exclude reference="AG0-6f-5TT"/>
+                                <exclude reference="JTM-1f-Hkk"/>
                                 <exclude reference="Lzy-bw-k2F"/>
                                 <exclude reference="3bN-ZU-Pq6"/>
                                 <exclude reference="QDF-vz-E61"/>
@@ -579,6 +590,11 @@
                                 <include reference="3bN-ZU-Pq6"/>
                                 <include reference="QDF-vz-E61"/>
                                 <include reference="lH6-Q4-fLd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="JTM-1f-Hkk"/>
                             </mask>
                         </variation>
                     </view>
@@ -712,18 +728,21 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="3pZ-sc-KGK"/>
                                     <constraint firstAttribute="height" constant="100" id="FSA-M2-jPo"/>
+                                    <constraint firstAttribute="width" secondItem="4Ad-Ov-uJi" secondAttribute="height" multiplier="2:1" id="T3d-XV-PqZ"/>
                                     <constraint firstAttribute="width" constant="400" id="ZfG-qL-i2N"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3pZ-sc-KGK"/>
                                         <exclude reference="FSA-M2-jPo"/>
+                                        <exclude reference="T3d-XV-PqZ"/>
                                         <exclude reference="ZfG-qL-i2N"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="3pZ-sc-KGK"/>
+                                        <include reference="T3d-XV-PqZ"/>
                                     </mask>
                                 </variation>
                             </imageView>
