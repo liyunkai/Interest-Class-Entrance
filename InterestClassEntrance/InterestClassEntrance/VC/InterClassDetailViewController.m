@@ -12,7 +12,6 @@
 @interface InterClassDetailViewController () <HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
 @property (nonatomic, strong) HTHorizontalSelectionList *textSelectionList;
-//@property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *textSelectionList;
 @property (nonatomic, strong) NSArray *detailMakes;
 @property(nonatomic, assign) NSInteger selectedListItemIndex;
 @property (nonatomic, strong) UILabel *selectedDetailLabel;
@@ -80,37 +79,78 @@
     return 6;
 }
 
+#define INTRO_INDEX 0
+#define COMMENT_INDEX 3
+#define TEACHER_INDEX  1
+#define LESSON_INDEX  2
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    // fixed font style. use custom view (UILabel) if you want something different
+    return self.detailMakes[self.selectedListItemIndex];
+}
+
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      switch (self.selectedListItemIndex) {
-         case 0:
+         case INTRO_INDEX:
          {
              UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"introCell" forIndexPath:indexPath];
              // Configure the cell...
              if (cell == nil) {
                  cell = [[UITableViewCell alloc] init];
              }
-             cell.textLabel.text = @"机构介绍";
-             cell.detailTextLabel.text = @"成立于XX年\nssssssssssssssssssssssssss\nsssssssssssssssssss\nssssssssssssssssss";
+             cell.textLabel.text = @"成立于XX年\nssssssssssssssssssssssssss\nsssssssssssssssssss\nssssssssssssssssss";
+             
+             
              return cell;
              break;
          }
-         case 1:{
+         case COMMENT_INDEX:{
              UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
              if (cell == nil) {
                  cell = [[UITableViewCell alloc] init];
              }
              cell.textLabel.text = @"用户名：评论内容blablabla";
-         }
-         default:
-         {
              
-             UITableViewCell *cell = [[UITableViewCell alloc] init];
+             
              return cell;
+             break;
+         }
+         case TEACHER_INDEX:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"teacherInfoCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"老师名字：介绍blabla";
+             
+             
+             return cell;
+             break;
+         }
+         case LESSON_INDEX:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lessonInfoCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"课程名：介绍blabla";
+             
+             
+             return cell;
+             break;
+         }
+             
+         default:{
+             UITableViewCell *cell = [[UITableViewCell alloc] init];
+             
+             
+             return cell;
+             break;
          }
              
              
      }
+     
+     
  }
 
 
