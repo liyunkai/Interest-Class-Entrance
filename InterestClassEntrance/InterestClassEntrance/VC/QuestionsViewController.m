@@ -34,7 +34,11 @@
 
 - (void)handleBtnIndex:(NSInteger)btnIndex{
     self->choises[self.quiz.index0] = (int)btnIndex;
-    [self nextQuestionProc];
+    if (self.quiz.index0+1 == self.quiz.amount) {
+        [self performSegueWithIdentifier:@"completeTest" sender:self];
+        return;
+    }
+    [self nextQuestionProc];//异步的
 }
 
 -(void)initViewsData{
