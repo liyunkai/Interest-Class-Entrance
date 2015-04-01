@@ -14,7 +14,7 @@
 @property (nonatomic, strong) HTHorizontalSelectionList *textSelectionList;
 //@property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *textSelectionList;
 @property (nonatomic, strong) NSArray *detailMakes;
-
+@property(nonatomic, assign) NSInteger selectedListItemIndex;
 @property (nonatomic, strong) UILabel *selectedDetailLabel;
 
 @end
@@ -27,7 +27,6 @@
 }
 
 - (void)setupHorizonSelectionList{
-    //    self.title = @"Cars";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     CGRect refTopImgFrame = self.topImageView.frame;
     NSLog(@"%f",refTopImgFrame.origin.y);
@@ -48,26 +47,6 @@
                       @"不知道写什么了"];
     
     [self.view addSubview:self.textSelectionList];
-    self.selectedDetailLabel = [[UILabel alloc] init];
-    self.selectedDetailLabel.text = self.detailMakes[self.textSelectionList.selectedButtonIndex];
-    self.selectedDetailLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.selectedDetailLabel];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedDetailLabel
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.0
-                                                           constant:0.0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedDetailLabel
-                                                          attribute:NSLayoutAttributeCenterY
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterY
-                                                         multiplier:1.0
-                                                           constant:0.0]];
 }
 
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
@@ -84,7 +63,8 @@
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
     // update the view for the corresponding index
-    self.selectedDetailLabel.text = self.detailMakes[index];
+    self.selectedListItemIndex = index;
+    NSLog(@"%ld",(long)index);
     [self.detailTableView reloadData];
 }
 
@@ -102,14 +82,35 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"introCell" forIndexPath:indexPath];
- // Configure the cell...
-     if (cell == nil) {
-         cell = [[UITableViewCell alloc] init];
+     switch (self.selectedListItemIndex) {
+         case 0:
+         {
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"introCell" forIndexPath:indexPath];
+             // Configure the cell...
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"机构介绍";
+             cell.detailTextLabel.text = @"成立于XX年\nssssssssssssssssssssssssss\nsssssssssssssssssss\nssssssssssssssssss";
+             return cell;
+             break;
+         }
+         case 1:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"用户名：评论内容blablabla";
+         }
+         default:
+         {
+             
+             UITableViewCell *cell = [[UITableViewCell alloc] init];
+             return cell;
+         }
+             
+             
      }
-     cell.textLabel.text = @"机构介绍";
-     cell.detailTextLabel.text = @"成立于XX年";
-     return cell;
  }
 
 
@@ -117,9 +118,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
-
-
-
 
  #pragma mark - Navigation
  
