@@ -23,17 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.title = @"Cars";
+    [self setupHorizonSelectionList];
+}
+
+- (void)setupHorizonSelectionList{
+    //    self.title = @"Cars";
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    self.textSelectionList = [[HTHorizontalSelectionList alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 40)];
+    CGRect refTopImgFrame = self.topImageView.frame;
+    NSLog(@"%f",refTopImgFrame.origin.y);
+    NSLog(@"%f",refTopImgFrame.size.height);
+    self.textSelectionList = [[HTHorizontalSelectionList alloc] initWithFrame:CGRectMake(0, refTopImgFrame.size.height-20, self.view.frame.size.width, 40)];
     self.textSelectionList.delegate = self;
     self.textSelectionList.dataSource = self;
     
     self.textSelectionList.selectionIndicatorColor = [UIColor redColor];
     [self.textSelectionList setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-
+    
     self.carMakes = @[@"机构信息",
                       @"师资力量",
                       @"课程设计",
@@ -47,23 +52,22 @@
     self.selectedCarLabel.text = self.carMakes[self.textSelectionList.selectedButtonIndex];
     self.selectedCarLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.selectedCarLabel];
-
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                         attribute:NSLayoutAttributeCenterX
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self.view
-                                                         attribute:NSLayoutAttributeCenterX
-                                                        multiplier:1.0
-                                                          constant:0.0]];
-
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                         attribute:NSLayoutAttributeCenterY
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self.view
-                                                         attribute:NSLayoutAttributeCenterY
-                                                        multiplier:1.0
-                                                          constant:0.0]];
     
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.0
+                                                           constant:0.0]];
 }
 
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
