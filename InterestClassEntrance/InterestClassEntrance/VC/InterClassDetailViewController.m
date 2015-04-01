@@ -13,9 +13,9 @@
 
 @property (nonatomic, strong) HTHorizontalSelectionList *textSelectionList;
 //@property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *textSelectionList;
-@property (nonatomic, strong) NSArray *carMakes;
+@property (nonatomic, strong) NSArray *detailMakes;
 
-@property (nonatomic, strong) UILabel *selectedCarLabel;
+@property (nonatomic, strong) UILabel *selectedDetailLabel;
 
 @end
 
@@ -39,7 +39,7 @@
     self.textSelectionList.selectionIndicatorColor = [UIColor redColor];
     [self.textSelectionList setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     
-    self.carMakes = @[@"机构信息",
+    self.detailMakes = @[@"机构信息",
                       @"师资力量",
                       @"课程设计",
                       @"家长评价",
@@ -48,12 +48,12 @@
                       @"不知道写什么了"];
     
     [self.view addSubview:self.textSelectionList];
-    self.selectedCarLabel = [[UILabel alloc] init];
-    self.selectedCarLabel.text = self.carMakes[self.textSelectionList.selectedButtonIndex];
-    self.selectedCarLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.selectedCarLabel];
+    self.selectedDetailLabel = [[UILabel alloc] init];
+    self.selectedDetailLabel.text = self.detailMakes[self.textSelectionList.selectedButtonIndex];
+    self.selectedDetailLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.selectedDetailLabel];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedDetailLabel
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.view
@@ -61,7 +61,7 @@
                                                          multiplier:1.0
                                                            constant:0.0]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedDetailLabel
                                                           attribute:NSLayoutAttributeCenterY
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.view
@@ -73,18 +73,19 @@
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
 
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
-    return self.carMakes.count;
+    return self.detailMakes.count;
 }
 
 - (NSString *)selectionList:(HTHorizontalSelectionList *)selectionList titleForItemWithIndex:(NSInteger)index {
-    return self.carMakes[index];
+    return self.detailMakes[index];
 }
 
 #pragma mark - HTHorizontalSelectionListDelegate Protocol Methods
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
     // update the view for the corresponding index
-    self.selectedCarLabel.text = self.carMakes[index];
+    self.selectedDetailLabel.text = self.detailMakes[index];
+    [self.detailTableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -101,11 +102,14 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
- 
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"introCell" forIndexPath:indexPath];
  // Configure the cell...
- 
- return cell;
+     if (cell == nil) {
+         cell = [[UITableViewCell alloc] init];
+     }
+     cell.textLabel.text = @"机构介绍";
+     cell.detailTextLabel.text = @"成立于XX年";
+     return cell;
  }
 
 
