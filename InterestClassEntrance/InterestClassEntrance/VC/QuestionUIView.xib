@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="400" id="PWx-iw-r7k"/>
@@ -152,7 +152,7 @@
                     </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_A" highlightedImage="Test_A-" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-Jj-f7l">
-                    <rect key="frame" x="68" y="242" width="30" height="28"/>
+                    <rect key="frame" x="68" y="242" width="39" height="36"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="56" y="247" width="30" height="28"/>
                     </variation>
@@ -161,7 +161,7 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_B" highlightedImage="Test_B-" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-8h-6MJ">
-                    <rect key="frame" x="71" y="307" width="27" height="23"/>
+                    <rect key="frame" x="71" y="307" width="39" height="36"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="59" y="312" width="27" height="23"/>
                     </variation>
@@ -170,7 +170,7 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_C" highlightedImage="Test_C-" translatesAutoresizingMaskIntoConstraints="NO" id="j68-AB-A2c">
-                    <rect key="frame" x="69" y="363" width="30" height="29"/>
+                    <rect key="frame" x="69" y="363" width="39" height="36"/>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="57" y="368" width="30" height="29"/>
                     </variation>
@@ -179,7 +179,7 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_D" highlightedImage="Test_D-" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WW-St4">
-                    <rect key="frame" x="68" y="430" width="29" height="33"/>
+                    <rect key="frame" x="68" y="430" width="39" height="36"/>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="57" y="425" width="29" height="33"/>
                     </variation>
@@ -402,16 +402,16 @@
         </view>
     </objects>
     <resources>
-        <image name="Test_A" width="26" height="24"/>
-        <image name="Test_A-" width="26" height="24"/>
-        <image name="Test_B" width="26" height="24"/>
-        <image name="Test_B-" width="25" height="24"/>
-        <image name="Test_C" width="25" height="24"/>
-        <image name="Test_C-" width="25" height="24"/>
-        <image name="Test_D" width="24" height="24"/>
-        <image name="Test_D-" width="24" height="24"/>
-        <image name="Test_beijing" width="250" height="444"/>
-        <image name="Test_selectedImg" width="250" height="46"/>
-        <image name="star" width="19" height="18"/>
+        <image name="Test_A" width="39" height="36"/>
+        <image name="Test_A-" width="39" height="36"/>
+        <image name="Test_B" width="39" height="36"/>
+        <image name="Test_B-" width="38" height="36"/>
+        <image name="Test_C" width="38" height="36"/>
+        <image name="Test_C-" width="38" height="36"/>
+        <image name="Test_D" width="36" height="36"/>
+        <image name="Test_D-" width="36" height="36"/>
+        <image name="Test_beijing" width="375" height="667"/>
+        <image name="Test_selectedImg" width="375" height="70"/>
+        <image name="star" width="29" height="27"/>
     </resources>
 </document>
