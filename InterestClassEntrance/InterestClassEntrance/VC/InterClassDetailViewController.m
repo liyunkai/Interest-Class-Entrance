@@ -12,10 +12,9 @@
 @interface InterClassDetailViewController () <HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
 @property (nonatomic, strong) HTHorizontalSelectionList *textSelectionList;
-//@property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *textSelectionList;
-@property (nonatomic, strong) NSArray *carMakes;
-
-@property (nonatomic, strong) UILabel *selectedCarLabel;
+@property (nonatomic, strong) NSArray *detailMakes;
+@property(nonatomic, assign) NSInteger selectedListItemIndex;
+@property (nonatomic, strong) UILabel *selectedDetailLabel;
 
 @end
 
@@ -27,7 +26,6 @@
 }
 
 - (void)setupHorizonSelectionList{
-    //    self.title = @"Cars";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     CGRect refTopImgFrame = self.topImageView.frame;
     NSLog(@"%f",refTopImgFrame.origin.y);
@@ -39,7 +37,7 @@
     self.textSelectionList.selectionIndicatorColor = [UIColor redColor];
     [self.textSelectionList setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     
-    self.carMakes = @[@"机构信息",
+    self.detailMakes = @[@"机构信息",
                       @"师资力量",
                       @"课程设计",
                       @"家长评价",
@@ -48,43 +46,25 @@
                       @"不知道写什么了"];
     
     [self.view addSubview:self.textSelectionList];
-    self.selectedCarLabel = [[UILabel alloc] init];
-    self.selectedCarLabel.text = self.carMakes[self.textSelectionList.selectedButtonIndex];
-    self.selectedCarLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.selectedCarLabel];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.0
-                                                           constant:0.0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                          attribute:NSLayoutAttributeCenterY
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterY
-                                                         multiplier:1.0
-                                                           constant:0.0]];
 }
 
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
 
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
-    return self.carMakes.count;
+    return self.detailMakes.count;
 }
 
 - (NSString *)selectionList:(HTHorizontalSelectionList *)selectionList titleForItemWithIndex:(NSInteger)index {
-    return self.carMakes[index];
+    return self.detailMakes[index];
 }
 
 #pragma mark - HTHorizontalSelectionListDelegate Protocol Methods
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
     // update the view for the corresponding index
-    self.selectedCarLabel.text = self.carMakes[index];
+    self.selectedListItemIndex = index;
+    NSLog(@"%ld",(long)index);
+    [self.detailTableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -99,13 +79,78 @@
     return 6;
 }
 
+#define INTRO_INDEX 0
+#define COMMENT_INDEX 3
+#define TEACHER_INDEX  1
+#define LESSON_INDEX  2
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    // fixed font style. use custom view (UILabel) if you want something different
+    return self.detailMakes[self.selectedListItemIndex];
+}
+
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
+     switch (self.selectedListItemIndex) {
+         case INTRO_INDEX:
+         {
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"introCell" forIndexPath:indexPath];
+             // Configure the cell...
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"成立于XX年\nssssssssssssssssssssssssss\nsssssssssssssssssss\nssssssssssssssssss";
+             
+             
+             return cell;
+             break;
+         }
+         case COMMENT_INDEX:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"用户名：评论内容blablabla";
+             
+             
+             return cell;
+             break;
+         }
+         case TEACHER_INDEX:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"teacherInfoCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"老师名字：介绍blabla";
+             
+             
+             return cell;
+             break;
+         }
+         case LESSON_INDEX:{
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lessonInfoCell" forIndexPath:indexPath];
+             if (cell == nil) {
+                 cell = [[UITableViewCell alloc] init];
+             }
+             cell.textLabel.text = @"课程名：介绍blabla";
+             
+             
+             return cell;
+             break;
+         }
+             
+         default:{
+             UITableViewCell *cell = [[UITableViewCell alloc] init];
+             
+             
+             return cell;
+             break;
+         }
+             
+             
+     }
+     
+     
  }
 
 
@@ -113,9 +158,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
-
-
-
 
  #pragma mark - Navigation
  

@@ -13,7 +13,7 @@
 -(id)init{
     self = [super init];
     if (self) {
-        self->columArr[0] = 5;
+        self->columArr[0] = 6;
         self->columArr[1] = 5;
         self->columArr[2] = 4;
         self->columArr[3] = 4;
