@@ -147,12 +147,15 @@
                             <constraint firstAttribute="centerX" secondItem="qOd-DQ-XQf" secondAttribute="centerX" id="JU4-VA-wAz"/>
                             <constraint firstItem="OcA-yS-8Bk" firstAttribute="top" secondItem="ECE-TM-dlr" secondAttribute="bottom" constant="100" id="Jyu-Di-93j">
                                 <variation key="widthClass=compact" constant="120"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="a0q-jM-86D" secondAttribute="trailing" id="PX5-3Y-xcW"/>
                             <constraint firstItem="iJ6-RK-GNN" firstAttribute="top" secondItem="SlO-Lc-b0y" secondAttribute="bottom" constant="79" id="SW5-C5-Xwg"/>
                             <constraint firstItem="a0q-jM-86D" firstAttribute="leading" secondItem="bVk-Q9-pdp" secondAttribute="leading" id="X1I-Xk-5UC"/>
                             <constraint firstAttribute="centerX" secondItem="iJ6-RK-GNN" secondAttribute="centerX" id="amF-Rq-UZP"/>
-                            <constraint firstItem="qOd-DQ-XQf" firstAttribute="top" secondItem="SlO-Lc-b0y" secondAttribute="bottom" constant="107" id="ttF-hE-w3c"/>
+                            <constraint firstItem="qOd-DQ-XQf" firstAttribute="top" secondItem="SlO-Lc-b0y" secondAttribute="bottom" constant="107" id="ttF-hE-w3c">
+                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -195,7 +198,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-IC-ky5">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-IC-ky5">
                                 <rect key="frame" x="157" y="93" width="286" height="70"/>
                                 <subviews>
                                     <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znG-Fi-X7v">
@@ -1018,7 +1021,7 @@
         <image name="InterClass_certification" width="12" height="12"/>
         <image name="InterClass_signning" width="12" height="12"/>
         <image name="InterClass_speechBubble" width="12" height="12"/>
-        <image name="Test_beijing" width="375" height="667"/>
+        <image name="Test_beijing" width="250" height="444"/>
         <image name="border.png" width="567" height="157"/>
         <image name="chakan.png" width="258" height="80"/>
         <image name="enter.png" width="340" height="88"/>

@@ -52,8 +52,24 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-fY-WnI">
                     <rect key="frame" x="70" y="157" width="25" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="B7n-te-1co">
+                            <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                        </constraint>
+                        <constraint firstAttribute="width" secondItem="8QV-fY-WnI" secondAttribute="height" multiplier="1:1" id="QlB-rC-O9R"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="B7n-te-1co"/>
+                            <exclude reference="QlB-rC-O9R"/>
+                        </mask>
+                    </variation>
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="44" y="155" width="26" height="28"/>
+                        <mask key="constraints">
+                            <include reference="B7n-te-1co"/>
+                            <include reference="QlB-rC-O9R"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-Kb-xvk">
