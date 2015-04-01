@@ -1118,7 +1118,7 @@
         <image name="InterClass_certification" width="12" height="12"/>
         <image name="InterClass_signning" width="12" height="12"/>
         <image name="InterClass_speechBubble" width="12" height="12"/>
-        <image name="Test_beijing" width="375" height="667"/>
+        <image name="Test_beijing" width="250" height="444"/>
         <image name="border.png" width="567" height="157"/>
         <image name="chakan.png" width="258" height="80"/>
         <image name="enter.png" width="340" height="88"/>

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView">
@@ -24,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="U82-D5-GeO">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="400" id="PWx-iw-r7k"/>
@@ -57,38 +58,90 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-Kb-xvk">
                     <rect key="frame" x="41" y="233" width="451" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="jxO-0I-2hc">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jxO-0I-2hc"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="238" width="380" height="46"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="19" y="293" width="325" height="54"/>
+                        <mask key="constraints">
+                            <include reference="jxO-0I-2hc"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="42J-fd-qdm">
                     <rect key="frame" x="33" y="295" width="459" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="g1a-XT-Gky">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="g1a-XT-Gky"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="300" width="380" height="47"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="19" y="364" width="325" height="54"/>
+                        <mask key="constraints">
+                            <include reference="g1a-XT-Gky"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-zC-LJc">
                     <rect key="frame" x="49" y="354" width="443" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="MUQ-7m-6WO">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="MUQ-7m-6WO"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="17" y="359" width="380" height="48"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="19" y="427" width="325" height="54"/>
+                        <mask key="constraints">
+                            <include reference="MUQ-7m-6WO"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_selectedImg" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-gE-oCq">
                     <rect key="frame" x="33" y="421" width="471" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="EQk-Iw-M4K">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="EQk-Iw-M4K"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="17" y="417" width="380" height="51"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="19" y="493" width="325" height="54"/>
+                        <mask key="constraints">
+                            <include reference="EQk-Iw-M4K"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LabelA" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aL-0w-M4t">
@@ -152,16 +205,33 @@
                     </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_A" highlightedImage="Test_A-" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-Jj-f7l">
-                    <rect key="frame" x="68" y="242" width="39" height="36"/>
+                    <rect key="frame" x="68" y="242" width="30" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TQA-Jj-f7l" secondAttribute="height" multiplier="1:1" id="aUl-Lq-SMw"/>
+                        <constraint firstAttribute="width" constant="26" id="h9E-DM-9FW">
+                            <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="h9E-DM-9FW"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="56" y="247" width="30" height="28"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="45" y="306" width="26" height="28"/>
+                        <mask key="constraints">
+                            <include reference="h9E-DM-9FW"/>
+                        </mask>
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_B" highlightedImage="Test_B-" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-8h-6MJ">
-                    <rect key="frame" x="71" y="307" width="39" height="36"/>
+                    <rect key="frame" x="71" y="307" width="27" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AZ8-8h-6MJ" secondAttribute="height" multiplier="1:1" id="KwR-FI-Bi9"/>
+                    </constraints>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="59" y="312" width="27" height="23"/>
                     </variation>
@@ -170,7 +240,10 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_C" highlightedImage="Test_C-" translatesAutoresizingMaskIntoConstraints="NO" id="j68-AB-A2c">
-                    <rect key="frame" x="69" y="363" width="39" height="36"/>
+                    <rect key="frame" x="69" y="363" width="30" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="j68-AB-A2c" secondAttribute="height" multiplier="1:1" id="72f-0j-aPb"/>
+                    </constraints>
                     <variation key="widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="57" y="368" width="30" height="29"/>
                     </variation>
@@ -179,7 +252,10 @@
                     </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Test_D" highlightedImage="Test_D-" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WW-St4">
-                    <rect key="frame" x="68" y="430" width="39" height="36"/>
+                    <rect key="frame" x="68" y="430" width="29" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="80X-WW-St4" secondAttribute="height" multiplier="1:1" id="zgo-2q-8mU"/>
+                    </constraints>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="57" y="425" width="29" height="33"/>
                     </variation>
@@ -293,7 +369,9 @@
                 </constraint>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="trailing" secondItem="ok6-zC-LJc" secondAttribute="trailing" id="8bd-Cv-Q0i"/>
                 <constraint firstItem="MIH-dc-CXu" firstAttribute="top" secondItem="F8B-va-xd0" secondAttribute="top" id="8ja-9a-ZAi"/>
-                <constraint firstItem="42J-fd-qdm" firstAttribute="centerY" secondItem="AZ8-8h-6MJ" secondAttribute="centerY" constant="4" id="9lZ-ep-QBP"/>
+                <constraint firstItem="42J-fd-qdm" firstAttribute="centerY" secondItem="AZ8-8h-6MJ" secondAttribute="centerY" constant="4" id="9lZ-ep-QBP">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="leading" secondItem="NBB-ow-iyD" secondAttribute="leading" id="Awn-70-U39"/>
                 <constraint firstItem="42J-fd-qdm" firstAttribute="top" secondItem="nyT-in-56L" secondAttribute="top" id="D9c-QS-xJy"/>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="leading" secondItem="ArD-vU-l0r" secondAttribute="leading" id="EZR-ux-Gx4"/>
@@ -318,7 +396,7 @@
                 <constraint firstItem="MIH-dc-CXu" firstAttribute="top" secondItem="MN9-gE-oCq" secondAttribute="top" id="Tmb-mq-f73"/>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="leading" secondItem="42J-fd-qdm" secondAttribute="leading" id="Ujj-VT-cgi"/>
                 <constraint firstItem="E9h-Mt-X7e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="78" id="Uoo-m1-ncz">
-                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="55"/>
                 </constraint>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="centerY" secondItem="TQA-Jj-f7l" secondAttribute="centerY" id="XRs-UI-9qR"/>
                 <constraint firstItem="Qzg-88-ApO" firstAttribute="trailing" secondItem="F8B-va-xd0" secondAttribute="trailing" id="YYG-kS-G5U"/>
@@ -332,7 +410,7 @@
                 <constraint firstItem="AZ8-8h-6MJ" firstAttribute="leading" secondItem="j68-AB-A2c" secondAttribute="leading" id="cKO-KK-hse"/>
                 <constraint firstItem="42J-fd-qdm" firstAttribute="bottom" secondItem="nyT-in-56L" secondAttribute="bottom" id="dyt-Sd-HTI"/>
                 <constraint firstItem="E9h-Mt-X7e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="128" id="gHp-6E-lIc">
-                    <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="130"/>
                 </constraint>
                 <constraint firstItem="Fna-Kb-xvk" firstAttribute="bottom" secondItem="0aL-0w-M4t" secondAttribute="bottom" id="hLf-jj-TCT"/>
                 <constraint firstItem="80X-WW-St4" firstAttribute="centerY" secondItem="MN9-gE-oCq" secondAttribute="centerY" id="hbk-0y-iO7"/>
@@ -342,7 +420,7 @@
                 </constraint>
                 <constraint firstItem="42J-fd-qdm" firstAttribute="top" secondItem="Cl5-AT-XGO" secondAttribute="top" id="kyv-48-O3L"/>
                 <constraint firstItem="8QV-fY-WnI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="lWb-VT-VFS">
-                    <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                 </constraint>
                 <constraint firstItem="Qzg-88-ApO" firstAttribute="top" secondItem="ArD-vU-l0r" secondAttribute="top" id="oaa-q5-miX"/>
                 <constraint firstItem="j68-AB-A2c" firstAttribute="centerY" secondItem="ok6-zC-LJc" secondAttribute="centerY" constant="1" id="pIq-0f-kvx">
@@ -402,16 +480,16 @@
         </view>
     </objects>
     <resources>
-        <image name="Test_A" width="39" height="36"/>
-        <image name="Test_A-" width="39" height="36"/>
-        <image name="Test_B" width="39" height="36"/>
-        <image name="Test_B-" width="38" height="36"/>
-        <image name="Test_C" width="38" height="36"/>
-        <image name="Test_C-" width="38" height="36"/>
-        <image name="Test_D" width="36" height="36"/>
-        <image name="Test_D-" width="36" height="36"/>
-        <image name="Test_beijing" width="375" height="667"/>
-        <image name="Test_selectedImg" width="375" height="70"/>
-        <image name="star" width="29" height="27"/>
+        <image name="Test_A" width="26" height="24"/>
+        <image name="Test_A-" width="26" height="24"/>
+        <image name="Test_B" width="26" height="24"/>
+        <image name="Test_B-" width="25" height="24"/>
+        <image name="Test_C" width="25" height="24"/>
+        <image name="Test_C-" width="25" height="24"/>
+        <image name="Test_D" width="24" height="24"/>
+        <image name="Test_D-" width="24" height="24"/>
+        <image name="Test_beijing" width="250" height="444"/>
+        <image name="Test_selectedImg" width="250" height="46"/>
+        <image name="star" width="19" height="18"/>
     </resources>
 </document>

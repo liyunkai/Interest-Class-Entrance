@@ -197,7 +197,7 @@
 -(dataSou *)getRandQuiz:(int)index{
     if (index >= 0 && index < self.amount ) {
 //        return [self.subject objectAtIndex:index];
-        return [self findDatabyId:TABLEBAME_TALENT :self.index0+1];
+        return [self findDatabyId:TABLEBAME_TALENT :index+1];
     }
     return nil;
 }
