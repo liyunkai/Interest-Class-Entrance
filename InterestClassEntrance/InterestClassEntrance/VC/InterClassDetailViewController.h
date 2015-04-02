@@ -10,6 +10,7 @@
 
 @interface InterClassDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 
 

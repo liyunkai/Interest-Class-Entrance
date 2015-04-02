@@ -46,8 +46,8 @@
 //    self.quiz.subject = [self.quiz getTablebyName :(NSString *)TABLENAME_TALENT];
     //配置题目开始题数
     int seqInit;
-    seqInit = 1;
-    self.quiz.index0 = seqInit-1;
+    seqInit = 0;
+    self.quiz.index0 = seqInit;
     //配置用户已选信息
     for (int i=0; i<100; ++i) {
         self->choises[i] = -1;
