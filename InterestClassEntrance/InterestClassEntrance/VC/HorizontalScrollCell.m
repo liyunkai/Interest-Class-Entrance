@@ -148,6 +148,20 @@
     
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.y < 0) {
+        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
+    }
+    
+    if (scrollView.contentOffset.y > 0) {
+        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
+    }
+    
+}
+
+
 @end
 
 
