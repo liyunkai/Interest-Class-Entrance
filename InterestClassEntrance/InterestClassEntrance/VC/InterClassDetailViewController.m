@@ -30,9 +30,15 @@
     //    self.title = @"Cars";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     CGRect refTopImgFrame = self.topImageView.frame;
+    self.topImageView.image = nil;
     NSLog(@"%f",refTopImgFrame.origin.y);
     NSLog(@"%f",refTopImgFrame.size.height);
-    self.textSelectionList = [[HTHorizontalSelectionList alloc] initWithFrame:CGRectMake(0, refTopImgFrame.size.height-20, self.view.frame.size.width, 40)];
+//    self.textSelectionList = [[HTHorizontalSelectionList alloc] initWithFrame:CGRectMake(0, refTopImgFrame.size.height-20, self.view.frame.size.width, 40)];
+    
+    self.textSelectionList = [[HTHorizontalSelectionList alloc] init];
+    self.textSelectionList.backgroundColor = [UIColor redColor];
+//    self.textSelectionList.frame = CGRectMake(0, 0, self.view.frame.size.width, 40);
+    
     self.textSelectionList.delegate = self;
     self.textSelectionList.dataSource = self;
     
@@ -50,24 +56,63 @@
     [self.view addSubview:self.textSelectionList];
     self.selectedCarLabel = [[UILabel alloc] init];
     self.selectedCarLabel.text = self.carMakes[self.textSelectionList.selectedButtonIndex];
-    self.selectedCarLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//    self.selectedCarLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.selectedCarLabel];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                          attribute:NSLayoutAttributeCenterX
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.textSelectionList
+                                                          attribute:NSLayoutAttributeBottom
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
+                                                             toItem:self.topImageView
+                                                          attribute:NSLayoutAttributeTop
                                                          multiplier:1.0
                                                            constant:0.0]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
-                                                          attribute:NSLayoutAttributeCenterY
+    
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.textSelectionList
+//                                                          attribute:NSLayoutAttributeLeft
+//                                                          relatedBy:NSLayoutRelationEqual
+//                                                             toItem:self.view
+//                                                          attribute:NSLayoutAttributeLeft
+//                                                         multiplier:1.0
+//                                                           constant:0.0]];
+//    
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.textSelectionList
+//                                                          attribute:NSLayoutAttributeRight
+//                                                          relatedBy:NSLayoutRelationEqual
+//                                                             toItem:self.view
+//                                                          attribute:NSLayoutAttributeRight
+//                                                         multiplier:1.0
+//                                                           constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.textSelectionList
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:nil
+                                                          attribute:NSLayoutAttributeNotAnAttribute
+                                                         multiplier:1.0
+                                                           constant:40.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.textSelectionList
+                                                          attribute:NSLayoutAttributeWidth
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterY
+                                                          attribute:NSLayoutAttributeWidth
                                                          multiplier:1.0
-                                                           constant:0.0]];
+                                                           constant:0]];
+    
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+//                                                          attribute:NSLayoutAttributeCenterX
+//                                                          relatedBy:NSLayoutRelationEqual
+//                                                             toItem:self.view
+//                                                          attribute:NSLayoutAttributeCenterX
+//                                                         multiplier:1.0
+//                                                           constant:0.0]];
+//
+//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.selectedCarLabel
+//                                                          attribute:NSLayoutAttributeCenterY
+//                                                          relatedBy:NSLayoutRelationEqual
+//                                                             toItem:self.view
+//                                                          attribute:NSLayoutAttributeCenterY
+//                                                         multiplier:1.0
+//                                                           constant:0.0]];
 }
 
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods

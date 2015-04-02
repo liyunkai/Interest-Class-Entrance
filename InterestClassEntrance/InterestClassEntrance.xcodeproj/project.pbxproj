@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572A469A1ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A46991ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m */; };
+		572A469C1ACD38B000592BC9 /* category_backimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 572A469B1ACD38B000592BC9 /* category_backimg.png */; };
 		57FFE9781ABFFD0A00D6ECDC /* beijing.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE96F1ABFFD0A00D6ECDC /* beijing.png */; };
 		57FFE9791ABFFD0A00D6ECDC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE9701ABFFD0A00D6ECDC /* bg.png */; };
 		57FFE97A1ABFFD0A00D6ECDC /* bgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FFE9711ABFFD0A00D6ECDC /* bgImage.png */; };
@@ -70,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		572A46981ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderCollectionViewLayout.h; sourceTree = "<group>"; };
+		572A46991ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderCollectionViewLayout.m; sourceTree = "<group>"; };
+		572A469B1ACD38B000592BC9 /* category_backimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_backimg.png; sourceTree = "<group>"; };
 		57FFE96F1ABFFD0A00D6ECDC /* beijing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beijing.png; sourceTree = "<group>"; };
 		57FFE9701ABFFD0A00D6ECDC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		57FFE9711ABFFD0A00D6ECDC /* bgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgImage.png; sourceTree = "<group>"; };
@@ -290,6 +295,7 @@
 		E4A8163C1AB809260006E5B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				572A469B1ACD38B000592BC9 /* category_backimg.png */,
 				57FFE9811ABFFE4D00D6ECDC /* test.db */,
 				57FFE96F1ABFFD0A00D6ECDC /* beijing.png */,
 				57FFE9701ABFFD0A00D6ECDC /* bg.png */,
@@ -355,6 +361,8 @@
 		E4A9B1901AC940DE004F0298 /* InterestCategory */ = {
 			isa = PBXGroup;
 			children = (
+				572A46981ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.h */,
+				572A46991ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m */,
 				E4A8166B1AB80A0C0006E5B6 /* InterestCategoryViewController.h */,
 				E4A8166C1AB80A0C0006E5B6 /* InterestCategoryViewController.m */,
 				E4878BA91AC415FC00205E1B /* InterestCategoryClass.h */,
@@ -461,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572A469C1ACD38B000592BC9 /* category_backimg.png in Resources */,
 				57FFE97F1ABFFD0A00D6ECDC /* selected.png in Resources */,
 				57FFE9801ABFFD0A00D6ECDC /* touxiang.png in Resources */,
 				E4878BBC1AC59D4300205E1B /* IntroPage2.xib in Resources */,
@@ -502,6 +511,7 @@
 				E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */,
 				E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */,
 				A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */,
+				572A469A1ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
 				E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */,
 				E44EF22A1ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m in Sources */,

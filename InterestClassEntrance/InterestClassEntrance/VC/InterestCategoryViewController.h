@@ -11,8 +11,9 @@
 
 @interface InterestCategoryViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *collection;
+@property (strong, nonatomic)  UICollectionView *collection;
 @property(strong, nonatomic) InterestCategoryClass *interestCategInfo;
+@property (nonatomic, readonly) UICollectionReusableView *header;
 
 @end
 

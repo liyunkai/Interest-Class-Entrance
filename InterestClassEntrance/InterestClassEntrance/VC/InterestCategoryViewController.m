@@ -9,6 +9,10 @@
 #import "InterestCategoryViewController.h"
 #import "HorizontalScrollCell.h"
 #import "InterestCategoryClass.h"
+#import "StretchyHeaderCollectionViewLayout.h"
+
+NSString * const kHeaderIdent = @"Header";
+//NSString * const kCellIdent = @"cvcHsc";
 
 @interface InterestCategoryViewController ()<HorizontalScrollCellDelegate>
 
@@ -17,10 +21,12 @@
 @end
 
 @implementation InterestCategoryViewController
+@synthesize   header;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+        // Do any additional setup after loading the view, typically from a nib.
     self.interestCategInfo = [[InterestCategoryClass alloc] init];
     [self setUpCollection];
 }
@@ -32,13 +38,36 @@
 
 -(void)setUpCollection
 {
+    
+    CGRect bounds;
+    bounds = [[self view] bounds];
+    
+    StretchyHeaderCollectionViewLayout *stretchyLayout;
+    stretchyLayout = [[StretchyHeaderCollectionViewLayout alloc] init];
+    [stretchyLayout setSectionInset:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
+    [stretchyLayout setItemSize:CGSizeMake(300.0, 510.0)];
+    [stretchyLayout setHeaderReferenceSize:CGSizeMake(320.0, 220.0)];
+    
+    
+    self.collection = [[UICollectionView alloc] initWithFrame:bounds collectionViewLayout:stretchyLayout];
+    [self.collection setAlwaysBounceVertical:YES];
+    [self.collection setBackgroundColor:[UIColor clearColor]];
     self.collection.delegate = self;
     self.collection.dataSource = self;
+    
     
     UINib *hsCellNib = [UINib nibWithNibName:@"HorizontalScrollCell" bundle:nil];
     [self.collection registerNib:hsCellNib forCellWithReuseIdentifier:@"cvcHsc"];
     
+    
     [self.collection reloadData];
+    
+    [[self view] addSubview:self.collection];
+
+    
+    [self.collection registerClass:[UICollectionReusableView class]
+       forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+              withReuseIdentifier:kHeaderIdent];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -69,6 +98,30 @@
     
     return hsc;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)cv viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    if (!header) {
+        
+        header = [self.collection dequeueReusableSupplementaryViewOfKind:kind
+                                                    withReuseIdentifier:kHeaderIdent
+                                                           forIndexPath:indexPath];
+        CGRect bounds;
+//        bounds = [header bounds];
+        bounds = CGRectMake(header.bounds.origin.x, header.bounds.origin.y+64, header.bounds.size.width, header.bounds.size.height-64);
+        
+        UIImageView *imageView;
+        imageView = [[UIImageView alloc] initWithFrame:bounds];
+        [imageView setImage:[UIImage imageNamed:@"category_backimg"]];
+        [imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [imageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+        [imageView setClipsToBounds:YES];
+        [header addSubview:imageView];
+    }
+    
+    return header;
+}
+
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -198,7 +198,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-IC-ky5">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-IC-ky5">
                                 <rect key="frame" x="157" y="93" width="286" height="70"/>
                                 <subviews>
                                     <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znG-Fi-X7v">
@@ -494,38 +494,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="InterCateg_top_ads" translatesAutoresizingMaskIntoConstraints="NO" id="1jI-Ts-FR6">
-                                <rect key="frame" x="111" y="0.0" width="379" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="JmZ-mM-JV7"/>
-                                    <constraint firstAttribute="width" secondItem="1jI-Ts-FR6" secondAttribute="height" multiplier="125:64" id="Vjs-Hy-0KA"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="Wdn-2k-sNd"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JmZ-mM-JV7"/>
-                                        <exclude reference="Vjs-Hy-0KA"/>
-                                        <exclude reference="Wdn-2k-sNd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="11" y="0.0" width="379" height="128"/>
-                                    <mask key="constraints">
-                                        <include reference="JmZ-mM-JV7"/>
-                                        <include reference="Wdn-2k-sNd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="60" width="250" height="128"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="JmZ-mM-JV7"/>
-                                        <include reference="Vjs-Hy-0KA"/>
-                                        <exclude reference="Wdn-2k-sNd"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-zq-r0x">
                                 <rect key="frame" x="100" y="129" width="400" height="471"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -564,40 +532,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1jI-Ts-FR6" firstAttribute="top" secondItem="L1k-aI-ZLh" secondAttribute="top" constant="60" id="1BE-Ol-7Kx"/>
                             <constraint firstAttribute="bottom" secondItem="AAn-zq-r0x" secondAttribute="bottom" id="3bN-ZU-Pq6"/>
-                            <constraint firstAttribute="centerX" secondItem="1jI-Ts-FR6" secondAttribute="centerX" id="AG0-6f-5TT"/>
-                            <constraint firstAttribute="trailing" secondItem="1jI-Ts-FR6" secondAttribute="trailing" constant="150" id="JTM-1f-Hkk">
+                            <constraint firstItem="AAn-zq-r0x" firstAttribute="top" secondItem="yRr-aG-wyL" secondAttribute="bottom" constant="201" id="B45-XJ-GCs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="1jI-Ts-FR6" firstAttribute="leading" secondItem="L1k-aI-ZLh" secondAttribute="leading" id="Lzy-bw-k2F"/>
-                            <constraint firstItem="AAn-zq-r0x" firstAttribute="top" secondItem="1jI-Ts-FR6" secondAttribute="bottom" id="QDF-vz-E61"/>
                             <constraint firstAttribute="centerX" secondItem="AAn-zq-r0x" secondAttribute="centerX" id="lH6-Q4-fLd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="1BE-Ol-7Kx"/>
-                                <exclude reference="AG0-6f-5TT"/>
-                                <exclude reference="JTM-1f-Hkk"/>
-                                <exclude reference="Lzy-bw-k2F"/>
                                 <exclude reference="3bN-ZU-Pq6"/>
-                                <exclude reference="QDF-vz-E61"/>
+                                <exclude reference="B45-XJ-GCs"/>
                                 <exclude reference="lH6-Q4-fLd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="1BE-Ol-7Kx"/>
-                                <include reference="AG0-6f-5TT"/>
-                                <include reference="Lzy-bw-k2F"/>
                                 <include reference="3bN-ZU-Pq6"/>
-                                <include reference="QDF-vz-E61"/>
                                 <include reference="lH6-Q4-fLd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="JTM-1f-Hkk"/>
+                                <include reference="B45-XJ-GCs"/>
                             </mask>
                         </variation>
                     </view>
@@ -605,7 +561,6 @@
                         <barButtonItem key="backBarButtonItem" title="武汉" id="wbi-aw-FrR"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="collection" destination="AAn-zq-r0x" id="EpU-9s-aUC"/>
                         <segue destination="aNs-pL-3om" kind="show" identifier="segueToInterClassList" id="p49-Tb-vZz"/>
                     </connections>
                 </viewController>
@@ -1017,7 +972,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="InterCateg_top_ads" width="375" height="200"/>
+        <image name="InterCateg_top_ads" width="375" height="160"/>
         <image name="InterClass_certification" width="12" height="12"/>
         <image name="InterClass_signning" width="12" height="12"/>
         <image name="InterClass_speechBubble" width="12" height="12"/>
