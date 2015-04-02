@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.headImageView.layer.cornerRadius = 25;
+    self.headImageView.layer.shadowRadius = 5;
+    self.headImageView.layer.shadowColor = [UIColor blackColor].CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -26,53 +26,77 @@
     self.title = @"古筝";
     self.interestClassList = [[NSMutableArray alloc] init];
     InterestClassSummary *oneInterClassSummary;
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"启明兴趣班" SigNum:2048 commentNum:911 headImage:nil price:200 certification:@"机构认证" address:@"湖北省武汉市洪山区华中科技大学启明学院"];
+    UIImage *img = [UIImage imageNamed:@"InterClassList_img0"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"艺乐艺术培训中心" SigNum:189 commentNum:43 headImage:img price:400 certification:@"机构认证" address:@"光谷天地长城坐标城A4栋2单元101室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"雨果琴韵文化会所" SigNum:1400 commentNum:78 headImage:nil price:300 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img1"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"雨果琴韵文化会所" SigNum:1400 commentNum:78 headImage:img price:300 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img2"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"武汉市洪山区木声琴行" SigNum:250 commentNum:24 headImage:img price:500 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img3"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"武汉市洪山区华逸琴行" SigNum:73 commentNum:53 headImage:img price:800 certification:@"机构认证" address:@"武汉市洪山区元宝山市场"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img4"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"汉阳优哆国际艺术培训工作室" SigNum:43 commentNum:12 headImage:img price:500 certification:@"机构认证" address:@"汉阳钟家村马鹦路姚湾广电兰亭都荟5栋二单元2101室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img5"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"巴洛克艺术培训中心" SigNum:234 commentNum:45 headImage:img price:600 certification:@"机构认证" address:@"武汉武昌区南湖平安路雪香花园"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img6"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"音乐花园艺术培训中心" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"江岸区车站路长青广场"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img6"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"广墨缘古琴古筝培训" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"武汉市江岸区解放公园中华名塔园内"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img7"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img8"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img9"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
-    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:nil price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
+    img = [UIImage imageNamed:@"InterClassList_img10"];
+    oneInterClassSummary = [[InterestClassSummary alloc] initWithName:@"少年宫文艺部" SigNum:250 commentNum:105 headImage:img price:250 certification:@"机构认证" address:@"东湖高新区珞瑜东路柏景阁1-1128室"];
     [self.interestClassList addObject:oneInterClassSummary];
     oneInterClassSummary = nil;
+    img = nil;
     
 }
 
@@ -91,6 +115,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return [self.interestClassList count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
