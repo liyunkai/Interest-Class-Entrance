@@ -18,6 +18,6 @@
 @property(nonatomic,strong)NSString *certification;
 @property(nonatomic,strong)NSString *address;
 
--(id)init;
+-(id)initWithName:(NSString *)name SigNum:(NSInteger)sigNum commentNum:(NSInteger)commentNum headImage:(UIImage *)img price:(NSInteger)price certification:(NSString *)certification address:(NSString *)address;
 
 @end

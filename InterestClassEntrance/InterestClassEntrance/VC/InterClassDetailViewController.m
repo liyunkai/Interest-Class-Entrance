@@ -124,6 +124,10 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     // fixed font style. use custom view (UILabel) if you want something different
     return self.detailMakes[self.selectedListItemIndex];
