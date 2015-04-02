@@ -63,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="IntroPage_3" width="750" height="1334"/>
+        <image name="IntroPage_3" width="375" height="667"/>
     </resources>
 </document>
