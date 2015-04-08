@@ -57,6 +57,13 @@
 		E4A9B18F1AC93C0E004F0298 /* InterestClassSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A9B18E1AC93C0E004F0298 /* InterestClassSummary.m */; };
 		E4AC7F221AC24E7A00A25F78 /* dataSou.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */; };
 		E4AC7F231AC24E7A00A25F78 /* readDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AC7F211AC24E7A00A25F78 /* readDatabase.m */; };
+		E4B5E1891AD4C90D00A8A010 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E1881AD4C90D00A8A010 /* AVOSCloud.framework */; };
+		E4B5E18B1AD4C9FD00A8A010 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E18A1AD4C9FD00A8A010 /* SystemConfiguration.framework */; };
+		E4B5E18D1AD4CA0C00A8A010 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E18C1AD4CA0C00A8A010 /* MobileCoreServices.framework */; };
+		E4B5E18F1AD4CA1B00A8A010 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E18E1AD4CA1B00A8A010 /* CoreTelephony.framework */; };
+		E4B5E1911AD4CA2600A8A010 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E1901AD4CA2600A8A010 /* CoreLocation.framework */; };
+		E4B5E1931AD4CA3700A8A010 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E1921AD4CA3700A8A010 /* libicucore.dylib */; };
+		E4B5E1951AD4CA5300A8A010 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5E1941AD4CA5300A8A010 /* CFNetwork.framework */; };
 		E4E2B2031AC6A217009BDEAB /* InterClassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B2021AC6A217009BDEAB /* InterClassListViewController.m */; };
 		E4E2B2071AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B2061AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -152,6 +159,13 @@
 		E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataSou.m; path = Class/dataSou.m; sourceTree = "<group>"; };
 		E4AC7F201AC24E7A00A25F78 /* readDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = readDatabase.h; path = Class/readDatabase.h; sourceTree = "<group>"; };
 		E4AC7F211AC24E7A00A25F78 /* readDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = readDatabase.m; path = Class/readDatabase.m; sourceTree = "<group>"; };
+		E4B5E1881AD4C90D00A8A010 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		E4B5E18A1AD4C9FD00A8A010 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4B5E18C1AD4CA0C00A8A010 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E4B5E18E1AD4CA1B00A8A010 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E4B5E1901AD4CA2600A8A010 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E4B5E1921AD4CA3700A8A010 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		E4B5E1941AD4CA5300A8A010 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E4E2B2011AC6A217009BDEAB /* InterClassListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterClassListViewController.h; sourceTree = "<group>"; };
 		E4E2B2021AC6A217009BDEAB /* InterClassListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterClassListViewController.m; sourceTree = "<group>"; };
 		E4E2B2051AC6A8BC009BDEAB /* InterClassSummaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterClassSummaryTableViewCell.h; sourceTree = "<group>"; };
@@ -163,7 +177,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B5E1951AD4CA5300A8A010 /* CFNetwork.framework in Frameworks */,
+				E4B5E1931AD4CA3700A8A010 /* libicucore.dylib in Frameworks */,
+				E4B5E1911AD4CA2600A8A010 /* CoreLocation.framework in Frameworks */,
+				E4B5E18F1AD4CA1B00A8A010 /* CoreTelephony.framework in Frameworks */,
+				E4B5E18D1AD4CA0C00A8A010 /* MobileCoreServices.framework in Frameworks */,
+				E4B5E18B1AD4C9FD00A8A010 /* SystemConfiguration.framework in Frameworks */,
 				57FFE98B1ABFFFF500D6ECDC /* libsqlite3.dylib in Frameworks */,
+				E4B5E1891AD4C90D00A8A010 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +281,13 @@
 		E4A816301AB809260006E5B6 = {
 			isa = PBXGroup;
 			children = (
+				E4B5E1941AD4CA5300A8A010 /* CFNetwork.framework */,
+				E4B5E1921AD4CA3700A8A010 /* libicucore.dylib */,
+				E4B5E1901AD4CA2600A8A010 /* CoreLocation.framework */,
+				E4B5E18E1AD4CA1B00A8A010 /* CoreTelephony.framework */,
+				E4B5E18C1AD4CA0C00A8A010 /* MobileCoreServices.framework */,
+				E4B5E18A1AD4C9FD00A8A010 /* SystemConfiguration.framework */,
+				E4B5E1881AD4C90D00A8A010 /* AVOSCloud.framework */,
 				57FFE98A1ABFFFF500D6ECDC /* libsqlite3.dylib */,
 				E4A8163B1AB809260006E5B6 /* InterestClassEntrance */,
 				E4A816581AB809270006E5B6 /* InterestClassEntranceTests */,
@@ -661,6 +689,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,6 +707,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

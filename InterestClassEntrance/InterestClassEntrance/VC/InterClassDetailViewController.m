@@ -9,6 +9,8 @@
 #import "InterClassDetailViewController.h"
 #import "HTHorizontalSelectionList.h"
 
+#import <AVOSCloud/AVOSCloud.h>
+
 @interface InterClassDetailViewController () <HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
 @property (nonatomic, strong) HTHorizontalSelectionList *textSelectionList;
@@ -39,6 +41,11 @@
                              @"陈梦琪:  武汉知名古琴青年教师，拥有丰富的表演经验，从教多年，拥有丰富的古琴教学经验.8岁跟随启蒙老师开始学习古筝，10岁考入武汉音乐学院附小师从中央音乐学院王运老师学习古筝。经过3年系统学习，以优异成绩考入武汉音乐学院附中成为2004级音乐表演（古筝方向）学生。在武汉音乐附中4年跟随高雁教授，吴青副教授学习。其间向徐守成大师学习过潮州筝曲。2010年考入武汉音乐学院，善于演奏山东，潮州，客家筝派筝曲和创作型乐曲与古筝协奏曲。研究古筝基础教育，古典曲目的感情表达和古筝高级技巧演奏。"];
     self.commentList = @[@"[浮生若梦]：hello world 任我行",@"[猜猜我是谁]：你肯定猜不到"];
     self.lessonList = @[@" 古筝(小班) : 800元/期",@"古筝（1对1）: 80元/小时",@"古琴（小班） :  800元/期", @"古琴（1对1）:  80元/小时"];
+    
+    
+    AVObject *testObject = [AVObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
 
 }
 
