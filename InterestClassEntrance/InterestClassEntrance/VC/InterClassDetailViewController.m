@@ -8,8 +8,15 @@
 
 #import "InterClassDetailViewController.h"
 #import "HTHorizontalSelectionList.h"
+#import "CommentData.h"
+#import "CommentTableViewCell.h"
 
 #import <AVOSCloud/AVOSCloud.h>
+
+#define INTRO_INDEX 0
+#define COMMENT_INDEX 3
+#define TEACHER_INDEX  1
+#define LESSON_INDEX  2
 
 @interface InterClassDetailViewController () <HTHorizontalSelectionListDelegate, HTHorizontalSelectionListDataSource>
 
@@ -20,7 +27,7 @@
 
 /* 演示用数据 */
 @property(nonatomic, strong) NSArray *teacherInfoList;
-@property(nonatomic, strong) NSArray *commentList;
+@property(nonatomic, strong) NSMutableArray *commentList;
 @property(nonatomic, strong) NSArray *lessonList;
 
 @end
@@ -33,13 +40,40 @@
     [self setupTestData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.detailTableView reloadData];
+}
+
 - (void)setupTestData{
     self.title = @"雨果琴韵文化会所";
     self.teacherInfoList = @[@"刘雨果:  当代古筝专业演奏家，雨果琴韵文化会所创办人，多次参加国内外民乐演出，并担任古筝独奏。国际古筝协会会员，中国民族器乐协会会员，中国东方乐团古筝演奏员；中国音乐家协会、武汉音乐家协会会员，并获古筝大师资格证和中央音乐学院高级教师资格证，从师于当代中国杰出古筝表演艺术家袁莎、国家一级作曲（正教授级专业技术职称）、新筝艺术之父、王派筝法创始人王天一、国家一级演员新筝艺术大师赵勃楠。曾受中国文化部和国家有关部门派遣，先后到10多个国家和地区进行访问演出，形成了重大国际影响，为祖国赢得了荣誉。",
                              @"徐雯煊:  6岁开始学习古筝，从武汉音乐学院副教授吴青老师老师。参加两岸台海杯音乐大赛．艺术节斩获银奖；参加由（香港）国际艺术专业等级评判协会 、中国音乐学院考级委员会、中国国际艺术文化协会主办的东方艺术盛典香港国际青少年艺术节并荣获古筝组金奖。并有多年从事古筝教育工作经验。",
                              @"王晓惜:  8岁跟随启蒙老师开始学习古筝，10岁考入武汉音乐学院附小师从中央音乐学院王运老师学习古筝。经过3年系统学习，以优异成绩考入武汉音乐学院附中成为2004级音乐表演（古筝方向）学生。在武汉音乐附中4年跟随高雁教授，吴青副教授学习。其间向徐守成大师学习过潮州筝曲。2010年考入武汉音乐学院，善于演奏山东，潮州，客家筝派筝曲和创作型乐曲与古筝协奏曲。研究古筝基础教育，古典曲目的感情表达和古筝高级技巧演奏.",
                              @"陈梦琪:  武汉知名古琴青年教师，拥有丰富的表演经验，从教多年，拥有丰富的古琴教学经验.8岁跟随启蒙老师开始学习古筝，10岁考入武汉音乐学院附小师从中央音乐学院王运老师学习古筝。经过3年系统学习，以优异成绩考入武汉音乐学院附中成为2004级音乐表演（古筝方向）学生。在武汉音乐附中4年跟随高雁教授，吴青副教授学习。其间向徐守成大师学习过潮州筝曲。2010年考入武汉音乐学院，善于演奏山东，潮州，客家筝派筝曲和创作型乐曲与古筝协奏曲。研究古筝基础教育，古典曲目的感情表达和古筝高级技巧演奏。"];
-    self.commentList = @[@"[浮生若梦]：hello world 任我行",@"[猜猜我是谁]：你肯定猜不到"];
+    
+    self.commentList = [[NSMutableArray alloc] init];
+    
+    CommentData *item1 = [[CommentData alloc] initWithName:@"XD"
+                                                      date:[NSDate date]
+                                                   comment:@"好"];
+    [self.commentList addObject:item1];
+    CommentData *item2 = [[CommentData alloc] initWithName:@"XXD"
+                                                      date:[NSDate date]
+                                                   comment:@"2333333333333"];
+    [self.commentList addObject:item2];
+    CommentData *item3 = [[CommentData alloc] initWithName:@"XXXD"
+                                                      date:[NSDate date]
+                                                   comment:@"东南形胜,三吴都会,钱塘自古繁华。烟柳画桥,风帘翠幕,参差十万人家。云树 绕堤沙,怒涛卷霜雪,天堑无涯。市列珠玑,户盈罗绮,竞豪奢。重湖叠清嘉,有三秋桂子,十里荷花。羌管弄晴,菱歌泛夜,嬉嬉钓叟莲娃。千骑拥高衙,乘醉听箫鼓,吟赏烟霞。异日图将好景,归去凤池夸。云树 绕堤沙,怒涛卷霜雪,天堑无涯。市列珠玑,户盈罗绮,竞豪奢。重湖叠清嘉,有三秋桂子,十里荷花。羌管弄晴,菱歌泛夜,嬉嬉钓叟莲娃。千骑拥高衙,乘醉听箫鼓,吟赏烟霞。异日图将好景,归去凤池夸。"];
+    [self.commentList addObject:item3];
+    CommentData *item4 = [[CommentData alloc] initWithName:@"XXXXXXXXXXXXXXXXXXXXXD"
+                                                      date:[NSDate date]
+                                                   comment:@"......"];
+    [self.commentList addObject:item4];
+    
+    
+    self.lessonList = @[@" 古筝(小班) : 800元/期",@"古筝（1对1）: 80元/小时",@"古琴（小班） :  800元/期", @"古琴（1对1）:  80元/小时"];
+    
+    
     self.lessonList = @[@" 古筝(小班) : 800元/期",@"古筝（1对1）: 80元/小时",@"古琴（小班） :  800元/期", @"古琴（1对1）:  80元/小时"];
     
     
@@ -93,13 +127,32 @@
 
 #pragma mark - Table view data source
 
-#define INTRO_INDEX 0
-#define COMMENT_INDEX 3
-#define TEACHER_INDEX  1
-#define LESSON_INDEX  2
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
+    switch (self.selectedListItemIndex) {
+        case INTRO_INDEX:
+        {
+            return 1;
+            break;
+        }
+        case COMMENT_INDEX:{
+            return 2;
+            break;
+        }
+        case TEACHER_INDEX:{
+            return 1;
+            break;
+        }
+        case LESSON_INDEX:{
+            return 1;
+            break;
+        }
+        default:{
+            return 1;
+            break;
+        }
+            
+    }
     return 1;
 }
 
@@ -112,7 +165,11 @@
             break;
         }
         case COMMENT_INDEX:{
+            if (section == 0) {
+                return 1;
+            } else {
             return [self.commentList count];
+            }
             break;
         }
         case TEACHER_INDEX:{
@@ -137,42 +194,61 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     // fixed font style. use custom view (UILabel) if you want something different
-    return self.detailMakes[self.selectedListItemIndex];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (self.selectedListItemIndex) {
         case INTRO_INDEX:
         {
-            return 200;
             break;
         }
         case COMMENT_INDEX:{
-            return 44;
+            return @"";
             break;
         }
         case TEACHER_INDEX:{
-            return 200;
             break;
         }
         case LESSON_INDEX:{
-            return 44;
             break;
         }
         default:{
-            return 44;
             break;
         }
-            
     }
-
-    
-    
-    return 1.0f;
+    return self.detailMakes[self.selectedListItemIndex];
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    switch (self.selectedListItemIndex) {
+//        case INTRO_INDEX:
+//        {
+//            return 200;
+//            break;
+//        }
+//        case COMMENT_INDEX:{
+//            return 44;
+//            break;
+//        }
+//        case TEACHER_INDEX:{
+//            return 200;
+//            break;
+//        }
+//        case LESSON_INDEX:{
+//            return 44;
+//            break;
+//        }
+//        default:{
+//            return 44;
+//            break;
+//        }
+//            
+//    }
+//
+//    
+//    
+//    return 1.0f;
+//}
 
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      switch (self.selectedListItemIndex) {
          case INTRO_INDEX:
          {
@@ -187,13 +263,20 @@
              break;
          }
          case COMMENT_INDEX:{
-             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
-             if (cell == nil) {
-                 cell = [[UITableViewCell alloc] init];
+             if(indexPath.section == 0) {
+                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewComment" forIndexPath:indexPath];
+                 return cell;
+             } else {
+                 CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell" forIndexPath:indexPath];
+                 if (cell == nil) {
+                     cell = [[CommentTableViewCell alloc] init];
+                 }
+                 cell.comment.text = [[self.commentList objectAtIndex:indexPath.row] comment];
+                 cell.name.text = [[self.commentList objectAtIndex:indexPath.row] name];
+                 cell.date.text = [[self.commentList objectAtIndex:indexPath.row] getFormatedDate];
+                 
+                 return cell;
              }
-             cell.textLabel.text = [self.commentList objectAtIndex:indexPath.row];
-             
-             return cell;
              break;
          }
          case TEACHER_INDEX:{

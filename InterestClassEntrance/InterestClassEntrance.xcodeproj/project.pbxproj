@@ -24,6 +24,9 @@
 		A5614C9D1ABF0A410053D19D /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9B1ABF0A410053D19D /* ASProgressPopUpView.m */; };
 		A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614C9F1ABF0AEF0053D19D /* characterLable.m */; };
 		A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */; };
+		BB639F8A1AD55B79003358F7 /* CommentData.m in Sources */ = {isa = PBXBuildFile; fileRef = BB639F891AD55B79003358F7 /* CommentData.m */; };
+		BB639F8E1AD564D8003358F7 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB639F8C1AD564D8003358F7 /* CommentTableViewCell.m */; };
+		BBBBECDA1AD6929E006C1E66 /* WriteCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBBECD91AD6929E006C1E66 /* WriteCommentViewController.m */; };
 		E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */; };
 		E43E3FB01AC3D28700D2B0B4 /* HorizontalScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */; };
 		E44EF22A1ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44EF2251ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m */; };
@@ -101,6 +104,12 @@
 		A5614C9F1ABF0AEF0053D19D /* characterLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = characterLable.m; sourceTree = "<group>"; };
 		A5614CA21ABF0AEF0053D19D /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		A5614CA31ABF0AEF0053D19D /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		BB639F881AD55B79003358F7 /* CommentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentData.h; path = Class/CommentData.h; sourceTree = "<group>"; };
+		BB639F891AD55B79003358F7 /* CommentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentData.m; path = Class/CommentData.m; sourceTree = "<group>"; };
+		BB639F8B1AD564D8003358F7 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentTableViewCell.h; path = HTHorizontalSelectionList/CommentTableViewCell.h; sourceTree = "<group>"; };
+		BB639F8C1AD564D8003358F7 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentTableViewCell.m; path = HTHorizontalSelectionList/CommentTableViewCell.m; sourceTree = "<group>"; };
+		BBBBECD81AD6929E006C1E66 /* WriteCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteCommentViewController.h; sourceTree = "<group>"; };
+		BBBBECD91AD6929E006C1E66 /* WriteCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteCommentViewController.m; sourceTree = "<group>"; };
 		E43E3FAC1AC3D28700D2B0B4 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalScrollCell.h; path = VC/HorizontalScrollCell.h; sourceTree = "<group>"; };
 		E43E3FAD1AC3D28700D2B0B4 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalScrollCell.m; path = VC/HorizontalScrollCell.m; sourceTree = "<group>"; };
 		E43E3FAE1AC3D28700D2B0B4 /* HorizontalScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalScrollCell.xib; path = VC/HorizontalScrollCell.xib; sourceTree = "<group>"; };
@@ -205,6 +214,8 @@
 				E4AC7F1F1AC24E7A00A25F78 /* dataSou.m */,
 				E4AC7F201AC24E7A00A25F78 /* readDatabase.h */,
 				E4AC7F211AC24E7A00A25F78 /* readDatabase.m */,
+				BB639F881AD55B79003358F7 /* CommentData.h */,
+				BB639F891AD55B79003358F7 /* CommentData.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -225,7 +236,11 @@
 			children = (
 				E44EF22D1ACA4629000F5EBD /* InterClassDetailViewController.h */,
 				E44EF22E1ACA4629000F5EBD /* InterClassDetailViewController.m */,
+				BBBBECD81AD6929E006C1E66 /* WriteCommentViewController.h */,
+				BBBBECD91AD6929E006C1E66 /* WriteCommentViewController.m */,
 				E44EF2211ACA4566000F5EBD /* HTHorizontalSelectionList */,
+				BB639F8B1AD564D8003358F7 /* CommentTableViewCell.h */,
+				BB639F8C1AD564D8003358F7 /* CommentTableViewCell.m */,
 			);
 			name = InterestClassDetail;
 			sourceTree = "<group>";
@@ -536,10 +551,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A665A41AB96F790055CCB1 /* QuestionView.m in Sources */,
+				BB639F8A1AD55B79003358F7 /* CommentData.m in Sources */,
 				E4A8167A1AB80B950006E5B6 /* ReportViewController.m in Sources */,
 				E43E3FAF1AC3D28700D2B0B4 /* HorizontalScrollCell.m in Sources */,
 				A5614CA41ABF0AEF0053D19D /* characterLable.m in Sources */,
 				572A469A1ACD2FA000592BC9 /* StretchyHeaderCollectionViewLayout.m in Sources */,
+				BBBBECDA1AD6929E006C1E66 /* WriteCommentViewController.m in Sources */,
 				E4A816741AB80B560006E5B6 /* TestIntroductionViewController.m in Sources */,
 				E4A8166E1AB80A0C0006E5B6 /* InterestCategoryViewController.m in Sources */,
 				E44EF22A1ACA4566000F5EBD /* HTHorizontalSelectionListCustomViewCell.m in Sources */,
@@ -558,6 +575,7 @@
 				E4A816771AB80B7D0006E5B6 /* QuestionsViewController.m in Sources */,
 				A5614CA61ABF0AEF0053D19D /* RecommendViewController.m in Sources */,
 				E4878BB51AC5975F00205E1B /* MYIntroductionPanel.m in Sources */,
+				BB639F8E1AD564D8003358F7 /* CommentTableViewCell.m in Sources */,
 				E44EF22C1ACA4566000F5EBD /* HTHorizontalSelectionList.m in Sources */,
 				E4A816711AB80B330006E5B6 /* TestChooseViewController.m in Sources */,
 				E4E2B2031AC6A217009BDEAB /* InterClassListViewController.m in Sources */,
@@ -694,10 +712,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -712,10 +731,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InterestClassEntrance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
