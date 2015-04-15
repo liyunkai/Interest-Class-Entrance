@@ -9,7 +9,7 @@
 #import "characterLable.h"
 
 @implementation characterLable
-
+//test
 -(void)enable{
     self.isSelected = NO;
     
